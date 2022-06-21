@@ -13,6 +13,8 @@
 		41019AFB2861A9FA00CBF3D8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41019AFA2861A9FA00CBF3D8 /* Preview Assets.xcassets */; };
 		41019AFD2861A9FA00CBF3D8 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41019AFC2861A9FA00CBF3D8 /* Persistence.swift */; };
 		41019B002861A9FA00CBF3D8 /* mimoni.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 41019AFE2861A9FA00CBF3D8 /* mimoni.xcdatamodeld */; };
+		EC0797E12861B2880062E89B /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0797E02861B2880062E89B /* OnboardingView.swift */; };
+		EC0797E32861B5C70062E89B /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0797E22861B5C70062E89B /* LaunchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		41019AFA2861A9FA00CBF3D8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		41019AFC2861A9FA00CBF3D8 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		41019AFF2861A9FA00CBF3D8 /* mimoni.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = mimoni.xcdatamodel; sourceTree = "<group>"; };
+		EC0797E02861B2880062E89B /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		EC0797E22861B5C70062E89B /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,7 @@
 		41019AF22861A9F800CBF3D8 /* mimoni */ = {
 			isa = PBXGroup;
 			children = (
+				EC0797DF2861B2640062E89B /* onboarding */,
 				41019AF32861A9F800CBF3D8 /* mimoniApp.swift */,
 				41019AF52861A9F800CBF3D8 /* ContentView.swift */,
 				41019AF72861A9FA00CBF3D8 /* Assets.xcassets */,
@@ -71,6 +76,15 @@
 				41019AFA2861A9FA00CBF3D8 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EC0797DF2861B2640062E89B /* onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				EC0797E02861B2880062E89B /* OnboardingView.swift */,
+				EC0797E22861B5C70062E89B /* LaunchView.swift */,
+			);
+			path = onboarding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,8 +158,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				41019B002861A9FA00CBF3D8 /* mimoni.xcdatamodeld in Sources */,
+				EC0797E32861B5C70062E89B /* LaunchView.swift in Sources */,
 				41019AFD2861A9FA00CBF3D8 /* Persistence.swift in Sources */,
 				41019AF62861A9F800CBF3D8 /* ContentView.swift in Sources */,
+				EC0797E12861B2880062E89B /* OnboardingView.swift in Sources */,
 				41019AF42861A9F800CBF3D8 /* mimoniApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,7 +291,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"mimoni/Preview Content\"";
-				DEVELOPMENT_TEAM = CPLM3B32WS;
+				DEVELOPMENT_TEAM = G9K9MD55MT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -304,7 +320,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"mimoni/Preview Content\"";
-				DEVELOPMENT_TEAM = CPLM3B32WS;
+				DEVELOPMENT_TEAM = G9K9MD55MT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
