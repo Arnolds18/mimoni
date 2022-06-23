@@ -9,13 +9,22 @@ import SwiftUI
 
 @main
 struct mimoniApp: App {
-    let persistenceController = PersistenceController.shared
+    @AppStorage("isOnboarding") var isOnboarding = true
 
     var body: some Scene {
         WindowGroup {
+
+            if isOnboarding{
+                OnboardingView()
+            }else{
+                InputIncome()
+            }
+            
+
 //            ContentView()
 //                .environment(\.managedObjectContext, persistenceController.container.viewContext)
-            InputIncome()
+            
+
         }
     }
 }

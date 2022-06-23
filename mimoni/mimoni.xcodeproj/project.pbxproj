@@ -13,8 +13,48 @@
 		41019AFB2861A9FA00CBF3D8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41019AFA2861A9FA00CBF3D8 /* Preview Assets.xcassets */; };
 		41019AFD2861A9FA00CBF3D8 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41019AFC2861A9FA00CBF3D8 /* Persistence.swift */; };
 		41019B002861A9FA00CBF3D8 /* mimoni.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 41019AFE2861A9FA00CBF3D8 /* mimoni.xcdatamodeld */; };
+
+		EC0797E12861B2880062E89B /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0797E02861B2880062E89B /* OnboardingView.swift */; };
+		EC0797E32861B5C70062E89B /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0797E22861B5C70062E89B /* LaunchView.swift */; };
+		EC5953E02863036300B0C200 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC5953DC2863034400B0C200 /* Charts.framework */; platformFilter = ios; };
+		EC5953E12863036300B0C200 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EC5953DC2863034400B0C200 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EC5953E428630A7200B0C200 /* PieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5953E328630A7200B0C200 /* PieChart.swift */; };
+		EC5953E628630E6A00B0C200 /* Wine.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5953E528630E6A00B0C200 /* Wine.swift */; };
+
 		41019B072861AD1100CBF3D8 /* InputIncome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41019B062861AD1100CBF3D8 /* InputIncome.swift */; };
+
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EC5953DB2863034400B0C200 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC5953D62863034400B0C200 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 65AD9E95D9ED4DC0BD73A743;
+			remoteInfo = Charts;
+		};
+		EC5953DD2863034400B0C200 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC5953D62863034400B0C200 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1CBBC58C6CE1EBEE9852CE41;
+			remoteInfo = ChartsTests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EC5953E22863036300B0C200 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EC5953E12863036300B0C200 /* Charts.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		41019AF02861A9F800CBF3D8 /* mimoni.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mimoni.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,7 +64,15 @@
 		41019AFA2861A9FA00CBF3D8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		41019AFC2861A9FA00CBF3D8 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		41019AFF2861A9FA00CBF3D8 /* mimoni.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = mimoni.xcdatamodel; sourceTree = "<group>"; };
+
+		EC0797E02861B2880062E89B /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		EC0797E22861B5C70062E89B /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
+		EC5953D62863034400B0C200 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../../../Downloads/Charts-master/Charts.xcodeproj"; sourceTree = "<group>"; };
+		EC5953E328630A7200B0C200 /* PieChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChart.swift; sourceTree = "<group>"; };
+		EC5953E528630E6A00B0C200 /* Wine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Wine.swift; path = ../../../../../Downloads/Wine.swift; sourceTree = "<group>"; };
+
 		41019B062861AD1100CBF3D8 /* InputIncome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputIncome.swift; sourceTree = "<group>"; };
+
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC5953E02863036300B0C200 /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +92,7 @@
 			children = (
 				41019AF22861A9F800CBF3D8 /* mimoni */,
 				41019AF12861A9F800CBF3D8 /* Products */,
+				EC5953DF2863036300B0C200 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,12 +107,16 @@
 		41019AF22861A9F800CBF3D8 /* mimoni */ = {
 			isa = PBXGroup;
 			children = (
+				EC5953E728631FB400B0C200 /* view */,
+				EC0797DF2861B2640062E89B /* onboarding */,
+				EC5953E528630E6A00B0C200 /* Wine.swift */,
 				41019AF32861A9F800CBF3D8 /* mimoniApp.swift */,
 				41019AF52861A9F800CBF3D8 /* ContentView.swift */,
 				41019B062861AD1100CBF3D8 /* InputIncome.swift */,
 				41019AF72861A9FA00CBF3D8 /* Assets.xcassets */,
 				41019AFC2861A9FA00CBF3D8 /* Persistence.swift */,
 				41019AFE2861A9FA00CBF3D8 /* mimoni.xcdatamodeld */,
+				EC5953D62863034400B0C200 /* Charts.xcodeproj */,
 				41019AF92861A9FA00CBF3D8 /* Preview Content */,
 			);
 			path = mimoni;
@@ -76,6 +130,39 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		EC0797DF2861B2640062E89B /* onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				EC0797E02861B2880062E89B /* OnboardingView.swift */,
+				EC0797E22861B5C70062E89B /* LaunchView.swift */,
+			);
+			path = onboarding;
+			sourceTree = "<group>";
+		};
+		EC5953D72863034400B0C200 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EC5953DC2863034400B0C200 /* Charts.framework */,
+				EC5953DE2863034400B0C200 /* ChartsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EC5953DF2863036300B0C200 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EC5953E728631FB400B0C200 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				EC5953E328630A7200B0C200 /* PieChart.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,6 +173,7 @@
 				41019AEC2861A9F800CBF3D8 /* Sources */,
 				41019AED2861A9F800CBF3D8 /* Frameworks */,
 				41019AEE2861A9F800CBF3D8 /* Resources */,
+				EC5953E22863036300B0C200 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -122,12 +210,35 @@
 			mainGroup = 41019AE72861A9F800CBF3D8;
 			productRefGroup = 41019AF12861A9F800CBF3D8 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = EC5953D72863034400B0C200 /* Products */;
+					ProjectRef = EC5953D62863034400B0C200 /* Charts.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				41019AEF2861A9F800CBF3D8 /* mimoni */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		EC5953DC2863034400B0C200 /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = EC5953DB2863034400B0C200 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EC5953DE2863034400B0C200 /* ChartsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ChartsTests.xctest;
+			remoteRef = EC5953DD2863034400B0C200 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		41019AEE2861A9F800CBF3D8 /* Resources */ = {
@@ -146,9 +257,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC5953E628630E6A00B0C200 /* Wine.swift in Sources */,
 				41019B002861A9FA00CBF3D8 /* mimoni.xcdatamodeld in Sources */,
+				EC0797E32861B5C70062E89B /* LaunchView.swift in Sources */,
 				41019AFD2861A9FA00CBF3D8 /* Persistence.swift in Sources */,
+				EC5953E428630A7200B0C200 /* PieChart.swift in Sources */,
 				41019AF62861A9F800CBF3D8 /* ContentView.swift in Sources */,
+				EC0797E12861B2880062E89B /* OnboardingView.swift in Sources */,
 				41019AF42861A9F800CBF3D8 /* mimoniApp.swift in Sources */,
 				41019B072861AD1100CBF3D8 /* InputIncome.swift in Sources */,
 			);
@@ -279,7 +394,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"mimoni/Preview Content\"";
-				DEVELOPMENT_TEAM = CPLM3B32WS;
+				DEVELOPMENT_TEAM = G9K9MD55MT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -308,7 +423,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"mimoni/Preview Content\"";
-				DEVELOPMENT_TEAM = CPLM3B32WS;
+				DEVELOPMENT_TEAM = G9K9MD55MT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
