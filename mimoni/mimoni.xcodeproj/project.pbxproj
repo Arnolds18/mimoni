@@ -13,29 +13,26 @@
 		41019AFB2861A9FA00CBF3D8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41019AFA2861A9FA00CBF3D8 /* Preview Assets.xcassets */; };
 		41019AFD2861A9FA00CBF3D8 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41019AFC2861A9FA00CBF3D8 /* Persistence.swift */; };
 		41019B002861A9FA00CBF3D8 /* mimoni.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 41019AFE2861A9FA00CBF3D8 /* mimoni.xcdatamodeld */; };
-
+		41019B072861AD1100CBF3D8 /* InputIncome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41019B062861AD1100CBF3D8 /* InputIncome.swift */; };
+		416315B62864641600C3B36B /* Wine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416315B52864641600C3B36B /* Wine.swift */; };
+		416315B8286464A500C3B36B /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 416315B2286463FC00C3B36B /* Charts.framework */; platformFilter = ios; };
+		416315B9286464A500C3B36B /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 416315B2286463FC00C3B36B /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EC0797E12861B2880062E89B /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0797E02861B2880062E89B /* OnboardingView.swift */; };
 		EC0797E32861B5C70062E89B /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0797E22861B5C70062E89B /* LaunchView.swift */; };
-		EC5953E02863036300B0C200 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC5953DC2863034400B0C200 /* Charts.framework */; platformFilter = ios; };
-		EC5953E12863036300B0C200 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EC5953DC2863034400B0C200 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EC5953E428630A7200B0C200 /* PieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5953E328630A7200B0C200 /* PieChart.swift */; };
-		EC5953E628630E6A00B0C200 /* Wine.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5953E528630E6A00B0C200 /* Wine.swift */; };
-
-		41019B072861AD1100CBF3D8 /* InputIncome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41019B062861AD1100CBF3D8 /* InputIncome.swift */; };
-
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		EC5953DB2863034400B0C200 /* PBXContainerItemProxy */ = {
+		416315B1286463FC00C3B36B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = EC5953D62863034400B0C200 /* Charts.xcodeproj */;
+			containerPortal = 416315AC286463FC00C3B36B /* Charts.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 65AD9E95D9ED4DC0BD73A743;
 			remoteInfo = Charts;
 		};
-		EC5953DD2863034400B0C200 /* PBXContainerItemProxy */ = {
+		416315B3286463FC00C3B36B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = EC5953D62863034400B0C200 /* Charts.xcodeproj */;
+			containerPortal = 416315AC286463FC00C3B36B /* Charts.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 1CBBC58C6CE1EBEE9852CE41;
 			remoteInfo = ChartsTests;
@@ -49,7 +46,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				EC5953E12863036300B0C200 /* Charts.framework in Embed Frameworks */,
+				416315B9286464A500C3B36B /* Charts.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -64,15 +61,13 @@
 		41019AFA2861A9FA00CBF3D8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		41019AFC2861A9FA00CBF3D8 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		41019AFF2861A9FA00CBF3D8 /* mimoni.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = mimoni.xcdatamodel; sourceTree = "<group>"; };
-
+		41019B062861AD1100CBF3D8 /* InputIncome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputIncome.swift; sourceTree = "<group>"; };
+		416315AC286463FC00C3B36B /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../../../../Downloads/Charts-master/Charts.xcodeproj"; sourceTree = "<group>"; };
+		416315B52864641600C3B36B /* Wine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wine.swift; sourceTree = "<group>"; };
+		416315B72864649200C3B36B /* Charts-master */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "Charts-master"; path = "../../../../../Downloads/Charts-master"; sourceTree = "<group>"; };
 		EC0797E02861B2880062E89B /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		EC0797E22861B5C70062E89B /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
-		EC5953D62863034400B0C200 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../../../Downloads/Charts-master/Charts.xcodeproj"; sourceTree = "<group>"; };
 		EC5953E328630A7200B0C200 /* PieChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChart.swift; sourceTree = "<group>"; };
-		EC5953E528630E6A00B0C200 /* Wine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Wine.swift; path = ../../../../../Downloads/Wine.swift; sourceTree = "<group>"; };
-
-		41019B062861AD1100CBF3D8 /* InputIncome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputIncome.swift; sourceTree = "<group>"; };
-
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC5953E02863036300B0C200 /* Charts.framework in Frameworks */,
+				416315B8286464A500C3B36B /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,14 +104,14 @@
 			children = (
 				EC5953E728631FB400B0C200 /* view */,
 				EC0797DF2861B2640062E89B /* onboarding */,
-				EC5953E528630E6A00B0C200 /* Wine.swift */,
 				41019AF32861A9F800CBF3D8 /* mimoniApp.swift */,
 				41019AF52861A9F800CBF3D8 /* ContentView.swift */,
+				416315B52864641600C3B36B /* Wine.swift */,
 				41019B062861AD1100CBF3D8 /* InputIncome.swift */,
 				41019AF72861A9FA00CBF3D8 /* Assets.xcassets */,
 				41019AFC2861A9FA00CBF3D8 /* Persistence.swift */,
 				41019AFE2861A9FA00CBF3D8 /* mimoni.xcdatamodeld */,
-				EC5953D62863034400B0C200 /* Charts.xcodeproj */,
+				416315AC286463FC00C3B36B /* Charts.xcodeproj */,
 				41019AF92861A9FA00CBF3D8 /* Preview Content */,
 			);
 			path = mimoni;
@@ -130,6 +125,15 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		416315AD286463FC00C3B36B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				416315B2286463FC00C3B36B /* Charts.framework */,
+				416315B4286463FC00C3B36B /* ChartsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		EC0797DF2861B2640062E89B /* onboarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,18 +143,10 @@
 			path = onboarding;
 			sourceTree = "<group>";
 		};
-		EC5953D72863034400B0C200 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				EC5953DC2863034400B0C200 /* Charts.framework */,
-				EC5953DE2863034400B0C200 /* ChartsTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		EC5953DF2863036300B0C200 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				416315B72864649200C3B36B /* Charts-master */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -212,8 +208,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = EC5953D72863034400B0C200 /* Products */;
-					ProjectRef = EC5953D62863034400B0C200 /* Charts.xcodeproj */;
+					ProductGroup = 416315AD286463FC00C3B36B /* Products */;
+					ProjectRef = 416315AC286463FC00C3B36B /* Charts.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -224,18 +220,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		EC5953DC2863034400B0C200 /* Charts.framework */ = {
+		416315B2286463FC00C3B36B /* Charts.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Charts.framework;
-			remoteRef = EC5953DB2863034400B0C200 /* PBXContainerItemProxy */;
+			remoteRef = 416315B1286463FC00C3B36B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		EC5953DE2863034400B0C200 /* ChartsTests.xctest */ = {
+		416315B4286463FC00C3B36B /* ChartsTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = ChartsTests.xctest;
-			remoteRef = EC5953DD2863034400B0C200 /* PBXContainerItemProxy */;
+			remoteRef = 416315B3286463FC00C3B36B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -257,9 +253,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC5953E628630E6A00B0C200 /* Wine.swift in Sources */,
 				41019B002861A9FA00CBF3D8 /* mimoni.xcdatamodeld in Sources */,
 				EC0797E32861B5C70062E89B /* LaunchView.swift in Sources */,
+				416315B62864641600C3B36B /* Wine.swift in Sources */,
 				41019AFD2861A9FA00CBF3D8 /* Persistence.swift in Sources */,
 				EC5953E428630A7200B0C200 /* PieChart.swift in Sources */,
 				41019AF62861A9F800CBF3D8 /* ContentView.swift in Sources */,
