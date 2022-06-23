@@ -13,12 +13,18 @@ struct mimoniApp: App {
 
     var body: some Scene {
         WindowGroup {
+
             if isOnboarding{
                 OnboardingView()
             }else{
-                ContentView()
+                InputIncome()
             }
             
+
+//            ContentView()
+//                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            
+
         }
     }
 }
