@@ -8,51 +8,60 @@
 import SwiftUI
 
 struct InputIncome: View {
-    @State private var income = 0
+    @State var income : Int = 0
+    @State var isShowingDetailView =  false
     @FocusState private var isInputActive: Bool
     
+    var numberFormatter : NumberFormatter{
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        numberFormatter.zeroSymbol = ""
+        return numberFormatter
+    }
+    
     var body: some View {
-        VStack{
+        NavigationView{
             VStack{
-                Text("Income")
-                    .fontWeight(.bold)
-                    .font(.system(size: 31))
-                Text("write down your income")
-                    .fontWeight(.regular)
-                    .font(.system(size: 18))
-                    .frame(height: 100, alignment:.topLeading)
-            }
-            TextField("Income", value: $income, format: .number)
-                .focused($isInputActive)
-                .textFieldStyle(.roundedBorder)
-                .padding()
-                .keyboardType(.numberPad)
-                .toolbar {
-                    ToolbarItemGroup(placement: .keyboard) {
-                        Spacer()
-                        Button("Done") {
-                            isInputActive = false
+                VStack{
+                    Text("Income")
+                        .fontWeight(.bold)
+                        .font(.system(size: 31))
+                    Text("write down your income")
+                        .fontWeight(.regular)
+                        .font(.system(size: 18))
+                        .frame(height: 100, alignment:.topLeading)
+                }
+                
+                TextField("Income", value: $income, formatter: numberFormatter)
+                    .focused($isInputActive)
+                    .textFieldStyle(.roundedBorder)
+                    .padding()
+                    .keyboardType(.numberPad)
+                    .toolbar {
+                        ToolbarItemGroup(placement: .keyboard) {
+                            Spacer()
+                            Button("Done") {
+                                isInputActive = false
+                            }
                         }
                     }
+
+                NavigationLink(destination: SetupBudget(income: self.$income)) {
+                    HStack{
+                        Text("Continue")
+                            .fontWeight(.semibold)
+                    }
+                    .font(.headline)
+                    .frame(width: 350, height: 60)
+                    .foregroundColor(.white)
+                    .background(Color.blue)
+                    .cornerRadius(15)
+                    .padding(.top, 250)
+                    
                 }
-            
-            Button(action: {
-                print("Continued")
-            }){
-                HStack{
-                    Text("Continue")
-                        .fontWeight(.semibold)
-                }
-                .font(.headline)
-                .frame(width: 350, height: 60)
-                .foregroundColor(.white)
-                .background(Color.blue)
-                .cornerRadius(15)
-                .padding(.top, 250)
-                
             }
+            .padding()
         }
-        .padding()
     }
 }
 
