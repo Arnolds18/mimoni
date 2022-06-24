@@ -13,16 +13,14 @@
 		41019AFB2861A9FA00CBF3D8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41019AFA2861A9FA00CBF3D8 /* Preview Assets.xcassets */; };
 		41019AFD2861A9FA00CBF3D8 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41019AFC2861A9FA00CBF3D8 /* Persistence.swift */; };
 		41019B002861A9FA00CBF3D8 /* mimoni.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 41019AFE2861A9FA00CBF3D8 /* mimoni.xcdatamodeld */; };
-
+		41019B072861AD1100CBF3D8 /* InputIncome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41019B062861AD1100CBF3D8 /* InputIncome.swift */; };
 		EC0797E12861B2880062E89B /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0797E02861B2880062E89B /* OnboardingView.swift */; };
 		EC0797E32861B5C70062E89B /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0797E22861B5C70062E89B /* LaunchView.swift */; };
 		EC5953E02863036300B0C200 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC5953DC2863034400B0C200 /* Charts.framework */; platformFilter = ios; };
 		EC5953E12863036300B0C200 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EC5953DC2863034400B0C200 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EC5953E428630A7200B0C200 /* PieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5953E328630A7200B0C200 /* PieChart.swift */; };
 		EC5953E628630E6A00B0C200 /* Wine.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5953E528630E6A00B0C200 /* Wine.swift */; };
-
-		41019B072861AD1100CBF3D8 /* InputIncome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41019B062861AD1100CBF3D8 /* InputIncome.swift */; };
-
+		EC5953EC2865984000B0C200 /* SetupBudget.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5953EB2865984000B0C200 /* SetupBudget.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,15 +62,13 @@
 		41019AFA2861A9FA00CBF3D8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		41019AFC2861A9FA00CBF3D8 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		41019AFF2861A9FA00CBF3D8 /* mimoni.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = mimoni.xcdatamodel; sourceTree = "<group>"; };
-
+		41019B062861AD1100CBF3D8 /* InputIncome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputIncome.swift; sourceTree = "<group>"; };
 		EC0797E02861B2880062E89B /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		EC0797E22861B5C70062E89B /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		EC5953D62863034400B0C200 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../../../Downloads/Charts-master/Charts.xcodeproj"; sourceTree = "<group>"; };
 		EC5953E328630A7200B0C200 /* PieChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChart.swift; sourceTree = "<group>"; };
 		EC5953E528630E6A00B0C200 /* Wine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Wine.swift; path = ../../../../../Downloads/Wine.swift; sourceTree = "<group>"; };
-
-		41019B062861AD1100CBF3D8 /* InputIncome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputIncome.swift; sourceTree = "<group>"; };
-
+		EC5953EB2865984000B0C200 /* SetupBudget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupBudget.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +109,7 @@
 				41019AF32861A9F800CBF3D8 /* mimoniApp.swift */,
 				41019AF52861A9F800CBF3D8 /* ContentView.swift */,
 				41019B062861AD1100CBF3D8 /* InputIncome.swift */,
+				EC5953EB2865984000B0C200 /* SetupBudget.swift */,
 				41019AF72861A9FA00CBF3D8 /* Assets.xcassets */,
 				41019AFC2861A9FA00CBF3D8 /* Persistence.swift */,
 				41019AFE2861A9FA00CBF3D8 /* mimoni.xcdatamodeld */,
@@ -265,6 +262,7 @@
 				41019AF62861A9F800CBF3D8 /* ContentView.swift in Sources */,
 				EC0797E12861B2880062E89B /* OnboardingView.swift in Sources */,
 				41019AF42861A9F800CBF3D8 /* mimoniApp.swift in Sources */,
+				EC5953EC2865984000B0C200 /* SetupBudget.swift in Sources */,
 				41019B072861AD1100CBF3D8 /* InputIncome.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
