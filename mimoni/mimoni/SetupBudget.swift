@@ -2,7 +2,9 @@
 //  SetupBudget.swift
 //  mimoni
 //
-//  Created by Nicky Santano on 24/06/22.
+
+//  Created by Arnold Sidiprasetija on 24/06/22.
+
 //
 
 import SwiftUI
@@ -23,11 +25,18 @@ class StocksViewModel: ObservableObject{
 }
 
 struct SetupBudget: View{
+    @Binding var income: Int
     @StateObject var viewModel = StocksViewModel()
     
     var body: some View {
         NavigationView{
             VStack{
+                Text("Income")
+                    .fontWeight(.bold)
+                    .font(.system(size: 31))
+                Text("Rp. \(income)")
+                    .fontWeight(.bold)
+                    .font(.system(size: 31))
                 List{
                     ForEach(viewModel.stocks){ stock in
                         StockRow(title: stock.title)
@@ -46,19 +55,25 @@ struct SetupBudget: View{
             }
         }
     }
-}
-
-struct StockRow: View{
     
-    let title: String
     
-    var body: some View{
-        Label(title: {Text(title)}, icon: {Image(systemName: "")})
+    
+    struct StockRow: View{
+        
+        let title: String
+        
+        var body: some View{
+            Label(title: {Text(title)}, icon: {Image(systemName: "")})
+        }
     }
-}
-
-struct SetupBudget_Previews: PreviewProvider {
-    static var previews: some View {
-        SetupBudget().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+    
+    //struct SetupBudget_Previews: PreviewProvider {
+    //    static var previews: some View {
+    //        SetupBudget().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+    //    }
+    struct SetupBudget_Previews: PreviewProvider {
+        static var previews: some View {
+            SetupBudget(income: .constant(1000))
+        }
     }
 }
