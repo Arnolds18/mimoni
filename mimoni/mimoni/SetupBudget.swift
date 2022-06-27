@@ -27,6 +27,7 @@ class StocksViewModel: ObservableObject{
 struct SetupBudget: View{
     @Binding var income: Int
     @StateObject var viewModel = StocksViewModel()
+    @State private var showAddBudget: Bool = false
     
     var body: some View {
         NavigationView{
@@ -57,7 +58,9 @@ struct SetupBudget: View{
                         }
                     }
                 }
-            }
+
+        .sheet(isPresented: $showAddBudget){
+            AddBudgetView()
         }
     }
     
