@@ -27,6 +27,7 @@ class StocksViewModel: ObservableObject{
 struct SetupBudget: View{
     @Binding var income: Int
     @StateObject var viewModel = StocksViewModel()
+    @State private var showAddBudget: Bool = false
     
     var body: some View {
         NavigationView{
@@ -42,17 +43,19 @@ struct SetupBudget: View{
                         StockRow(title: stock.title)
                     }
                 }
-                .navigationTitle("Hello")
-                .toolbar{
-                    ToolbarItemGroup(placement: .navigationBarTrailing){
-                        Button{
-                            print("Modal view shown")
-                        }label: {
-                            Label("Add", systemImage: "plus")
-                        }
-                    }
-                }
             }
+        }
+        .toolbar{
+            ToolbarItemGroup(placement: .navigationBarTrailing){
+                Button(action: {
+                    showAddBudget = true
+                }, label: {
+                    Label("Add", systemImage: "plus")
+                })
+            }
+        }
+        .sheet(isPresented: $showAddBudget){
+            AddBudgetView()
         }
     }
     
