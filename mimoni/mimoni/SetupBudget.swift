@@ -43,28 +43,17 @@ struct SetupBudget: View{
                         StockRow(title: stock.title)
                     }
                     Button {
-                        
+                        showAddBudget = true
                     } label: {
                         Label("Add Category", systemImage: "plus.circle.fill")
                     }
-
+                    .sheet(isPresented: $showAddBudget){
+                        AddBudgetView()
                 }
-                .toolbar{
-                    ToolbarItemGroup(placement: .navigationBarTrailing){
-                        Button{
-                            print("Modal view shown")
-                        }label: {
-                            Label("Add", systemImage: "plus")
-                        }
-                    }
-                }
-
-        .sheet(isPresented: $showAddBudget){
-            AddBudgetView()
+            }
         }
     }
-    
-    
+}
     
     struct StockRow: View{
         
