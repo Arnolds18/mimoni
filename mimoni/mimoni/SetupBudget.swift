@@ -27,6 +27,7 @@ class StocksViewModel: ObservableObject{
 struct SetupBudget: View{
     @Binding var income: Int
     @StateObject var viewModel = StocksViewModel()
+    @State private var showAddBudget: Bool = false
     
     var body: some View {
         NavigationView{
@@ -41,8 +42,13 @@ struct SetupBudget: View{
                     ForEach(viewModel.stocks){ stock in
                         StockRow(title: stock.title)
                     }
+                    Button {
+                        
+                    } label: {
+                        Label("Add Category", systemImage: "plus.circle.fill")
+                    }
+
                 }
-                .navigationTitle("Hello")
                 .toolbar{
                     ToolbarItemGroup(placement: .navigationBarTrailing){
                         Button{
@@ -52,7 +58,9 @@ struct SetupBudget: View{
                         }
                     }
                 }
-            }
+
+        .sheet(isPresented: $showAddBudget){
+            AddBudgetView()
         }
     }
     
@@ -61,10 +69,14 @@ struct SetupBudget: View{
     struct StockRow: View{
         
         let title: String
-        
         var body: some View{
-            Label(title: {Text(title)}, icon: {Image(systemName: "")})
+            VStack(alignment: .leading) {
+                Text(title)
+                Divider()
+            }.listRowSeparator(.hidden)
+            
         }
+        
     }
     
     //struct SetupBudget_Previews: PreviewProvider {
