@@ -42,18 +42,23 @@ struct SetupBudget: View{
                     ForEach(viewModel.stocks){ stock in
                         StockRow(title: stock.title)
                     }
+                    Button {
+                        
+                    } label: {
+                        Label("Add Category", systemImage: "plus.circle.fill")
+                    }
+
                 }
-            }
-        }
-        .toolbar{
-            ToolbarItemGroup(placement: .navigationBarTrailing){
-                Button(action: {
-                    showAddBudget = true
-                }, label: {
-                    Label("Add", systemImage: "plus")
-                })
-            }
-        }
+                .toolbar{
+                    ToolbarItemGroup(placement: .navigationBarTrailing){
+                        Button{
+                            print("Modal view shown")
+                        }label: {
+                            Label("Add", systemImage: "plus")
+                        }
+                    }
+                }
+
         .sheet(isPresented: $showAddBudget){
             AddBudgetView()
         }
@@ -64,10 +69,14 @@ struct SetupBudget: View{
     struct StockRow: View{
         
         let title: String
-        
         var body: some View{
-            Label(title: {Text(title)}, icon: {Image(systemName: "")})
+            VStack(alignment: .leading) {
+                Text(title)
+                Divider()
+            }.listRowSeparator(.hidden)
+            
         }
+        
     }
     
     //struct SetupBudget_Previews: PreviewProvider {
