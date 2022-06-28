@@ -64,9 +64,8 @@ struct SetupBudget: View{
             VStack(alignment: .leading) {
                 HStack{
                 Text(title)
-                    VStack(alignment: .trailing){
                     Text("\(value)").background(Color.blue)
-                    }
+                            .frame(maxWidth: .infinity, alignment: .trailing)
                 }
                 Divider()
             }.listRowSeparator(.hidden)
