@@ -9,24 +9,25 @@
 
 import SwiftUI
 
-struct Stock: Identifiable{
+struct Segment: Identifiable{
     var id = UUID()
     
     let title: String
+    let value: Double
 }
 
-class StocksViewModel: ObservableObject{
-    @Published var stocks: [Stock] = [
-        Stock(title: "Kebutuhan"),
-        Stock(title: "Keinginan"),
-        Stock(title: "Tabungan"),
-        Stock(title: "Dana Darurat"),
+class SegmentsViewModel: ObservableObject{
+    @Published var segments: [Segment] = [
+        Segment(title: "Kebutuhan", value: 0),
+        Segment(title: "Keinginan", value: 0),
+        Segment(title: "Tabungan", value: 0),
+        Segment(title: "Dana Darurat", value: 0),
     ]
 }
 
 struct SetupBudget: View{
     @Binding var income: Int
-    @StateObject var viewModel = StocksViewModel()
+    @StateObject var viewModel = SegmentsViewModel()
     @State private var showAddBudget: Bool = false
     
     var body: some View {
@@ -39,8 +40,8 @@ struct SetupBudget: View{
                     .fontWeight(.bold)
                     .font(.system(size: 31))
                 List{
-                    ForEach(viewModel.stocks){ stock in
-                        StockRow(title: stock.title)
+                    ForEach(viewModel.segments){ segment in
+                        SegmentRow(value: segment.value, title: segment.title)
                     }
                     Button {
                         showAddBudget = true
@@ -55,12 +56,18 @@ struct SetupBudget: View{
     }
 }
     
-    struct StockRow: View{
+    struct SegmentRow: View {
         
+        let value: Double
         let title: String
         var body: some View{
             VStack(alignment: .leading) {
+                HStack{
                 Text(title)
+                    VStack(alignment: .trailing){
+                    Text("\(value)").background(Color.blue)
+                    }
+                }
                 Divider()
             }.listRowSeparator(.hidden)
             
