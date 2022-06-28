@@ -1,19 +1,14 @@
-//
-//  AddBudgetView.swift
-//  mimoni
-//
-//  Created by Arnold Sidiprasetija on 27/06/22.
-//
+
 
 import SwiftUI
 
-struct AddBudgetView: View {
+struct EditBudgetView: View {
     @Environment(\.dismiss) var dismiss
     //@Binding var
     
     @FocusState private var isInputActive: Bool
-    @State var totalBudget : Int = 0
-    @State var budgetCategory : String = ""
+    @Binding var totalBudget : Int
+    @Binding var budgetCategory : String
     @State var recomendationEnabled: Bool = false
 
     var numberFormatter : NumberFormatter{
@@ -60,7 +55,6 @@ struct AddBudgetView: View {
                   .navigationBarItems(trailing:
                   Button("Add") {
                       print("add")
-                      
                   })
             }
         }

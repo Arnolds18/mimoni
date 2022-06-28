@@ -14,7 +14,7 @@ struct Wine {
     var category: Category
     var value:Double
     var label:String
-    
+
     static func entriesForWines(  wines: [Wine], category: Category) -> [PieChartDataEntry]{
         let requestedWines = wines.filter {$0.category == category}
         return requestedWines.map { PieChartDataEntry(value: $0.value, label: $0.label)}

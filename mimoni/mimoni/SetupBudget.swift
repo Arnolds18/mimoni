@@ -8,6 +8,7 @@
 //
 
 import SwiftUI
+import ModalView
 
 struct Segment: Identifiable{
     var id = UUID()
@@ -39,19 +40,25 @@ struct SetupBudget: View{
                 Text("Rp. \(income)")
                     .fontWeight(.bold)
                     .font(.system(size: 31))
-                List{
-                    ForEach(viewModel.segments){ segment in
-                        SegmentRow(value: segment.value, title: segment.title)
+                ModalPresenter {
+                    List{
+                        ForEach(viewModel.segments){ segment in
+                            ModalLink(destination: EditBudgetView( totalBudget: .constant(5), budgetCategory: .constant("Halo"))) {
+                                SegmentRow(value: segment.value, title: segment.title)
+                            }
+                            
+                        }
+                        Button {
+                            //showAddBudget = true
+                            viewModel.segments.append(Segment(id: UUID(), title: "Kareo", value: 21312.00))
+                        } label: {
+                            Label("Add Category", systemImage: "plus.circle.fill")
+                        }
+                        .sheet(isPresented: $showAddBudget){
+                            //AddBudgetView()
                     }
-                    Button {
-                        showAddBudget = true
-                    } label: {
-                        Label("Add Category", systemImage: "plus.circle.fill")
                     }
-                    .sheet(isPresented: $showAddBudget){
-                        AddBudgetView()
                 }
-            }
         }
     }
 }

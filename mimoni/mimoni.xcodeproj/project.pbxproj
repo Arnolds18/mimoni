@@ -16,25 +16,27 @@
 		41019B072861AD1100CBF3D8 /* InputIncome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41019B062861AD1100CBF3D8 /* InputIncome.swift */; };
 		4144A0CD2865985D00917D31 /* SetupBudget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4144A0CC2865985D00917D31 /* SetupBudget.swift */; };
 		416315B62864641600C3B36B /* Wine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416315B52864641600C3B36B /* Wine.swift */; };
-		41BE7EC328698E7100F32CB9 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41BE7EC028698E6900F32CB9 /* Charts.framework */; platformFilter = ios; };
-		41BE7EC428698E7100F32CB9 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 41BE7EC028698E6900F32CB9 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		41BE7EC72869909B00F32CB9 /* AddBudgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BE7EC62869909B00F32CB9 /* AddBudgetView.swift */; };
 		EC0797E12861B2880062E89B /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0797E02861B2880062E89B /* OnboardingView.swift */; };
 		EC0797E32861B5C70062E89B /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0797E22861B5C70062E89B /* LaunchView.swift */; };
+		EC575551286AD8C400CA63B4 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC57554B2869C02E00CA63B4 /* Charts.framework */; platformFilter = ios; };
+		EC575552286AD8C400CA63B4 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EC57554B2869C02E00CA63B4 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EC575558286AF36800CA63B4 /* EditBudgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC575557286AF36800CA63B4 /* EditBudgetView.swift */; };
+		EC57555D286AF69200CA63B4 /* ModalView in Frameworks */ = {isa = PBXBuildFile; productRef = EC57555C286AF69200CA63B4 /* ModalView */; };
 		EC5953E428630A7200B0C200 /* PieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5953E328630A7200B0C200 /* PieChart.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		41BE7EBF28698E6900F32CB9 /* PBXContainerItemProxy */ = {
+		EC57554A2869C02E00CA63B4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 41BE7EBA28698E6900F32CB9 /* Charts.xcodeproj */;
+			containerPortal = EC5755452869C02E00CA63B4 /* Charts.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 65AD9E95D9ED4DC0BD73A743;
 			remoteInfo = Charts;
 		};
-		41BE7EC128698E6900F32CB9 /* PBXContainerItemProxy */ = {
+		EC57554C2869C02E00CA63B4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 41BE7EBA28698E6900F32CB9 /* Charts.xcodeproj */;
+			containerPortal = EC5755452869C02E00CA63B4 /* Charts.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 1CBBC58C6CE1EBEE9852CE41;
 			remoteInfo = ChartsTests;
@@ -48,7 +50,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				41BE7EC428698E7100F32CB9 /* Charts.framework in Embed Frameworks */,
+				EC575552286AD8C400CA63B4 /* Charts.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -67,10 +69,11 @@
 		4144A0CC2865985D00917D31 /* SetupBudget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupBudget.swift; sourceTree = "<group>"; };
 		416315B52864641600C3B36B /* Wine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wine.swift; sourceTree = "<group>"; };
 		416315B72864649200C3B36B /* Charts-master */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "Charts-master"; path = "../../../../../Downloads/Charts-master"; sourceTree = "<group>"; };
-		41BE7EBA28698E6900F32CB9 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../../../../Downloads/Charts-master/Charts.xcodeproj"; sourceTree = "<group>"; };
 		41BE7EC62869909B00F32CB9 /* AddBudgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBudgetView.swift; sourceTree = "<group>"; };
 		EC0797E02861B2880062E89B /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		EC0797E22861B5C70062E89B /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
+		EC5755452869C02E00CA63B4 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../../../../Downloads/Charts-master 2/Charts.xcodeproj"; sourceTree = "<group>"; };
+		EC575557286AF36800CA63B4 /* EditBudgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBudgetView.swift; sourceTree = "<group>"; };
 		EC5953E328630A7200B0C200 /* PieChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,7 +82,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41BE7EC328698E7100F32CB9 /* Charts.framework in Frameworks */,
+				EC575551286AD8C400CA63B4 /* Charts.framework in Frameworks */,
+				EC57555D286AF69200CA63B4 /* ModalView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,10 +118,11 @@
 				41019B062861AD1100CBF3D8 /* InputIncome.swift */,
 				4144A0CC2865985D00917D31 /* SetupBudget.swift */,
 				41BE7EC62869909B00F32CB9 /* AddBudgetView.swift */,
+				EC575557286AF36800CA63B4 /* EditBudgetView.swift */,
 				41019AF72861A9FA00CBF3D8 /* Assets.xcassets */,
 				41019AFC2861A9FA00CBF3D8 /* Persistence.swift */,
+				EC5755452869C02E00CA63B4 /* Charts.xcodeproj */,
 				41019AFE2861A9FA00CBF3D8 /* mimoni.xcdatamodeld */,
-				41BE7EBA28698E6900F32CB9 /* Charts.xcodeproj */,
 				41019AF92861A9FA00CBF3D8 /* Preview Content */,
 			);
 			path = mimoni;
@@ -131,15 +136,6 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		41BE7EBB28698E6900F32CB9 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				41BE7EC028698E6900F32CB9 /* Charts.framework */,
-				41BE7EC228698E6900F32CB9 /* ChartsTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		EC0797DF2861B2640062E89B /* onboarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +143,15 @@
 				EC0797E22861B5C70062E89B /* LaunchView.swift */,
 			);
 			path = onboarding;
+			sourceTree = "<group>";
+		};
+		EC5755462869C02E00CA63B4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EC57554B2869C02E00CA63B4 /* Charts.framework */,
+				EC57554D2869C02E00CA63B4 /* ChartsTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		EC5953DF2863036300B0C200 /* Frameworks */ = {
@@ -182,6 +187,9 @@
 			dependencies = (
 			);
 			name = mimoni;
+			packageProductDependencies = (
+				EC57555C286AF69200CA63B4 /* ModalView */,
+			);
 			productName = mimoni;
 			productReference = 41019AF02861A9F800CBF3D8 /* mimoni.app */;
 			productType = "com.apple.product-type.application";
@@ -210,12 +218,15 @@
 				Base,
 			);
 			mainGroup = 41019AE72861A9F800CBF3D8;
+			packageReferences = (
+				EC57555B286AF69200CA63B4 /* XCRemoteSwiftPackageReference "modal-view" */,
+			);
 			productRefGroup = 41019AF12861A9F800CBF3D8 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 41BE7EBB28698E6900F32CB9 /* Products */;
-					ProjectRef = 41BE7EBA28698E6900F32CB9 /* Charts.xcodeproj */;
+					ProductGroup = EC5755462869C02E00CA63B4 /* Products */;
+					ProjectRef = EC5755452869C02E00CA63B4 /* Charts.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -226,18 +237,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		41BE7EC028698E6900F32CB9 /* Charts.framework */ = {
+		EC57554B2869C02E00CA63B4 /* Charts.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Charts.framework;
-			remoteRef = 41BE7EBF28698E6900F32CB9 /* PBXContainerItemProxy */;
+			remoteRef = EC57554A2869C02E00CA63B4 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		41BE7EC228698E6900F32CB9 /* ChartsTests.xctest */ = {
+		EC57554D2869C02E00CA63B4 /* ChartsTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = ChartsTests.xctest;
-			remoteRef = 41BE7EC128698E6900F32CB9 /* PBXContainerItemProxy */;
+			remoteRef = EC57554C2869C02E00CA63B4 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -260,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				41019B002861A9FA00CBF3D8 /* mimoni.xcdatamodeld in Sources */,
+				EC575558286AF36800CA63B4 /* EditBudgetView.swift in Sources */,
 				EC0797E32861B5C70062E89B /* LaunchView.swift in Sources */,
 				416315B62864641600C3B36B /* Wine.swift in Sources */,
 				41019AFD2861A9FA00CBF3D8 /* Persistence.swift in Sources */,
@@ -470,6 +482,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EC57555B286AF69200CA63B4 /* XCRemoteSwiftPackageReference "modal-view" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/diniska/modal-view";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EC57555C286AF69200CA63B4 /* ModalView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EC57555B286AF69200CA63B4 /* XCRemoteSwiftPackageReference "modal-view" */;
+			productName = ModalView;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		41019AFE2861A9FA00CBF3D8 /* mimoni.xcdatamodeld */ = {
