@@ -31,6 +31,7 @@ struct SetupBudget: View{
     @StateObject var viewModel = SegmentsViewModel()
     @State private var showAddBudget: Bool = false
     
+    
     var body: some View {
         NavigationView{
             VStack{
@@ -47,16 +48,29 @@ struct SetupBudget: View{
                                 SegmentRow(value: segment.value, title: segment.title)
                             }
                             
-                        }
-                        Button {
+                        }.listRowSeparator(.hidden)
                             //showAddBudget = true
-                            viewModel.segments.append(Segment(id: UUID(), title: "Kareo", value: 21312.00))
-                        } label: {
-                            Label("Add Category", systemImage: "plus.circle.fill")
-                        }
+                            //viewModel.segments.append(Segment(id: UUID(), title: "Kareo", value: 21312.00))
+                        ModalLink(destination: AddBudgetView( segment: viewModel), label: {
+                                Label("Add Category", systemImage: "plus.circle.fill")
+                            })
+                        
                         .sheet(isPresented: $showAddBudget){
                             //AddBudgetView()
                     }
+                    }
+                    NavigationLink(destination: SetupBudget(income: self.$income)) {
+                        HStack{
+                            Text("Continue")
+                                .fontWeight(.semibold)
+                        }
+                        .font(.headline)
+                        .frame(width: 350, height: 60)
+                        .foregroundColor(.white)
+                        .background(Color.blue)
+                        .cornerRadius(15)
+//                        .padding(.top, 250)
+                        
                     }
                 }
         }

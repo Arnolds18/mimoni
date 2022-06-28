@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AddBudgetView: View {
     @Environment(\.dismiss) var dismiss
-    //@Binding var
+    @ObservedObject var segment: SegmentsViewModel
     
     @FocusState private var isInputActive: Bool
     @State var totalBudget : Int = 0
@@ -60,7 +60,7 @@ struct AddBudgetView: View {
                   .navigationBarItems(trailing:
                   Button("Add") {
                       print("add")
-                      
+                      segment.segments.append(Segment(id: UUID(), title: budgetCategory, value: Double(totalBudget)))
                   })
             }
         }
