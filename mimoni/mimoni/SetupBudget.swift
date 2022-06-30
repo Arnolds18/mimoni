@@ -13,24 +13,25 @@ import ModalView
 struct Segment: Identifiable{
     var id = UUID()
     
-    let title: String
-    let value: Double
+    var title: String
+    var value: Int
+    var recommended: Bool
 }
 
 class SegmentsViewModel: ObservableObject{
     @Published var segments: [Segment] = [
-        Segment(title: "Kebutuhan", value: 0),
-        Segment(title: "Keinginan", value: 0),
-        Segment(title: "Tabungan", value: 0),
-        Segment(title: "Dana Darurat", value: 0),
+        Segment(title: "Kebutuhan", value: 0, recommended: false),
+        Segment(title: "Keinginan", value: 0, recommended: false),
+        Segment(title: "Tabungan", value: 0, recommended: false),
+        Segment(title: "Dana Darurat", value: 0, recommended: false),
     ]
 }
 
 struct SetupBudget: View{
     @Binding var income: Int
-    @StateObject var viewModel = SegmentsViewModel()
+    @ObservedObject var viewModel = SegmentsViewModel()
     @State private var showAddBudget: Bool = false
-    
+    @State private var totalListBudget = 0
     
     var body: some View {
         NavigationView{
@@ -43,21 +44,21 @@ struct SetupBudget: View{
                     .font(.system(size: 31))
                 ModalPresenter {
                     List{
-                        ForEach(viewModel.segments){ segment in
-                            ModalLink(destination: EditBudgetView( totalBudget: .constant(5), budgetCategory: .constant("Halo"))) {
-                                SegmentRow(value: segment.value, title: segment.title)
+                        ForEach(0..<viewModel.segments.count, id: \.self){ segment in
+                            ModalLink(destination: EditBudgetView(halo: $viewModel.segments[segment])) {
+                                SegmentRow(value: $viewModel.segments[segment].value, title: $viewModel.segments[segment].title, recommended: $viewModel.segments[segment].recommended)
                             }
                             
                         }.listRowSeparator(.hidden)
-                            //showAddBudget = true
-                            //viewModel.segments.append(Segment(id: UUID(), title: "Kareo", value: 21312.00))
+                        //showAddBudget = true
+                        //viewModel.segments.append(Segment(id: UUID(), title: "Kareo", value: 21312.00))
                         ModalLink(destination: AddBudgetView( segment: viewModel), label: {
-                                Label("Add Category", systemImage: "plus.circle.fill")
-                            })
+                            Label("Add Category", systemImage: "plus.circle.fill")
+                        })
                         
                         .sheet(isPresented: $showAddBudget){
                             //AddBudgetView()
-                    }
+                        }
                     }
                     NavigationLink(destination: SetupBudget(income: self.$income)) {
                         HStack{
@@ -67,26 +68,28 @@ struct SetupBudget: View{
                         .font(.headline)
                         .frame(width: 350, height: 60)
                         .foregroundColor(.white)
-                        .background(Color.blue)
+                        //                        .background(Color.blue)
                         .cornerRadius(15)
-//                        .padding(.top, 250)
+                        //                        .padding(.top, 250)
                         
                     }
                 }
+            }
         }
     }
-}
     
     struct SegmentRow: View {
         
-        let value: Double
-        let title: String
+        @Binding var value: Int
+        @Binding var title: String
+        @Binding var recommended: Bool
+        
         var body: some View{
             VStack(alignment: .leading) {
                 HStack{
-                Text(title)
+                    Text(title)
                     Text("\(value)").background(Color.blue)
-                            .frame(maxWidth: .infinity, alignment: .trailing)
+                        .frame(maxWidth: .infinity, alignment: .trailing)
                 }
                 Divider()
             }.listRowSeparator(.hidden)

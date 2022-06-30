@@ -60,7 +60,8 @@ struct AddBudgetView: View {
                   .navigationBarItems(trailing:
                   Button("Add") {
                       print("add")
-                      segment.segments.append(Segment(id: UUID(), title: budgetCategory, value: Double(totalBudget)))
+                      segment.segments.append(Segment(id: UUID(), title: budgetCategory, value: totalBudget, recommended: recomendationEnabled))
+                      segment.objectWillChange.send()
                   })
             }
         }
