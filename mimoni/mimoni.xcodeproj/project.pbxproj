@@ -23,6 +23,7 @@
 		418CCE82287C1120007ED601 /* EditBudgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418CCE80287C1120007ED601 /* EditBudgetView.swift */; };
 		418CCE85287C112C007ED601 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418CCE83287C112B007ED601 /* LaunchView.swift */; };
 		418CCE86287C112C007ED601 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418CCE84287C112B007ED601 /* OnboardingView.swift */; };
+		418CCE93287C16A6007ED601 /* color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418CCE92287C16A6007ED601 /* color.swift */; };
 		EC57555D286AF69200CA63B4 /* ModalView in Frameworks */ = {isa = PBXBuildFile; productRef = EC57555C286AF69200CA63B4 /* ModalView */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +77,7 @@
 		418CCE83287C112B007ED601 /* LaunchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		418CCE84287C112B007ED601 /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		418CCE87287C1158007ED601 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../../../../Downloads/Charts-master/Charts.xcodeproj"; sourceTree = "<group>"; };
+		418CCE92287C16A6007ED601 /* color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 		41019AF22861A9F800CBF3D8 /* mimoni */ = {
 			isa = PBXGroup;
 			children = (
+				418CCE90287C1692007ED601 /* utils */,
 				EC575562286ED79300CA63B4 /* object */,
 				EC575561286ED74000CA63B4 /* component */,
 				EC5953E728631FB400B0C200 /* view */,
@@ -141,6 +144,22 @@
 				418CCE8F287C1158007ED601 /* ChartsTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		418CCE90287C1692007ED601 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				418CCE91287C169B007ED601 /* extensions */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		418CCE91287C169B007ED601 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				418CCE92287C16A6007ED601 /* color.swift */,
+			);
+			path = extensions;
 			sourceTree = "<group>";
 		};
 		EC0797DF2861B2640062E89B /* onboarding */ = {
@@ -299,6 +318,7 @@
 				418CCE7E287C1110007ED601 /* RingsChart.swift in Sources */,
 				418CCE7D287C1110007ED601 /* PieChart.swift in Sources */,
 				41019B002861A9FA00CBF3D8 /* mimoni.xcdatamodeld in Sources */,
+				418CCE93287C16A6007ED601 /* color.swift in Sources */,
 				418CCE85287C112C007ED601 /* LaunchView.swift in Sources */,
 				41019AFD2861A9FA00CBF3D8 /* Persistence.swift in Sources */,
 				418CCE78287C10F5007ED601 /* Wine.swift in Sources */,
