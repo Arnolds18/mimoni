@@ -24,7 +24,6 @@
 		EC575558286AF36800CA63B4 /* EditBudgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC575557286AF36800CA63B4 /* EditBudgetView.swift */; };
 		EC57555D286AF69200CA63B4 /* ModalView in Frameworks */ = {isa = PBXBuildFile; productRef = EC57555C286AF69200CA63B4 /* ModalView */; };
 		EC575565287C070E00CA63B4 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC575564287C070E00CA63B4 /* CardView.swift */; };
-		EC575567287C0B4C00CA63B4 /* RingsChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC575566287C0B4C00CA63B4 /* RingsChart.swift */; };
 		EC5953E428630A7200B0C200 /* PieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5953E328630A7200B0C200 /* PieChart.swift */; };
 /* End PBXBuildFile section */
 
@@ -77,7 +76,6 @@
 		EC5755452869C02E00CA63B4 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../../../../Downloads/Charts-master 2/Charts.xcodeproj"; sourceTree = "<group>"; };
 		EC575557286AF36800CA63B4 /* EditBudgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBudgetView.swift; sourceTree = "<group>"; };
 		EC575564287C070E00CA63B4 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
-		EC575566287C0B4C00CA63B4 /* RingsChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingsChart.swift; sourceTree = "<group>"; };
 		EC5953E328630A7200B0C200 /* PieChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -161,7 +159,6 @@
 			children = (
 				EC5953E328630A7200B0C200 /* PieChart.swift */,
 				EC575564287C070E00CA63B4 /* CardView.swift */,
-				EC575566287C0B4C00CA63B4 /* RingsChart.swift */,
 			);
 			path = component;
 			sourceTree = "<group>";
@@ -300,7 +297,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC575567287C0B4C00CA63B4 /* RingsChart.swift in Sources */,
 				41019B002861A9FA00CBF3D8 /* mimoni.xcdatamodeld in Sources */,
 				EC575558286AF36800CA63B4 /* EditBudgetView.swift in Sources */,
 				EC0797E32861B5C70062E89B /* LaunchView.swift in Sources */,

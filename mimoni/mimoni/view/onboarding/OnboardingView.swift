@@ -27,7 +27,7 @@ struct OnboardingView: View {
             Spacer()
                 
                 VStack(alignment: .leading) {
-                    NewDetail(image: "heart.fill", imageColor: .pink, title: "YOUR BUDGETS SEEN BETTER", description: "Input budgets in different categories to see your expenses tracking.")
+                    NewDetail(image: "", imageColor: .pink, title: "YOUR BUDGETS SEEN BETTER", description: "Input budgets in different categories to see your expenses tracking.")
                     NewDetail(image: "paperclip", imageColor: .red, title: "DAILY BUDGET LIMIT", description: "Know the ideal maximum budget for you to spend daily, with notification.")
                     NewDetail(image: "play.rectangle.fill", imageColor: .blue, title: "TRACK EXPENSES EASILY", description: "Add widget to your home screen to input expenses data easier.")
             }
