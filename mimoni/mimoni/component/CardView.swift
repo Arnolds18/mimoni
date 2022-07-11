@@ -9,6 +9,8 @@ import Foundation
 import SwiftUI
 
 struct CardView: View{
+    @Binding var totalSpend: Segment
+    @Binding var totalCategory: Segment
     
     var body: some View{
         VStack(alignment: .leading){
@@ -17,12 +19,12 @@ struct CardView: View{
                 ZStack(alignment: .leading){
                     Circle() //circle yang belakang
                         .trim(from: 0, to: 1)
-                        .stroke(Color.green.opacity(0.05), lineWidth: 10)
+                        .stroke(Color.green.opacity(0.25), lineWidth: 10)
                         .frame(width: (UIScreen.main.bounds.width - 150) / 3, height: (UIScreen.main.bounds.width - 150) / 3)
                        
                     
                     Circle() //circle depan buat tau datanya berapa
-                        .trim(from: 0, to: 1) //nanti to nya dari data pengeluaran / batas dari budget yang di set
+                        .trim(from: 0, to: 0.3) //nanti to nya dari batas dari budget yang di set - data total pengeluaran
                         .stroke(Color.green, lineWidth: 10)
                         .frame(width: (UIScreen.main.bounds.width - 150) / 3, height: (UIScreen.main.bounds.width - 150) / 3)
                 }
@@ -60,7 +62,7 @@ func getPercent(){
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
         Group{
-            CardView()
+            CardView(totalSpend: .constant(Segment(title: "Test", value: 30, recommended: false)), totalCategory: .constant(Segment(title: "Test", value: 100, recommended: false)))
                 .previewLayout(.sizeThatFits)
         }
     }
