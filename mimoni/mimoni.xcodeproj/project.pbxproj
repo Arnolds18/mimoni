@@ -24,6 +24,7 @@
 		418CCE85287C112C007ED601 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418CCE83287C112B007ED601 /* LaunchView.swift */; };
 		418CCE86287C112C007ED601 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418CCE84287C112B007ED601 /* OnboardingView.swift */; };
 		418CCE93287C16A6007ED601 /* color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418CCE92287C16A6007ED601 /* color.swift */; };
+		418CCE95287C1791007ED601 /* colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418CCE94287C1791007ED601 /* colors.swift */; };
 		EC57555D286AF69200CA63B4 /* ModalView in Frameworks */ = {isa = PBXBuildFile; productRef = EC57555C286AF69200CA63B4 /* ModalView */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +79,7 @@
 		418CCE84287C112B007ED601 /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		418CCE87287C1158007ED601 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../../../../Downloads/Charts-master/Charts.xcodeproj"; sourceTree = "<group>"; };
 		418CCE92287C16A6007ED601 /* color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = color.swift; sourceTree = "<group>"; };
+		418CCE94287C1791007ED601 /* colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				EC5953E728631FB400B0C200 /* view */,
 				41019AF32861A9F800CBF3D8 /* mimoniApp.swift */,
 				41019AF52861A9F800CBF3D8 /* ContentView.swift */,
+				418CCE94287C1791007ED601 /* colors.swift */,
 				41019B062861AD1100CBF3D8 /* InputIncome.swift */,
 				4144A0CC2865985D00917D31 /* SetupBudget.swift */,
 				41019AF72861A9FA00CBF3D8 /* Assets.xcassets */,
@@ -324,6 +327,7 @@
 				418CCE78287C10F5007ED601 /* Wine.swift in Sources */,
 				41019AF62861A9F800CBF3D8 /* ContentView.swift in Sources */,
 				41019AF42861A9F800CBF3D8 /* mimoniApp.swift in Sources */,
+				418CCE95287C1791007ED601 /* colors.swift in Sources */,
 				4144A0CD2865985D00917D31 /* SetupBudget.swift in Sources */,
 				418CCE7C287C1110007ED601 /* CardView.swift in Sources */,
 				41019B072861AD1100CBF3D8 /* InputIncome.swift in Sources */,
