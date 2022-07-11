@@ -20,11 +20,9 @@ struct mimoniApp: App {
                 InputIncome()
             }
             
-
 //            ContentView()
 //                .environment(\.managedObjectContext, persistenceController.container.viewContext)
             
-
         }
     }
 }

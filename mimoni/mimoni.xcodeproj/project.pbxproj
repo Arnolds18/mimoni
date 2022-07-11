@@ -23,6 +23,8 @@
 		EC575552286AD8C400CA63B4 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EC57554B2869C02E00CA63B4 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EC575558286AF36800CA63B4 /* EditBudgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC575557286AF36800CA63B4 /* EditBudgetView.swift */; };
 		EC57555D286AF69200CA63B4 /* ModalView in Frameworks */ = {isa = PBXBuildFile; productRef = EC57555C286AF69200CA63B4 /* ModalView */; };
+		EC575565287C070E00CA63B4 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC575564287C070E00CA63B4 /* CardView.swift */; };
+		EC575567287C0B4C00CA63B4 /* RingsChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC575566287C0B4C00CA63B4 /* RingsChart.swift */; };
 		EC5953E428630A7200B0C200 /* PieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5953E328630A7200B0C200 /* PieChart.swift */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +76,8 @@
 		EC0797E22861B5C70062E89B /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		EC5755452869C02E00CA63B4 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../../../../Downloads/Charts-master 2/Charts.xcodeproj"; sourceTree = "<group>"; };
 		EC575557286AF36800CA63B4 /* EditBudgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBudgetView.swift; sourceTree = "<group>"; };
+		EC575564287C070E00CA63B4 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		EC575566287C0B4C00CA63B4 /* RingsChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingsChart.swift; sourceTree = "<group>"; };
 		EC5953E328630A7200B0C200 /* PieChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,15 +114,13 @@
 		41019AF22861A9F800CBF3D8 /* mimoni */ = {
 			isa = PBXGroup;
 			children = (
+				EC575562286ED79300CA63B4 /* object */,
+				EC575561286ED74000CA63B4 /* component */,
 				EC5953E728631FB400B0C200 /* view */,
-				EC0797DF2861B2640062E89B /* onboarding */,
 				41019AF32861A9F800CBF3D8 /* mimoniApp.swift */,
 				41019AF52861A9F800CBF3D8 /* ContentView.swift */,
-				416315B52864641600C3B36B /* Wine.swift */,
 				41019B062861AD1100CBF3D8 /* InputIncome.swift */,
 				4144A0CC2865985D00917D31 /* SetupBudget.swift */,
-				41BE7EC62869909B00F32CB9 /* AddBudgetView.swift */,
-				EC575557286AF36800CA63B4 /* EditBudgetView.swift */,
 				41019AF72861A9FA00CBF3D8 /* Assets.xcassets */,
 				41019AFC2861A9FA00CBF3D8 /* Persistence.swift */,
 				EC5755452869C02E00CA63B4 /* Charts.xcodeproj */,
@@ -154,6 +156,33 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		EC575561286ED74000CA63B4 /* component */ = {
+			isa = PBXGroup;
+			children = (
+				EC5953E328630A7200B0C200 /* PieChart.swift */,
+				EC575564287C070E00CA63B4 /* CardView.swift */,
+				EC575566287C0B4C00CA63B4 /* RingsChart.swift */,
+			);
+			path = component;
+			sourceTree = "<group>";
+		};
+		EC575562286ED79300CA63B4 /* object */ = {
+			isa = PBXGroup;
+			children = (
+				416315B52864641600C3B36B /* Wine.swift */,
+			);
+			path = object;
+			sourceTree = "<group>";
+		};
+		EC575563286ED85200CA63B4 /* modal */ = {
+			isa = PBXGroup;
+			children = (
+				41BE7EC62869909B00F32CB9 /* AddBudgetView.swift */,
+				EC575557286AF36800CA63B4 /* EditBudgetView.swift */,
+			);
+			path = modal;
+			sourceTree = "<group>";
+		};
 		EC5953DF2863036300B0C200 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,7 +194,8 @@
 		EC5953E728631FB400B0C200 /* view */ = {
 			isa = PBXGroup;
 			children = (
-				EC5953E328630A7200B0C200 /* PieChart.swift */,
+				EC575563286ED85200CA63B4 /* modal */,
+				EC0797DF2861B2640062E89B /* onboarding */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -270,6 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC575567287C0B4C00CA63B4 /* RingsChart.swift in Sources */,
 				41019B002861A9FA00CBF3D8 /* mimoni.xcdatamodeld in Sources */,
 				EC575558286AF36800CA63B4 /* EditBudgetView.swift in Sources */,
 				EC0797E32861B5C70062E89B /* LaunchView.swift in Sources */,
@@ -277,6 +308,7 @@
 				41019AFD2861A9FA00CBF3D8 /* Persistence.swift in Sources */,
 				EC5953E428630A7200B0C200 /* PieChart.swift in Sources */,
 				41019AF62861A9F800CBF3D8 /* ContentView.swift in Sources */,
+				EC575565287C070E00CA63B4 /* CardView.swift in Sources */,
 				EC0797E12861B2880062E89B /* OnboardingView.swift in Sources */,
 				41019AF42861A9F800CBF3D8 /* mimoniApp.swift in Sources */,
 				41BE7EC72869909B00F32CB9 /* AddBudgetView.swift in Sources */,
@@ -407,6 +439,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"mimoni/Preview Content\"";
@@ -436,6 +469,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"mimoni/Preview Content\"";
