@@ -45,7 +45,7 @@ struct SetupBudget: View{
                 ModalPresenter {
                     List{
                         ForEach(0..<viewModel.segments.count, id: \.self){ segment in
-                            ModalLink(destination: EditBudgetView(halo: $viewModel.segments[segment])) {
+                            ModalLink(destination: EditBudgetView(segmentItem: $viewModel.segments[segment])) {
                                 SegmentRow(value: $viewModel.segments[segment].value, title: $viewModel.segments[segment].title, recommended: $viewModel.segments[segment].recommended)
                             }
                             

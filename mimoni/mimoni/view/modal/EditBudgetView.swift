@@ -11,7 +11,7 @@ struct EditBudgetView: View {
     @State var budgetCategory : String = ""
     @State var recomendationEnabled: Bool = false
     
-    @Binding var halo: Segment
+    @Binding var segmentItem: Segment
     
     var numberFormatter : NumberFormatter{
         let numberFormatter = NumberFormatter()
@@ -60,14 +60,14 @@ struct EditBudgetView: View {
                                     Button("Edit") {
                 print("edit")
                 isInputActive = false
-                halo.value = totalBudget
-                halo.title = budgetCategory
-                halo.recommended = recomendationEnabled
+                segmentItem.value = totalBudget
+                segmentItem.title = budgetCategory
+                segmentItem.recommended = recomendationEnabled
             })
         }.onAppear{
-            totalBudget = halo.value
-            budgetCategory = halo.title
-            recomendationEnabled = halo.recommended
+            totalBudget = segmentItem.value
+            budgetCategory = segmentItem.title
+            recomendationEnabled = segmentItem.recommended
         }
     }
 }

@@ -13,17 +13,23 @@ struct OnboardingView: View {
     @EnvironmentObject var viewlaunch: ViewLaunch
     var body: some View {
         VStack {
+            
             Spacer()
-                Text("What's New")
-                    .fontWeight(.heavy)
-                    .font(.system(size: 50))
-                    .frame(width: 300, alignment: .leading)
-        
+                Text("Welcome To ")
+                    .font(.system(size: 40))
+                    .frame(width: 300, alignment: .center)
+            
+            Text("Moneh")
+                .fontWeight(.heavy)
+                .font(.system(size: 50))
+                .frame(width: 300, alignment: .center)
+            
+            Spacer()
                 
                 VStack(alignment: .leading) {
-                    NewDetail(image: "heart.fill", imageColor: .pink, title: "More Personalized", description: "Top Stories picked for you and recommendations from siri.")
-                    NewDetail(image: "paperclip", imageColor: .red, title: "New Spotlight Tab", description: "Discover great stories selected by our editors.")
-                    NewDetail(image: "play.rectangle.fill", imageColor: .blue, title: "Video In Today View", description: "The day's best videos, right in the News widget.")
+                    NewDetail(image: "heart.fill", imageColor: .pink, title: "YOUR BUDGETS SEEN BETTER", description: "Input budgets in different categories to see your expenses tracking.")
+                    NewDetail(image: "paperclip", imageColor: .red, title: "DAILY BUDGET LIMIT", description: "Know the ideal maximum budget for you to spend daily, with notification.")
+                    NewDetail(image: "play.rectangle.fill", imageColor: .blue, title: "TRACK EXPENSES EASILY", description: "Add widget to your home screen to input expenses data easier.")
             }
 
             Spacer()
