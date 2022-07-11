@@ -35,7 +35,8 @@ struct InputIncome: View {
                 TextField("Income", value: $income, formatter: numberFormatter)
                     .focused($isInputActive)
                     .padding()
-                    .overlay(RoundedRectangle(cornerRadius: 12).stroke(Color.gray, lineWidth: 1)).padding()
+                    .textFieldStyle(OvalTextFieldStyle())
+//                    .overlay(RoundedRectangle(cornerRadius: 12).stroke(Color.gray, lineWidth: 1)).padding()
                     .keyboardType(.numberPad)
                     .toolbar {
                         ToolbarItemGroup(placement: .keyboard) {
@@ -53,7 +54,7 @@ struct InputIncome: View {
                     }
                     .font(.headline)
                     .frame(width: 340, height: 50)
-                    .foregroundColor(.black)
+                    .foregroundColor(.blackColor)
                     .background(Color.interactiveColor)
                     .cornerRadius(15)
                     .padding(.top, 250)
