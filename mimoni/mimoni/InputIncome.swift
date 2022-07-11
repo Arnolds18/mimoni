@@ -53,8 +53,8 @@ struct InputIncome: View {
                     }
                     .font(.headline)
                     .frame(width: 340, height: 50)
-                    .foregroundColor(.white)
-                    .background(Color.blue)
+                    .foregroundColor(.black)
+                    .background(Color.interactiveColor)
                     .cornerRadius(15)
                     .padding(.top, 250)
                     
