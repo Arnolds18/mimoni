@@ -36,7 +36,6 @@ struct InputIncome: View {
                     .focused($isInputActive)
                     .padding()
                     .textFieldStyle(OvalTextFieldStyle())
-//                    .overlay(RoundedRectangle(cornerRadius: 12).stroke(Color.gray, lineWidth: 1)).padding()
                     .keyboardType(.numberPad)
                     .toolbar {
                         ToolbarItemGroup(placement: .keyboard) {
