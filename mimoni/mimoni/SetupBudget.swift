@@ -36,7 +36,7 @@ struct SetupBudget: View{
     var body: some View {
         NavigationView{
             VStack{
-                Text("Income")
+                Text("Budget")
                     .fontWeight(.bold)
                     .font(.system(size: 31))
                 Text("Rp. \(income)")
@@ -48,17 +48,22 @@ struct SetupBudget: View{
                             ModalLink(destination: EditBudgetView(segmentItem: $viewModel.segments[segment])) {
                                 SegmentRow(value: $viewModel.segments[segment].value, title: $viewModel.segments[segment].title, recommended: $viewModel.segments[segment].recommended)
                             }
-                            
-                        }.listRowSeparator(.hidden)
+                        }
+                        .listRowSeparator(.hidden)
                         //showAddBudget = true
                         //viewModel.segments.append(Segment(id: UUID(), title: "Kareo", value: 21312.00))
                         ModalLink(destination: AddBudgetView( segment: viewModel), label: {
-                            Label("Add Category", systemImage: "plus.circle.fill")
+                            Label {
+                                Text("Add Category")
+                            } icon: {
+                                Image(systemName: "plus.circle.fill")
+                                    .foregroundColor(.yellowColor)
+                            }
                         })
-                        
                         .sheet(isPresented: $showAddBudget){
                             //AddBudgetView()
                         }
+                        .background(.white)
                     }
                     NavigationLink(destination: SetupBudget(income: self.$income)) {
                         HStack{
@@ -66,16 +71,17 @@ struct SetupBudget: View{
                                 .fontWeight(.semibold)
                         }
                         .font(.headline)
-                        .frame(width: 350, height: 60)
-                        .foregroundColor(.white)
-                        //                        .background(Color.blue)
+                        .frame(width: 340, height: 50)
+                        .foregroundColor(.blackColor)
+                        .background(Color.yellowColor)
                         .cornerRadius(15)
-                        //                        .padding(.top, 250)
+                        .padding(.top, 150)
                         
                     }
                 }
             }
         }
+        .accentColor(.yellowColor)
     }
     
     struct SegmentRow: View {
@@ -88,7 +94,7 @@ struct SetupBudget: View{
             VStack(alignment: .leading) {
                 HStack{
                     Text(title)
-                    Text("\(value)").background(Color.blue)
+                    Text("\(value)")
                         .frame(maxWidth: .infinity, alignment: .trailing)
                 }
                 Divider()
