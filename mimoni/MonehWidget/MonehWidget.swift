@@ -13,15 +13,15 @@ struct Provider: IntentTimelineProvider {
     func placeholder(in context: Context) -> SimpleEntry {
         SimpleEntry(date: Date(), configuration: ConfigurationIntent())
     }
-
+    
     func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (SimpleEntry) -> ()) {
         let entry = SimpleEntry(date: Date(), configuration: configuration)
         completion(entry)
     }
-
+    
     func getTimeline(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         var entries: [SimpleEntry] = []
-
+        
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let currentDate = Date()
         for hourOffset in 0 ..< 5 {
@@ -29,7 +29,7 @@ struct Provider: IntentTimelineProvider {
             let entry = SimpleEntry(date: entryDate, configuration: configuration)
             entries.append(entry)
         }
-
+        
         let timeline = Timeline(entries: entries, policy: .atEnd)
         completion(timeline)
     }
@@ -42,22 +42,45 @@ struct SimpleEntry: TimelineEntry {
 
 struct MonehWidgetEntryView : View {
     var entry: Provider.Entry
-
+    
     var body: some View {
-        Text(entry.date, style: .time)
+        VStack(alignment: .leading){
+            //            Text(entry.date, style: .time)
+            Spacer()
+            Text("Sisa Uang:").font(.caption).frame(alignment: .leading)
+            Spacer()
+            Text("Rp. 2,000,000,-")
+            //            Button(action: {
+            //                self.title = "dsadsa"
+            //            },label: <#T##() -> _#>)
+            Spacer()
+            Button(action: {""
+            }, label: {
+                Text("+Add Expenses")
+                    .font(.caption)
+                    .fontWeight(.semibold)
+                    .foregroundColor(.black)
+                    .padding()
+                    .background(Color.yellow
+                        .cornerRadius (8)
+                    )
+            })
+            Spacer()
+        }
     }
 }
 
 @main
 struct MonehWidget: Widget {
     let kind: String = "MonehWidget"
-
+    
     var body: some WidgetConfiguration {
         IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
             MonehWidgetEntryView(entry: entry)
         }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
+        .configurationDisplayName("Moneh Widget")
+        .description("Moneh widget Small")
+        .supportedFamilies([.systemSmall])
     }
 }
 
