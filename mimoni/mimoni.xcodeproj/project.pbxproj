@@ -24,6 +24,8 @@
 		EC575558286AF36800CA63B4 /* EditBudgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC575557286AF36800CA63B4 /* EditBudgetView.swift */; };
 		EC57555D286AF69200CA63B4 /* ModalView in Frameworks */ = {isa = PBXBuildFile; productRef = EC57555C286AF69200CA63B4 /* ModalView */; };
 		EC575565287C070E00CA63B4 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC575564287C070E00CA63B4 /* CardView.swift */; };
+		EC575569287C2AEF00CA63B4 /* WalletCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC575568287C2AEF00CA63B4 /* WalletCardView.swift */; };
+		EC57556B287C2AFB00CA63B4 /* RecommendationCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC57556A287C2AFB00CA63B4 /* RecommendationCardView.swift */; };
 		EC5953E428630A7200B0C200 /* PieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5953E328630A7200B0C200 /* PieChart.swift */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +78,8 @@
 		EC5755452869C02E00CA63B4 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../../../../Downloads/Charts-master 2/Charts.xcodeproj"; sourceTree = "<group>"; };
 		EC575557286AF36800CA63B4 /* EditBudgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBudgetView.swift; sourceTree = "<group>"; };
 		EC575564287C070E00CA63B4 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		EC575568287C2AEF00CA63B4 /* WalletCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletCardView.swift; sourceTree = "<group>"; };
+		EC57556A287C2AFB00CA63B4 /* RecommendationCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationCardView.swift; sourceTree = "<group>"; };
 		EC5953E328630A7200B0C200 /* PieChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -159,6 +163,8 @@
 			children = (
 				EC5953E328630A7200B0C200 /* PieChart.swift */,
 				EC575564287C070E00CA63B4 /* CardView.swift */,
+				EC575568287C2AEF00CA63B4 /* WalletCardView.swift */,
+				EC57556A287C2AFB00CA63B4 /* RecommendationCardView.swift */,
 			);
 			path = component;
 			sourceTree = "<group>";
@@ -302,12 +308,14 @@
 				EC0797E32861B5C70062E89B /* LaunchView.swift in Sources */,
 				416315B62864641600C3B36B /* Wine.swift in Sources */,
 				41019AFD2861A9FA00CBF3D8 /* Persistence.swift in Sources */,
+				EC575569287C2AEF00CA63B4 /* WalletCardView.swift in Sources */,
 				EC5953E428630A7200B0C200 /* PieChart.swift in Sources */,
 				41019AF62861A9F800CBF3D8 /* ContentView.swift in Sources */,
 				EC575565287C070E00CA63B4 /* CardView.swift in Sources */,
 				EC0797E12861B2880062E89B /* OnboardingView.swift in Sources */,
 				41019AF42861A9F800CBF3D8 /* mimoniApp.swift in Sources */,
 				41BE7EC72869909B00F32CB9 /* AddBudgetView.swift in Sources */,
+				EC57556B287C2AFB00CA63B4 /* RecommendationCardView.swift in Sources */,
 				4144A0CD2865985D00917D31 /* SetupBudget.swift in Sources */,
 				41019B072861AD1100CBF3D8 /* InputIncome.swift in Sources */,
 			);

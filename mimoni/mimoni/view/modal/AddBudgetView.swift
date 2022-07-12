@@ -15,6 +15,7 @@ struct AddBudgetView: View {
     @State var totalBudget : Int = 0
     @State var budgetCategory : String = ""
     @State var recomendationEnabled: Bool = false
+    @Binding var ramdom:Bool
 
     var numberFormatter : NumberFormatter{
         let numberFormatter = NumberFormatter()
@@ -42,6 +43,7 @@ struct AddBudgetView: View {
                                       Spacer()
                                       Button("Done") {
                                           isInputActive = false
+                                          ramdom.toggle()
                                       }
                                   }
                               }
@@ -62,6 +64,7 @@ struct AddBudgetView: View {
                       print("add")
                       segment.segments.append(Segment(id: UUID(), title: budgetCategory, value: totalBudget, recommended: recomendationEnabled))
                       segment.objectWillChange.send()
+                      ramdom.toggle()
                   })
             }
         }

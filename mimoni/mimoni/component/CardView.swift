@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import Charts
 
 struct CardView: View{
     @Binding var totalSpend: Segment
