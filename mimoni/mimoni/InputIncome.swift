@@ -45,7 +45,7 @@ struct InputIncome: View {
                             }
                         }
                     }
-
+                Spacer()
                 NavigationLink(destination: SetupBudget(income: self.$income)) {
                     HStack{
                         Text("Continue")
@@ -56,11 +56,16 @@ struct InputIncome: View {
                     .foregroundColor(.blackColor)
                     .background(Color.interactiveColor)
                     .cornerRadius(15)
-                    .padding(.top, 250)
-                    
                 }
             }
-            .padding()
+            .frame(maxWidth:.infinity)
+            .toolbar{
+                Button("Skip"){
+                    print("skip tapped")
+                }
+                .foregroundColor(.interactiveColor)
+            }
+            .background(Color.whiteColor.ignoresSafeArea())
         }
     }
 }

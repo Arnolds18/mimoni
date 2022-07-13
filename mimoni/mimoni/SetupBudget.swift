@@ -32,9 +32,8 @@ struct SetupBudget: View{
     @ObservedObject var viewModel = SegmentsViewModel()
     @State private var showAddBudget: Bool = false
     @State private var totalListBudget = 0
-    
+
     var body: some View {
-        NavigationView{
             VStack{
                 Text("Budget")
                     .fontWeight(.bold)
@@ -48,22 +47,20 @@ struct SetupBudget: View{
                             ModalLink(destination: EditBudgetView(segmentItem: $viewModel.segments[segment])) {
                                 SegmentRow(value: $viewModel.segments[segment].value, title: $viewModel.segments[segment].title, recommended: $viewModel.segments[segment].recommended)
                             }
+                            .foregroundColor(.black)
                         }
                         .listRowSeparator(.hidden)
-                        //showAddBudget = true
-                        //viewModel.segments.append(Segment(id: UUID(), title: "Kareo", value: 21312.00))
                         ModalLink(destination: AddBudgetView( segment: viewModel), label: {
                             Label {
                                 Text("Add Category")
+                                    .foregroundColor(.black)
                             } icon: {
                                 Image(systemName: "plus.circle.fill")
-                                    .foregroundColor(.yellowColor)
+                                    .foregroundColor(.interactiveColor)
                             }
                         })
                         .sheet(isPresented: $showAddBudget){
-                            //AddBudgetView()
                         }
-                        .background(.white)
                     }
                     NavigationLink(destination: SetupBudget(income: self.$income)) {
                         HStack{
@@ -73,15 +70,13 @@ struct SetupBudget: View{
                         .font(.headline)
                         .frame(width: 340, height: 50)
                         .foregroundColor(.blackColor)
-                        .background(Color.yellowColor)
+                        .background(Color.interactiveColor)
                         .cornerRadius(15)
-                        .padding(.top, 150)
-                        
+                        .padding()
                     }
                 }
             }
-        }
-        .accentColor(.yellowColor)
+            .background(Color.whiteColor.ignoresSafeArea())
     }
     
     struct SegmentRow: View {

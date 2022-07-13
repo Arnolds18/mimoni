@@ -26,6 +26,8 @@
 		418CCE93287C16A6007ED601 /* color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418CCE92287C16A6007ED601 /* color.swift */; };
 		418CCE95287C1791007ED601 /* colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418CCE94287C1791007ED601 /* colors.swift */; };
 		418CCE97287C230F007ED601 /* textfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418CCE96287C230F007ED601 /* textfield.swift */; };
+		41FC9C18287EB51B001F5262 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 418CCE8D287C1158007ED601 /* Charts.framework */; platformFilter = ios; };
+		41FC9C19287EB51B001F5262 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 418CCE8D287C1158007ED601 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EC57555D286AF69200CA63B4 /* ModalView in Frameworks */ = {isa = PBXBuildFile; productRef = EC57555C286AF69200CA63B4 /* ModalView */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +55,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				41FC9C19287EB51B001F5262 /* Charts.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -90,6 +93,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC57555D286AF69200CA63B4 /* ModalView in Frameworks */,
+				41FC9C18287EB51B001F5262 /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
