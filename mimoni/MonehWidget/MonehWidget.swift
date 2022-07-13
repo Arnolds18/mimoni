@@ -21,20 +21,14 @@ struct MonehWidgetBundle: WidgetBundle {
 
 struct MonehWidget: Widget {
     let kind: String = "MonehWidgetSmall"
-    
     var body: some WidgetConfiguration {
         IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
             MonehWidgetEntryView(entry: entry)
         }
         .configurationDisplayName("Moneh Widget")
         .description("Moneh widget Small")
-        .supportedFamilies([.systemSmall])
+        .supportedFamilies([.systemSmall, .systemMedium])
     }
 }
 
-struct MonehWidget_Previews: PreviewProvider {
-    static var previews: some View {
-        MonehWidgetEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-            .previewContext(WidgetPreviewContext(family: .systemSmall))
-    }
-}
+
