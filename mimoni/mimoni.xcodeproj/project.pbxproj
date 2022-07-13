@@ -27,6 +27,8 @@
 		A0101688287D671A00F9D128 /* MonehWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = A0101683287D671800F9D128 /* MonehWidget.intentdefinition */; };
 		A010168B287D671A00F9D128 /* MonehWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A010167B287D671800F9D128 /* MonehWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A0C34EF1287EB8EE0029522B /* TimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C34EF0287EB8EE0029522B /* TimelineProvider.swift */; };
+		A0C34EF3287EBF900029522B /* TimelineEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C34EF2287EBF900029522B /* TimelineEntry.swift */; };
+		A0C34EF7287EC0100029522B /* MonehWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C34EF6287EC0100029522B /* MonehWidgetView.swift */; };
 		EC0797E12861B2880062E89B /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0797E02861B2880062E89B /* OnboardingView.swift */; };
 		EC0797E32861B5C70062E89B /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0797E22861B5C70062E89B /* LaunchView.swift */; };
 		EC575558286AF36800CA63B4 /* EditBudgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC575557286AF36800CA63B4 /* EditBudgetView.swift */; };
@@ -107,6 +109,8 @@
 		A0101684287D671A00F9D128 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0101686287D671A00F9D128 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0C34EF0287EB8EE0029522B /* TimelineProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineProvider.swift; sourceTree = "<group>"; };
+		A0C34EF2287EBF900029522B /* TimelineEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineEntry.swift; sourceTree = "<group>"; };
+		A0C34EF6287EC0100029522B /* MonehWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonehWidgetView.swift; sourceTree = "<group>"; };
 		EC0797E02861B2880062E89B /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		EC0797E22861B5C70062E89B /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		EC575557286AF36800CA63B4 /* EditBudgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBudgetView.swift; sourceTree = "<group>"; };
@@ -196,7 +200,9 @@
 			isa = PBXGroup;
 			children = (
 				A0101681287D671800F9D128 /* MonehWidget.swift */,
+				A0C34EF6287EC0100029522B /* MonehWidgetView.swift */,
 				A0C34EF0287EB8EE0029522B /* TimelineProvider.swift */,
+				A0C34EF2287EBF900029522B /* TimelineEntry.swift */,
 				A0101683287D671800F9D128 /* MonehWidget.intentdefinition */,
 				A0101684287D671A00F9D128 /* Assets.xcassets */,
 				A0101686287D671A00F9D128 /* Info.plist */,
@@ -414,7 +420,9 @@
 			files = (
 				A0C34EF1287EB8EE0029522B /* TimelineProvider.swift in Sources */,
 				A0101687287D671A00F9D128 /* MonehWidget.intentdefinition in Sources */,
+				A0C34EF7287EC0100029522B /* MonehWidgetView.swift in Sources */,
 				A0101682287D671800F9D128 /* MonehWidget.swift in Sources */,
+				A0C34EF3287EBF900029522B /* TimelineEntry.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
