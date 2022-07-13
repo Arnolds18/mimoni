@@ -51,11 +51,12 @@ struct EditBudgetView: View {
                     }
                 }
             }
+            .background(Color.whiteColor)
             .navigationBarTitle(Text("Budget"), displayMode: .inline)
             .navigationBarItems(leading:
                                     Button("Cancel") {
                 dismiss()
-            })
+            }.foregroundColor(Color.interactiveColor))
             .navigationBarItems(trailing:
                                     Button("Edit") {
                 print("edit")
@@ -63,7 +64,7 @@ struct EditBudgetView: View {
                 segmentItem.value = totalBudget
                 segmentItem.title = budgetCategory
                 segmentItem.recommended = recomendationEnabled
-            })
+            }.foregroundColor(Color.interactiveColor))
         }.onAppear{
             totalBudget = segmentItem.value
             budgetCategory = segmentItem.title

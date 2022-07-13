@@ -56,13 +56,15 @@ struct AddBudgetView: View {
                   .navigationBarItems(leading:
                   Button("Cancel") {
                       dismiss()
-                  })
+                  }.foregroundColor(Color.interactiveColor))
+                
                   .navigationBarItems(trailing:
                   Button("Add") {
                       print("add")
                       segment.segments.append(Segment(id: UUID(), title: budgetCategory, value: totalBudget, recommended: recomendationEnabled))
                       segment.objectWillChange.send()
-                  })
+                  }.foregroundColor(Color.interactiveColor))
+                  .background(Color.whiteColor)
             }
         }
 }
