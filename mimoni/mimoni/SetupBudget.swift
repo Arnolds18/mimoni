@@ -28,7 +28,7 @@ class SegmentsViewModel: ObservableObject{
 }
 
 struct SetupBudget: View{
-    @Environment(\.dismiss) private var dismiss
+//    @Environment(\.dismiss) private var dismiss
     @Binding var income: Int
     @ObservedObject var viewModel = SegmentsViewModel()
     @State private var showAddBudget: Bool = false
@@ -75,16 +75,15 @@ struct SetupBudget: View{
                     .padding()
                 }
             }
-            .navigationBarBackButtonHidden(true)
-
+//            .navigationBarBackButtonHidden(true)
             .navigationBarItems(trailing:
             Button("Skip") {
                 print("skip tapped")
             }
                 .foregroundColor(Color.interactiveColor))
         
-            .navigationBarItems(leading:
-                                    NavBarBackButton(dismiss:self.dismiss))
+//            .navigationBarItems(leading:
+//                                    NavBarBackButton(dismiss:self.dismiss))
         
             .background(Color.whiteColor.ignoresSafeArea())
         

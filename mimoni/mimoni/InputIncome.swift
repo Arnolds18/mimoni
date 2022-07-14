@@ -68,6 +68,7 @@ struct InputIncome: View {
             
             .background(Color.whiteColor.ignoresSafeArea())
         }
+        .accentColor(Color.interactiveColor)
     }
 }
 
