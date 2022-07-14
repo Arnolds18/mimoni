@@ -13,71 +13,72 @@ struct MonehWidgetEntryView : View {
     var entry: Provider.Entry
     var body: some View {
         switch family{
+        case .systemSmall:
+//            Text("Test Widget Small")
+                        VStack(alignment: .leading){
+                            //            Text(entry.date, style: .time)
+                            Spacer()
+                            Text("Sisa Uang:").font(.caption).frame(alignment: .leading)
+                            Spacer()
+                            Text("Rp. 2,000,000,-")
+                            Spacer()
+                            Button(action: {""
+                            }, label: {
+                                Text("+Add Expenses")
+                                    .font(.caption)
+                                    .fontWeight(.semibold)
+                                    .foregroundColor(.black)
+                                    .padding()
+                                    .background(Color.yellow
+                                        .cornerRadius (8)
+                                    )
+                            })
+                            Spacer()
+                        }
         case .systemMedium:
             Text("Test Widget Medium")
-            //            VStack(alignment: .leading){
-            //                //            Text(entry.date, style: .time)
-            //                Spacer()
-            //                Text("Sisa Uang:").font(.caption).frame(alignment: .leading)
-            //                Spacer()
-            //                Text("Rp. 2,000,000,-")
-            //                Spacer()
-            //                Button(action: {""
-            //                }, label: {
-            //                    Text("+Add Expenses")
-            //                        .font(.caption)
-            //                        .fontWeight(.semibold)
-            //                        .foregroundColor(.black)
-            //                        .padding()
-            //                        .background(Color.yellow
-            //                            .cornerRadius (8)
-            //                        )
-            //                })
-            //                Spacer()
-            //            }
-        case .systemSmall:
-            Text("Test Widget Small")
-            //            VStack(alignment: .leading){
-            //                        //            Text(entry.date, style: .time)
-            //                        Spacer()
-            //                        Text("Sisa Uang:").font(.caption).frame(alignment: .leading)
-            //                        Spacer()
-            //                        Text("Rp. 2,000,000,-")
-            //                        Spacer()
-            //                        Button(action: {""
-            //                        }, label: {
-            //                            Text("+Add Expenses")
-            //                                .font(.caption)
-            //                                .fontWeight(.semibold)
-            //                                .foregroundColor(.black)
-            //                                .padding()
-            //                                .background(Color.yellow
-            //                                    .cornerRadius (8)
-            //                                )
-            //                        })
-            //                        Spacer()
-            //                    }
+//                        VStack(alignment: .leading){
+//                                    //            Text(entry.date, style: .time)
+//                                    Spacer()
+//                                    Text("Sisa Uang:").font(.caption).frame(alignment: .leading)
+//                                    Spacer()
+//                                    Text("Rp. 2,000,000,-")
+//                                    Spacer()
+//                                    Button(action: {""
+//                                    }, label: {
+//                                        Text("+Add Expenses")
+//                                            .font(.caption)
+//                                            .fontWeight(.semibold)
+//                                            .foregroundColor(.black)
+//                                            .padding()
+//                                            .background(Color.yellow
+//                                                .cornerRadius (8)
+//                                            )
+//                                    })
+//                                    Spacer()
+//                                }
         default:
-            VStack(alignment: .leading){
-                //            Text(entry.date, style: .time)
-                Spacer()
-                Text("Sisa Uang:").font(.caption).frame(alignment: .leading)
-                Spacer()
-                Text("Rp. 2,000,000,-")
-                Spacer()
-                Button(action: {""
-                }, label: {
-                    Text("+Add Expenses")
-                        .font(.caption)
-                        .fontWeight(.semibold)
-                        .foregroundColor(.black)
-                        .padding()
-                        .background(Color.yellow
-                            .cornerRadius (8)
-                        )
-                })
-                Spacer()
-            }
+            Text("None")
+//            VStack(alignment: .leading){
+//                //            Text(entry.date, style: .time)
+//                Spacer()
+//                Text("Sisa Uang:").font(.caption).frame(alignment: .leading)
+//                Spacer()
+//                Text("Rp. 2,000,000,-")
+//                Spacer()
+//                Button(action: {""
+//                }, label: {
+//                    Text("+Add Expenses")
+//                        .font(.caption)
+//                        .fontWeight(.semibold)
+//                        .foregroundColor(.black)
+//                        .padding()
+//                        .background(Color.yellow
+//                            .cornerRadius (8)
+//                        )
+//                })
+//                Spacer()
+//            }
         }
     }
 }
