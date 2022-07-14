@@ -3,8 +3,7 @@
 import SwiftUI
 
 struct EditBudgetView: View {
-    @Environment(\.dismiss) var dismiss
-    //@Binding var
+    @Environment(\.dismiss) private var dismiss
     
     @FocusState private var isInputActive: Bool
     @State var totalBudget : Int = 0
@@ -51,11 +50,12 @@ struct EditBudgetView: View {
                     }
                 }
             }
+            .background(Color.whiteColor)
             .navigationBarTitle(Text("Budget"), displayMode: .inline)
             .navigationBarItems(leading:
                                     Button("Cancel") {
                 dismiss()
-            })
+            }.foregroundColor(Color.interactiveColor))
             .navigationBarItems(trailing:
                                     Button("Edit") {
                 print("edit")
@@ -63,7 +63,7 @@ struct EditBudgetView: View {
                 segmentItem.value = totalBudget
                 segmentItem.title = budgetCategory
                 segmentItem.recommended = recomendationEnabled
-            })
+            }.foregroundColor(Color.interactiveColor))
         }.onAppear{
             totalBudget = segmentItem.value
             budgetCategory = segmentItem.title

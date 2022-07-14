@@ -34,8 +34,8 @@ struct InputIncome: View {
                 
                 TextField("Income", value: $income, formatter: numberFormatter)
                     .focused($isInputActive)
-                    .textFieldStyle(.roundedBorder)
                     .padding()
+                    .textFieldStyle(OvalTextFieldStyle())
                     .keyboardType(.numberPad)
                     .toolbar {
                         ToolbarItemGroup(placement: .keyboard) {
@@ -45,23 +45,30 @@ struct InputIncome: View {
                             }
                         }
                     }
-
+                Spacer()
                 NavigationLink(destination: SetupBudget(income: self.$income)) {
                     HStack{
                         Text("Continue")
                             .fontWeight(.semibold)
                     }
                     .font(.headline)
-                    .frame(width: 350, height: 60)
-                    .foregroundColor(.white)
-                    .background(Color.blue)
+                    .frame(width: 340, height: 50)
+                    .foregroundColor(.blackColor)
+                    .background(Color.interactiveColor)
                     .cornerRadius(15)
-                    .padding(.top, 250)
-                    
                 }
             }
-            .padding()
+            .frame(maxWidth:.infinity)
+            .navigationBarBackButtonHidden(true)
+            .navigationBarItems(trailing:
+            Button("Skip") {
+                print("skip tapped")
+            }
+                .foregroundColor(Color.interactiveColor))
+            
+            .background(Color.whiteColor.ignoresSafeArea())
         }
+        .accentColor(Color.interactiveColor)
     }
 }
 

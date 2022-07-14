@@ -11,6 +11,12 @@ import SwiftUI
 struct mimoniApp: App {
     @AppStorage("isOnboarding") var isOnboarding = true
 
+    
+    init() {
+        UITableView.appearance().backgroundColor = .clear
+        UINavigationBar.appearance().backgroundColor = .clear
+    }
+    
     var body: some Scene {
         WindowGroup {
 

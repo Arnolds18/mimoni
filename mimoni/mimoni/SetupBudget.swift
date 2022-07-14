@@ -28,15 +28,15 @@ class SegmentsViewModel: ObservableObject{
 }
 
 struct SetupBudget: View{
+//    @Environment(\.dismiss) private var dismiss
     @Binding var income: Int
     @ObservedObject var viewModel = SegmentsViewModel()
     @State private var showAddBudget: Bool = false
     @State private var totalListBudget = 0
-    
+
     var body: some View {
-        NavigationView{
             VStack{
-                Text("Income")
+                Text("Budget")
                     .fontWeight(.bold)
                     .font(.system(size: 31))
                 Text("Rp. \(income)")
@@ -48,34 +48,45 @@ struct SetupBudget: View{
                             ModalLink(destination: EditBudgetView(segmentItem: $viewModel.segments[segment])) {
                                 SegmentRow(value: $viewModel.segments[segment].value, title: $viewModel.segments[segment].title, recommended: $viewModel.segments[segment].recommended)
                             }
-                            
-                        }.listRowSeparator(.hidden)
-                        //showAddBudget = true
-                        //viewModel.segments.append(Segment(id: UUID(), title: "Kareo", value: 21312.00))
+                            .foregroundColor(.black)
+                        }
+                        .listRowSeparator(.hidden)
                         ModalLink(destination: AddBudgetView( segment: viewModel), label: {
-                            Label("Add Category", systemImage: "plus.circle.fill")
+                            Label {
+                                Text("Add Category")
+                                    .foregroundColor(.black)
+                            } icon: {
+                                Image(systemName: "plus.circle.fill")
+                                    .foregroundColor(.interactiveColor)
+                            }
                         })
-                        
-                        .sheet(isPresented: $showAddBudget){
-                            //AddBudgetView()
-                        }
-                    }
-                    NavigationLink(destination: SetupBudget(income: self.$income)) {
-                        HStack{
-                            Text("Continue")
-                                .fontWeight(.semibold)
-                        }
-                        .font(.headline)
-                        .frame(width: 350, height: 60)
-                        .foregroundColor(.white)
-                        //                        .background(Color.blue)
-                        .cornerRadius(15)
-                        //                        .padding(.top, 250)
-                        
                     }
                 }
+                NavigationLink(destination: SetupBudget(income: self.$income)) {
+                    HStack{
+                        Text("Continue")
+                            .fontWeight(.semibold)
+                    }
+                    .font(.headline)
+                    .frame(width: 340, height: 50)
+                    .foregroundColor(.blackColor)
+                    .background(Color.interactiveColor)
+                    .cornerRadius(15)
+                    .padding()
+                }
             }
-        }
+//            .navigationBarBackButtonHidden(true)
+            .navigationBarItems(trailing:
+            Button("Skip") {
+                print("skip tapped")
+            }
+                .foregroundColor(Color.interactiveColor))
+        
+//            .navigationBarItems(leading:
+//                                    NavBarBackButton(dismiss:self.dismiss))
+        
+            .background(Color.whiteColor.ignoresSafeArea())
+        
     }
     
     struct SegmentRow: View {
@@ -88,7 +99,7 @@ struct SetupBudget: View{
             VStack(alignment: .leading) {
                 HStack{
                     Text(title)
-                    Text("\(value)").background(Color.blue)
+                    Text("\(value)")
                         .frame(maxWidth: .infinity, alignment: .trailing)
                 }
                 Divider()
