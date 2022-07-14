@@ -108,7 +108,7 @@ struct MonehWidgetEntryView : View {
                                 .trim(from: 0.090, to: 0.75) //nanti to nya dari batas dari budget yang di set - data total pengeluaran
                                 .stroke(Color.green, lineWidth: 8)
                                 .frame(width: (UIScreen.main.bounds.width - 310) / 2, height: (UIScreen.main.bounds.width - 310) / 2)
-                            Text("72%")
+                            Text("75%")
                                 .frame(maxWidth: 41, alignment: .center)
                                 .font(.system(size: 8))
                         }.padding(EdgeInsets(top: 6, leading: 0, bottom: 5, trailing: 0))
