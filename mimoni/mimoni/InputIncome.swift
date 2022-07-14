@@ -59,12 +59,13 @@ struct InputIncome: View {
                 }
             }
             .frame(maxWidth:.infinity)
-            .toolbar{
-                Button("Skip"){
-                    print("skip tapped")
-                }
-                .foregroundColor(.interactiveColor)
+            .navigationBarBackButtonHidden(true)
+            .navigationBarItems(trailing:
+            Button("Skip") {
+                print("skip tapped")
             }
+                .foregroundColor(Color.interactiveColor))
+            
             .background(Color.whiteColor.ignoresSafeArea())
         }
     }

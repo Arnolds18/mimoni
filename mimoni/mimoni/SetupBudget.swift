@@ -28,6 +28,7 @@ class SegmentsViewModel: ObservableObject{
 }
 
 struct SetupBudget: View{
+    @Environment(\.dismiss) private var dismiss
     @Binding var income: Int
     @ObservedObject var viewModel = SegmentsViewModel()
     @State private var showAddBudget: Bool = false
@@ -59,24 +60,34 @@ struct SetupBudget: View{
                                     .foregroundColor(.interactiveColor)
                             }
                         })
-                        .sheet(isPresented: $showAddBudget){
-                        }
-                    }
-                    NavigationLink(destination: SetupBudget(income: self.$income)) {
-                        HStack{
-                            Text("Continue")
-                                .fontWeight(.semibold)
-                        }
-                        .font(.headline)
-                        .frame(width: 340, height: 50)
-                        .foregroundColor(.blackColor)
-                        .background(Color.interactiveColor)
-                        .cornerRadius(15)
-                        .padding()
                     }
                 }
+                NavigationLink(destination: SetupBudget(income: self.$income)) {
+                    HStack{
+                        Text("Continue")
+                            .fontWeight(.semibold)
+                    }
+                    .font(.headline)
+                    .frame(width: 340, height: 50)
+                    .foregroundColor(.blackColor)
+                    .background(Color.interactiveColor)
+                    .cornerRadius(15)
+                    .padding()
+                }
             }
+            .navigationBarBackButtonHidden(true)
+
+            .navigationBarItems(trailing:
+            Button("Skip") {
+                print("skip tapped")
+            }
+                .foregroundColor(Color.interactiveColor))
+        
+            .navigationBarItems(leading:
+                                    NavBarBackButton(dismiss:self.dismiss))
+        
             .background(Color.whiteColor.ignoresSafeArea())
+        
     }
     
     struct SegmentRow: View {

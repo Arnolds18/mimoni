@@ -3,8 +3,7 @@
 import SwiftUI
 
 struct EditBudgetView: View {
-    @Environment(\.dismiss) var dismiss
-    //@Binding var
+    @Environment(\.dismiss) private var dismiss
     
     @FocusState private var isInputActive: Bool
     @State var totalBudget : Int = 0

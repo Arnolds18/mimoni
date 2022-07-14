@@ -14,6 +14,7 @@
 		41019AFD2861A9FA00CBF3D8 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41019AFC2861A9FA00CBF3D8 /* Persistence.swift */; };
 		41019B002861A9FA00CBF3D8 /* mimoni.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 41019AFE2861A9FA00CBF3D8 /* mimoni.xcdatamodeld */; };
 		41019B072861AD1100CBF3D8 /* InputIncome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41019B062861AD1100CBF3D8 /* InputIncome.swift */; };
+		410774BE287FFD3A00E72F46 /* NavBarBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410774BB287FFD3A00E72F46 /* NavBarBackButton.swift */; };
 		4144A0CD2865985D00917D31 /* SetupBudget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4144A0CC2865985D00917D31 /* SetupBudget.swift */; };
 		418CCE78287C10F5007ED601 /* Wine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418CCE77287C10F5007ED601 /* Wine.swift */; };
 		418CCE7C287C1110007ED601 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418CCE79287C110F007ED601 /* CardView.swift */; };
@@ -71,6 +72,7 @@
 		41019AFC2861A9FA00CBF3D8 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		41019AFF2861A9FA00CBF3D8 /* mimoni.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = mimoni.xcdatamodel; sourceTree = "<group>"; };
 		41019B062861AD1100CBF3D8 /* InputIncome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputIncome.swift; sourceTree = "<group>"; };
+		410774BB287FFD3A00E72F46 /* NavBarBackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavBarBackButton.swift; sourceTree = "<group>"; };
 		4144A0CC2865985D00917D31 /* SetupBudget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupBudget.swift; sourceTree = "<group>"; };
 		416315B72864649200C3B36B /* Charts-master */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "Charts-master"; path = "../../../../../Downloads/Charts-master"; sourceTree = "<group>"; };
 		418CCE77287C10F5007ED601 /* Wine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wine.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 		418CCE90287C1692007ED601 /* utils */ = {
 			isa = PBXGroup;
 			children = (
+				410774BB287FFD3A00E72F46 /* NavBarBackButton.swift */,
 				418CCE91287C169B007ED601 /* extensions */,
 			);
 			path = utils;
@@ -329,6 +332,7 @@
 				418CCE7D287C1110007ED601 /* PieChart.swift in Sources */,
 				41019B002861A9FA00CBF3D8 /* mimoni.xcdatamodeld in Sources */,
 				418CCE93287C16A6007ED601 /* color.swift in Sources */,
+				410774BE287FFD3A00E72F46 /* NavBarBackButton.swift in Sources */,
 				418CCE85287C112C007ED601 /* LaunchView.swift in Sources */,
 				41019AFD2861A9FA00CBF3D8 /* Persistence.swift in Sources */,
 				418CCE78287C10F5007ED601 /* Wine.swift in Sources */,
