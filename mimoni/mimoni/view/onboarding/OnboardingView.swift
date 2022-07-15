@@ -27,9 +27,9 @@ struct OnboardingView: View {
             Spacer()
                 
                 VStack(alignment: .leading) {
-                    NewDetail(image: "heart.fill", imageColor: .pink, title: "YOUR BUDGETS SEEN BETTER", description: "Input budgets in different categories to see your expenses tracking.")
-                    NewDetail(image: "paperclip", imageColor: .red, title: "DAILY BUDGET LIMIT", description: "Know the ideal maximum budget for you to spend daily, with notification.")
-                    NewDetail(image: "play.rectangle.fill", imageColor: .blue, title: "TRACK EXPENSES EASILY", description: "Add widget to your home screen to input expenses data easier.")
+                    NewDetail(image: "onboarding-1", imageColor: .pink, title: "YOUR BUDGETS SEEN BETTER", description: "Input budgets in different categories to see your expenses tracking.")
+                    NewDetail(image: "onboarding-2", imageColor: .red, title: "DAILY BUDGET LIMIT", description: "Know the ideal maximum budget for you to spend daily, with notification.")
+                    NewDetail(image: "onboarding-3", imageColor: .blue, title: "TRACK EXPENSES EASILY", description: "Add widget to your home screen to input expenses data easier.")
             }
 
             Spacer()
@@ -63,8 +63,9 @@ struct NewDetail: View {
     var body: some View {
         HStack(alignment: .center) {
             HStack {
-                Image(systemName: image)
-                    .font(.system(size: 50))
+                Image(image)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
                     .frame(width: 50)
                     .foregroundColor(imageColor)
                     .padding()

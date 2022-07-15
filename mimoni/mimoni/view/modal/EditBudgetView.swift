@@ -11,6 +11,7 @@ struct EditBudgetView: View {
     @State var recomendationEnabled: Bool = false
     
     @Binding var segmentItem: Segment
+    @Binding var ramdom:Bool
     
     var numberFormatter : NumberFormatter{
         let numberFormatter = NumberFormatter()
@@ -59,10 +60,13 @@ struct EditBudgetView: View {
             .navigationBarItems(trailing:
                                     Button("Edit") {
                 print("edit")
-                isInputActive = false
+                
                 segmentItem.value = totalBudget
                 segmentItem.title = budgetCategory
                 segmentItem.recommended = recomendationEnabled
+                isInputActive = false
+                ramdom.toggle()
+                
             }.foregroundColor(Color.interactiveColor))
         }.onAppear{
             totalBudget = segmentItem.value

@@ -27,10 +27,24 @@ class SegmentsViewModel: ObservableObject{
     ]
 }
 
+//extension SegmentsViewModel: Equatable {
+//    static func ==(lhs: SegmentsViewModel, rhs: SegmentsViewModel) -> Bool {
+//        let areEqual = lhs.segments == rhs.segments
+//
+//        return areEqual
+//    }
+//
+//
+//}
+
+
 struct SetupBudget: View{
 //    @Environment(\.dismiss) private var dismiss
     @Binding var income: Int
-    @ObservedObject var viewModel = SegmentsViewModel()
+    
+    //Sudah Nick
+    //Ini Gara2 ObservedObject ->StateObject
+    @StateObject var viewModel = SegmentsViewModel()
     @State private var showAddBudget: Bool = false
     @State private var totalListBudget = 0
 
@@ -39,19 +53,20 @@ struct SetupBudget: View{
                 Text("Budget")
                     .fontWeight(.bold)
                     .font(.system(size: 31))
-                Text("Rp. \(income)")
+                Text("Rp. \(income - totalListBudget)") //- totalBudget
                     .fontWeight(.bold)
                     .font(.system(size: 31))
                 ModalPresenter {
                     List{
                         ForEach(0..<viewModel.segments.count, id: \.self){ segment in
-                            ModalLink(destination: EditBudgetView(segmentItem: $viewModel.segments[segment])) {
+                            ModalLink(destination: EditBudgetView(segmentItem: $viewModel.segments[segment], ramdom: $showAddBudget)) {
                                 SegmentRow(value: $viewModel.segments[segment].value, title: $viewModel.segments[segment].title, recommended: $viewModel.segments[segment].recommended)
                             }
+
                             .foregroundColor(.black)
                         }
                         .listRowSeparator(.hidden)
-                        ModalLink(destination: AddBudgetView( segment: viewModel), label: {
+                        ModalLink(destination: AddBudgetView( segment: viewModel, ramdom: $showAddBudget), label: {
                             Label {
                                 Text("Add Category")
                                     .foregroundColor(.black)
@@ -66,6 +81,7 @@ struct SetupBudget: View{
                     HStack{
                         Text("Continue")
                             .fontWeight(.semibold)
+
                     }
                     .font(.headline)
                     .frame(width: 340, height: 50)
@@ -74,7 +90,19 @@ struct SetupBudget: View{
                     .cornerRadius(15)
                     .padding()
                 }
+                .onChange(of: showAddBudget) { newValue in
+                    totalListBudget = 0
+                    for i in viewModel.segments{
+                        print(i.value) //ngitung totalBudget aja
+                        
+                        totalListBudget = totalListBudget + i.value
+                    }
+                    print("onChange hereeeeee")
+                }
+                
+                
             }
+
 //            .navigationBarBackButtonHidden(true)
             .navigationBarItems(trailing:
             Button("Skip") {
@@ -87,6 +115,7 @@ struct SetupBudget: View{
         
             .background(Color.whiteColor.ignoresSafeArea())
         
+
     }
     
     struct SegmentRow: View {
