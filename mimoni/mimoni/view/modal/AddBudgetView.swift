@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AddBudgetView: View {
-    @Environment(\.dismiss) var dismiss
+    @Environment(\.dismiss) private var dismiss
     @ObservedObject var segment: SegmentsViewModel
     
     @FocusState private var isInputActive: Bool
@@ -16,6 +16,7 @@ struct AddBudgetView: View {
     @State var budgetCategory : String = ""
     @State var recomendationEnabled: Bool = false
     @Binding var ramdom:Bool
+
 
     var numberFormatter : NumberFormatter{
         let numberFormatter = NumberFormatter()
@@ -58,14 +59,17 @@ struct AddBudgetView: View {
                   .navigationBarItems(leading:
                   Button("Cancel") {
                       dismiss()
-                  })
+//                      showAddBudget = false
+                  }.foregroundColor(Color.interactiveColor))
+                
                   .navigationBarItems(trailing:
                   Button("Add") {
                       print("add")
                       segment.segments.append(Segment(id: UUID(), title: budgetCategory, value: totalBudget, recommended: recomendationEnabled))
                       segment.objectWillChange.send()
                       ramdom.toggle()
-                  })
+                  }.foregroundColor(Color.interactiveColor))
+                  .background(Color.whiteColor)
             }
         }
 }

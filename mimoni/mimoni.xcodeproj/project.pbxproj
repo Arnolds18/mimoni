@@ -17,10 +17,25 @@
 		4144A0CD2865985D00917D31 /* SetupBudget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4144A0CC2865985D00917D31 /* SetupBudget.swift */; };
 		416315B62864641600C3B36B /* Wine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416315B52864641600C3B36B /* Wine.swift */; };
 		41BE7EC72869909B00F32CB9 /* AddBudgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BE7EC62869909B00F32CB9 /* AddBudgetView.swift */; };
+		7896969A288034A400C690FC /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 789696972880343700C690FC /* Charts.framework */; platformFilter = ios; };
+		7896969B288034A400C690FC /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 789696972880343700C690FC /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		789696A22880356600C690FC /* colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7896969D2880356600C690FC /* colors.swift */; };
+		789696A32880356600C690FC /* mimoni.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 789696A02880356600C690FC /* mimoni.xcdatamodeld */; };
+		789696AA2880366000C690FC /* NavBarBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789696A62880366000C690FC /* NavBarBackButton.swift */; };
+		789696AB2880366000C690FC /* textfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789696A82880366000C690FC /* textfield.swift */; };
+		789696AC2880366000C690FC /* color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789696A92880366000C690FC /* color.swift */; };
+		A010167D287D671800F9D128 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A010167C287D671800F9D128 /* WidgetKit.framework */; };
+		A010167F287D671800F9D128 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A010167E287D671800F9D128 /* SwiftUI.framework */; };
+		A0101682287D671800F9D128 /* MonehWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0101681287D671800F9D128 /* MonehWidget.swift */; };
+		A0101685287D671A00F9D128 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0101684287D671A00F9D128 /* Assets.xcassets */; };
+		A0101687287D671A00F9D128 /* MonehWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = A0101683287D671800F9D128 /* MonehWidget.intentdefinition */; };
+		A0101688287D671A00F9D128 /* MonehWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = A0101683287D671800F9D128 /* MonehWidget.intentdefinition */; };
+		A010168B287D671A00F9D128 /* MonehWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A010167B287D671800F9D128 /* MonehWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A0C34EF1287EB8EE0029522B /* TimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C34EF0287EB8EE0029522B /* TimelineProvider.swift */; };
+		A0C34EF3287EBF900029522B /* TimelineEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C34EF2287EBF900029522B /* TimelineEntry.swift */; };
+		A0C34EF7287EC0100029522B /* MonehWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C34EF6287EC0100029522B /* MonehWidgetView.swift */; };
 		EC0797E12861B2880062E89B /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0797E02861B2880062E89B /* OnboardingView.swift */; };
 		EC0797E32861B5C70062E89B /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0797E22861B5C70062E89B /* LaunchView.swift */; };
-		EC575551286AD8C400CA63B4 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC57554B2869C02E00CA63B4 /* Charts.framework */; platformFilter = ios; };
-		EC575552286AD8C400CA63B4 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EC57554B2869C02E00CA63B4 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EC575558286AF36800CA63B4 /* EditBudgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC575557286AF36800CA63B4 /* EditBudgetView.swift */; };
 		EC57555D286AF69200CA63B4 /* ModalView in Frameworks */ = {isa = PBXBuildFile; productRef = EC57555C286AF69200CA63B4 /* ModalView */; };
 		EC575565287C070E00CA63B4 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC575564287C070E00CA63B4 /* CardView.swift */; };
@@ -30,19 +45,26 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		EC57554A2869C02E00CA63B4 /* PBXContainerItemProxy */ = {
+		789696962880343700C690FC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = EC5755452869C02E00CA63B4 /* Charts.xcodeproj */;
+			containerPortal = 789696912880343700C690FC /* Charts.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 65AD9E95D9ED4DC0BD73A743;
 			remoteInfo = Charts;
 		};
-		EC57554C2869C02E00CA63B4 /* PBXContainerItemProxy */ = {
+		789696982880343700C690FC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = EC5755452869C02E00CA63B4 /* Charts.xcodeproj */;
+			containerPortal = 789696912880343700C690FC /* Charts.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 1CBBC58C6CE1EBEE9852CE41;
 			remoteInfo = ChartsTests;
+		};
+		A0101689287D671A00F9D128 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 41019AE82861A9F800CBF3D8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A010167A287D671800F9D128;
+			remoteInfo = MonehWidgetExtension;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -53,9 +75,20 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				EC575552286AD8C400CA63B4 /* Charts.framework in Embed Frameworks */,
+				7896969B288034A400C690FC /* Charts.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A010168F287D671A00F9D128 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A010168B287D671A00F9D128 /* MonehWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -73,9 +106,24 @@
 		416315B52864641600C3B36B /* Wine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wine.swift; sourceTree = "<group>"; };
 		416315B72864649200C3B36B /* Charts-master */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "Charts-master"; path = "../../../../../Downloads/Charts-master"; sourceTree = "<group>"; };
 		41BE7EC62869909B00F32CB9 /* AddBudgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBudgetView.swift; sourceTree = "<group>"; };
+		789696912880343700C690FC /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "Charts-master/Charts.xcodeproj"; sourceTree = SOURCE_ROOT; };
+		7896969D2880356600C690FC /* colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = colors.swift; sourceTree = "<group>"; };
+		789696A12880356600C690FC /* mimoni.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = mimoni.xcdatamodel; sourceTree = "<group>"; };
+		789696A62880366000C690FC /* NavBarBackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavBarBackButton.swift; sourceTree = "<group>"; };
+		789696A82880366000C690FC /* textfield.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = textfield.swift; sourceTree = "<group>"; };
+		789696A92880366000C690FC /* color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = color.swift; sourceTree = "<group>"; };
+		A010167B287D671800F9D128 /* MonehWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MonehWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		A010167C287D671800F9D128 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		A010167E287D671800F9D128 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		A0101681287D671800F9D128 /* MonehWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonehWidget.swift; sourceTree = "<group>"; };
+		A0101683287D671800F9D128 /* MonehWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = MonehWidget.intentdefinition; sourceTree = "<group>"; };
+		A0101684287D671A00F9D128 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A0101686287D671A00F9D128 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0C34EF0287EB8EE0029522B /* TimelineProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineProvider.swift; sourceTree = "<group>"; };
+		A0C34EF2287EBF900029522B /* TimelineEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineEntry.swift; sourceTree = "<group>"; };
+		A0C34EF6287EC0100029522B /* MonehWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonehWidgetView.swift; sourceTree = "<group>"; };
 		EC0797E02861B2880062E89B /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		EC0797E22861B5C70062E89B /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
-		EC5755452869C02E00CA63B4 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../../../../Downloads/Charts-master 2/Charts.xcodeproj"; sourceTree = "<group>"; };
 		EC575557286AF36800CA63B4 /* EditBudgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBudgetView.swift; sourceTree = "<group>"; };
 		EC575564287C070E00CA63B4 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		EC575568287C2AEF00CA63B4 /* WalletCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletCardView.swift; sourceTree = "<group>"; };
@@ -88,8 +136,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC575551286AD8C400CA63B4 /* Charts.framework in Frameworks */,
 				EC57555D286AF69200CA63B4 /* ModalView in Frameworks */,
+				7896969A288034A400C690FC /* Charts.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0101678287D671800F9D128 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A010167F287D671800F9D128 /* SwiftUI.framework in Frameworks */,
+				A010167D287D671800F9D128 /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				41019AF22861A9F800CBF3D8 /* mimoni */,
+				A0101680287D671800F9D128 /* MonehWidget */,
 				41019AF12861A9F800CBF3D8 /* Products */,
 				EC5953DF2863036300B0C200 /* Frameworks */,
 			);
@@ -109,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				41019AF02861A9F800CBF3D8 /* mimoni.app */,
+				A010167B287D671800F9D128 /* MonehWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -116,6 +175,9 @@
 		41019AF22861A9F800CBF3D8 /* mimoni */ = {
 			isa = PBXGroup;
 			children = (
+				789696A52880366000C690FC /* utils */,
+				7896969D2880356600C690FC /* colors.swift */,
+				789696A02880356600C690FC /* mimoni.xcdatamodeld */,
 				EC575562286ED79300CA63B4 /* object */,
 				EC575561286ED74000CA63B4 /* component */,
 				EC5953E728631FB400B0C200 /* view */,
@@ -125,8 +187,8 @@
 				4144A0CC2865985D00917D31 /* SetupBudget.swift */,
 				41019AF72861A9FA00CBF3D8 /* Assets.xcassets */,
 				41019AFC2861A9FA00CBF3D8 /* Persistence.swift */,
-				EC5755452869C02E00CA63B4 /* Charts.xcodeproj */,
 				41019AFE2861A9FA00CBF3D8 /* mimoni.xcdatamodeld */,
+				789696912880343700C690FC /* Charts.xcodeproj */,
 				41019AF92861A9FA00CBF3D8 /* Preview Content */,
 			);
 			path = mimoni;
@@ -140,6 +202,47 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		789696922880343700C690FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				789696972880343700C690FC /* Charts.framework */,
+				789696992880343700C690FC /* ChartsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		789696A52880366000C690FC /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				789696A62880366000C690FC /* NavBarBackButton.swift */,
+				789696A72880366000C690FC /* extensions */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		789696A72880366000C690FC /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				789696A82880366000C690FC /* textfield.swift */,
+				789696A92880366000C690FC /* color.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
+		A0101680287D671800F9D128 /* MonehWidget */ = {
+			isa = PBXGroup;
+			children = (
+				A0101681287D671800F9D128 /* MonehWidget.swift */,
+				A0C34EF6287EC0100029522B /* MonehWidgetView.swift */,
+				A0C34EF0287EB8EE0029522B /* TimelineProvider.swift */,
+				A0C34EF2287EBF900029522B /* TimelineEntry.swift */,
+				A0101683287D671800F9D128 /* MonehWidget.intentdefinition */,
+				A0101684287D671A00F9D128 /* Assets.xcassets */,
+				A0101686287D671A00F9D128 /* Info.plist */,
+			);
+			path = MonehWidget;
+			sourceTree = "<group>";
+		};
 		EC0797DF2861B2640062E89B /* onboarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,15 +250,6 @@
 				EC0797E22861B5C70062E89B /* LaunchView.swift */,
 			);
 			path = onboarding;
-			sourceTree = "<group>";
-		};
-		EC5755462869C02E00CA63B4 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				EC57554B2869C02E00CA63B4 /* Charts.framework */,
-				EC57554D2869C02E00CA63B4 /* ChartsTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		EC575561286ED74000CA63B4 /* component */ = {
@@ -190,6 +284,8 @@
 			isa = PBXGroup;
 			children = (
 				416315B72864649200C3B36B /* Charts-master */,
+				A010167C287D671800F9D128 /* WidgetKit.framework */,
+				A010167E287D671800F9D128 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -214,10 +310,12 @@
 				41019AED2861A9F800CBF3D8 /* Frameworks */,
 				41019AEE2861A9F800CBF3D8 /* Resources */,
 				41BE7EC528698E7100F32CB9 /* Embed Frameworks */,
+				A010168F287D671A00F9D128 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A010168A287D671A00F9D128 /* PBXTargetDependency */,
 			);
 			name = mimoni;
 			packageProductDependencies = (
@@ -227,6 +325,23 @@
 			productReference = 41019AF02861A9F800CBF3D8 /* mimoni.app */;
 			productType = "com.apple.product-type.application";
 		};
+		A010167A287D671800F9D128 /* MonehWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A010168C287D671A00F9D128 /* Build configuration list for PBXNativeTarget "MonehWidgetExtension" */;
+			buildPhases = (
+				A0101677287D671800F9D128 /* Sources */,
+				A0101678287D671800F9D128 /* Frameworks */,
+				A0101679287D671800F9D128 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MonehWidgetExtension;
+			productName = MonehWidgetExtension;
+			productReference = A010167B287D671800F9D128 /* MonehWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -234,11 +349,14 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1330;
+				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
 					41019AEF2861A9F800CBF3D8 = {
 						CreatedOnToolsVersion = 13.3;
+					};
+					A010167A287D671800F9D128 = {
+						CreatedOnToolsVersion = 13.4.1;
 					};
 				};
 			};
@@ -258,30 +376,31 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = EC5755462869C02E00CA63B4 /* Products */;
-					ProjectRef = EC5755452869C02E00CA63B4 /* Charts.xcodeproj */;
+					ProductGroup = 789696922880343700C690FC /* Products */;
+					ProjectRef = 789696912880343700C690FC /* Charts.xcodeproj */;
 				},
 			);
 			projectRoot = "";
 			targets = (
 				41019AEF2861A9F800CBF3D8 /* mimoni */,
+				A010167A287D671800F9D128 /* MonehWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		EC57554B2869C02E00CA63B4 /* Charts.framework */ = {
+		789696972880343700C690FC /* Charts.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Charts.framework;
-			remoteRef = EC57554A2869C02E00CA63B4 /* PBXContainerItemProxy */;
+			remoteRef = 789696962880343700C690FC /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		EC57554D2869C02E00CA63B4 /* ChartsTests.xctest */ = {
+		789696992880343700C690FC /* ChartsTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = ChartsTests.xctest;
-			remoteRef = EC57554C2869C02E00CA63B4 /* PBXContainerItemProxy */;
+			remoteRef = 789696982880343700C690FC /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -296,6 +415,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A0101679287D671800F9D128 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0101685287D671A00F9D128 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -304,15 +431,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				41019B002861A9FA00CBF3D8 /* mimoni.xcdatamodeld in Sources */,
+				A0101688287D671A00F9D128 /* MonehWidget.intentdefinition in Sources */,
 				EC575558286AF36800CA63B4 /* EditBudgetView.swift in Sources */,
+				789696AA2880366000C690FC /* NavBarBackButton.swift in Sources */,
 				EC0797E32861B5C70062E89B /* LaunchView.swift in Sources */,
+				789696A32880356600C690FC /* mimoni.xcdatamodeld in Sources */,
 				416315B62864641600C3B36B /* Wine.swift in Sources */,
 				41019AFD2861A9FA00CBF3D8 /* Persistence.swift in Sources */,
 				EC575569287C2AEF00CA63B4 /* WalletCardView.swift in Sources */,
 				EC5953E428630A7200B0C200 /* PieChart.swift in Sources */,
 				41019AF62861A9F800CBF3D8 /* ContentView.swift in Sources */,
+				789696A22880356600C690FC /* colors.swift in Sources */,
 				EC575565287C070E00CA63B4 /* CardView.swift in Sources */,
+				789696AC2880366000C690FC /* color.swift in Sources */,
 				EC0797E12861B2880062E89B /* OnboardingView.swift in Sources */,
+				789696AB2880366000C690FC /* textfield.swift in Sources */,
 				41019AF42861A9F800CBF3D8 /* mimoniApp.swift in Sources */,
 				41BE7EC72869909B00F32CB9 /* AddBudgetView.swift in Sources */,
 				EC57556B287C2AFB00CA63B4 /* RecommendationCardView.swift in Sources */,
@@ -321,7 +454,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A0101677287D671800F9D128 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0C34EF1287EB8EE0029522B /* TimelineProvider.swift in Sources */,
+				A0101687287D671A00F9D128 /* MonehWidget.intentdefinition in Sources */,
+				A0C34EF7287EC0100029522B /* MonehWidgetView.swift in Sources */,
+				A0101682287D671800F9D128 /* MonehWidget.swift in Sources */,
+				A0C34EF3287EBF900029522B /* TimelineEntry.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A010168A287D671A00F9D128 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A010167A287D671800F9D128 /* MonehWidgetExtension */;
+			targetProxy = A0101689287D671A00F9D128 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		41019B012861A9FA00CBF3D8 /* Debug */ = {
@@ -441,13 +594,14 @@
 		41019B042861A9FA00CBF3D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"mimoni/Preview Content\"";
-				DEVELOPMENT_TEAM = G9K9MD55MT;
+				DEVELOPMENT_TEAM = VZ26QWDH4N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -471,13 +625,14 @@
 		41019B052861A9FA00CBF3D8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"mimoni/Preview Content\"";
-				DEVELOPMENT_TEAM = G9K9MD55MT;
+				DEVELOPMENT_TEAM = VZ26QWDH4N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -492,6 +647,62 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.arnold.mimoni;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A010168D287D671A00F9D128 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G9K9MD55MT;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MonehWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MonehWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.arnold.mimoni.MonehWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A010168E287D671A00F9D128 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G9K9MD55MT;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MonehWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MonehWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.arnold.mimoni.MonehWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -515,6 +726,15 @@
 			buildConfigurations = (
 				41019B042861A9FA00CBF3D8 /* Debug */,
 				41019B052861A9FA00CBF3D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A010168C287D671A00F9D128 /* Build configuration list for PBXNativeTarget "MonehWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A010168D287D671A00F9D128 /* Debug */,
+				A010168E287D671A00F9D128 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -547,6 +767,16 @@
 				41019AFF2861A9FA00CBF3D8 /* mimoni.xcdatamodel */,
 			);
 			currentVersion = 41019AFF2861A9FA00CBF3D8 /* mimoni.xcdatamodel */;
+			path = mimoni.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		789696A02880356600C690FC /* mimoni.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				789696A12880356600C690FC /* mimoni.xcdatamodel */,
+			);
+			currentVersion = 789696A12880356600C690FC /* mimoni.xcdatamodel */;
 			path = mimoni.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

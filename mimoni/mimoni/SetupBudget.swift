@@ -39,6 +39,7 @@ class SegmentsViewModel: ObservableObject{
 
 
 struct SetupBudget: View{
+//    @Environment(\.dismiss) private var dismiss
     @Binding var income: Int
     
     //Sudah Nick
@@ -46,13 +47,10 @@ struct SetupBudget: View{
     @StateObject var viewModel = SegmentsViewModel()
     @State private var showAddBudget: Bool = false
     @State private var totalListBudget = 0
-    
-    
-    
+
     var body: some View {
-        NavigationView{
             VStack{
-                Text("Income")
+                Text("Budget")
                     .fontWeight(.bold)
                     .font(.system(size: 31))
                 Text("Rp. \(income - totalListBudget)") //- totalBudget
@@ -64,34 +62,33 @@ struct SetupBudget: View{
                             ModalLink(destination: EditBudgetView(segmentItem: $viewModel.segments[segment], ramdom: $showAddBudget)) {
                                 SegmentRow(value: $viewModel.segments[segment].value, title: $viewModel.segments[segment].title, recommended: $viewModel.segments[segment].recommended)
                             }
-                            
-                        }.listRowSeparator(.hidden)
-                        //showAddBudget = true
-                        //viewModel.segments.append(Segment(id: UUID(), title: "Kareo", value: 21312.00))
-                        ModalLink(destination: AddBudgetView( segment: viewModel, ramdom: $showAddBudget), label: {
-                            Label("Add Category", systemImage: "plus.circle.fill")
-                        })
-                        
-                    }
-                    //                    .onChange(of: viewModel) { newValue in
-                    //                        for i in viewModel.segments{
-                    //                            totalListBudget = i.value
-                    //                            income = income - totalListBudget
-                    //                        }
-                    //                    }
-                    NavigationLink(destination: SetupBudget(income: self.$income)) {
-                        HStack{
-                            Text("Continue")
-                                .fontWeight(.semibold)
+
+                            .foregroundColor(.black)
                         }
-                        .font(.headline)
-                        .frame(width: 250, height: 60)
-                        .foregroundColor(.white)
-                        //                        .background(Color.blue)
-                        .cornerRadius(15)
-                        //                        .padding(.top, 250)
-                        
+                        .listRowSeparator(.hidden)
+                        ModalLink(destination: AddBudgetView( segment: viewModel, ramdom: $showAddBudget), label: {
+                            Label {
+                                Text("Add Category")
+                                    .foregroundColor(.black)
+                            } icon: {
+                                Image(systemName: "plus.circle.fill")
+                                    .foregroundColor(.interactiveColor)
+                            }
+                        })
                     }
+                }
+                NavigationLink(destination: SetupBudget(income: self.$income)) {
+                    HStack{
+                        Text("Continue")
+                            .fontWeight(.semibold)
+
+                    }
+                    .font(.headline)
+                    .frame(width: 340, height: 50)
+                    .foregroundColor(.blackColor)
+                    .background(Color.interactiveColor)
+                    .cornerRadius(15)
+                    .padding()
                 }
                 .onChange(of: showAddBudget) { newValue in
                     totalListBudget = 0
@@ -105,8 +102,20 @@ struct SetupBudget: View{
                 
                 
             }
-            
-        }
+
+//            .navigationBarBackButtonHidden(true)
+            .navigationBarItems(trailing:
+            Button("Skip") {
+                print("skip tapped")
+            }
+                .foregroundColor(Color.interactiveColor))
+        
+//            .navigationBarItems(leading:
+//                                    NavBarBackButton(dismiss:self.dismiss))
+        
+            .background(Color.whiteColor.ignoresSafeArea())
+        
+
     }
     
     struct SegmentRow: View {
@@ -119,7 +128,7 @@ struct SetupBudget: View{
             VStack(alignment: .leading) {
                 HStack{
                     Text(title)
-                    Text("\(value)").background(Color.blue)
+                    Text("\(value)")
                         .frame(maxWidth: .infinity, alignment: .trailing)
                 }
                 Divider()
