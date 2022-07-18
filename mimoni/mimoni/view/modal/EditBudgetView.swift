@@ -58,7 +58,7 @@ struct EditBudgetView: View {
                 dismiss()
             }.foregroundColor(Color.interactiveColor))
             .navigationBarItems(trailing:
-                                    Button("Edit") {
+                                    Button("Add") {
                 print("edit")
                 
                 segmentItem.value = totalBudget
