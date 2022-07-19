@@ -10,9 +10,8 @@ import SwiftUI
 @main
 struct mimoniApp: App {
     @AppStorage("isOnboarding") var isOnboarding = true
-
-    
-    init() {
+    @State var linkOne: Bool = false
+        init() {
         UITableView.appearance().backgroundColor = .clear
         UINavigationBar.appearance().backgroundColor = .clear
     }
@@ -24,11 +23,17 @@ struct mimoniApp: App {
                 OnboardingView()
             }else{
                 InputIncome()
+                    .onOpenURL { url in
+                        self.linkOne = url == URL(string: "mimoni://AddExpense")!
+                    }.sheet(isPresented: $linkOne, content: {
+                        AddExpenseView(random: $linkOne)
+                    })
             }
             
 //            ContentView()
 //                .environment(\.managedObjectContext, persistenceController.container.viewContext)
             
         }
+        
     }
 }
