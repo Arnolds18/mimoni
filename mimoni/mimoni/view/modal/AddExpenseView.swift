@@ -68,7 +68,8 @@ struct AddExpenseView: View {
                                     Button("Add") {
                 print("add")
             }.foregroundColor(Color.interactiveColor))
-            .background(Color.whiteColor)
+            .background(Color.whiteColor.ignoresSafeArea())
+            
         }
     }
 }
