@@ -39,7 +39,7 @@ class SegmentsViewModel: ObservableObject{
 
 
 struct SetupBudget: View{
-//    @Environment(\.dismiss) private var dismiss
+    
     @Binding var income: Int
     
     //Sudah Nick
@@ -47,75 +47,72 @@ struct SetupBudget: View{
     @StateObject var viewModel = SegmentsViewModel()
     @State private var showAddBudget: Bool = false
     @State private var totalListBudget = 0
-
+    @Binding var isShowOnBoarding: Bool
+    
     var body: some View {
-            VStack{
-                Text("Budget")
-                    .fontWeight(.bold)
-                    .font(.system(size: 31))
-                Text("Rp. \(income - totalListBudget)") //- totalBudget
-                    .fontWeight(.bold)
-                    .font(.system(size: 31))
-                ModalPresenter {
-                    List{
-                        ForEach(0..<viewModel.segments.count, id: \.self){ segment in
-                            ModalLink(destination: EditBudgetView(segmentItem: $viewModel.segments[segment], ramdom: $showAddBudget)) {
-                                SegmentRow(value: $viewModel.segments[segment].value, title: $viewModel.segments[segment].title, recommended: $viewModel.segments[segment].recommended)
-                            }
-
-                            .foregroundColor(.black)
+        VStack{
+            Text("Budget")
+                .fontWeight(.bold)
+                .font(.system(size: 31))
+            Text("Rp. \(income - totalListBudget)") //- totalBudget
+                .fontWeight(.bold)
+                .font(.system(size: 31))
+            ModalPresenter {
+                List{
+                    ForEach(0..<viewModel.segments.count, id: \.self){ segment in
+                        ModalLink(destination: EditBudgetView(segmentItem: $viewModel.segments[segment], ramdom: $showAddBudget)) {
+                            SegmentRow(value: $viewModel.segments[segment].value, title: $viewModel.segments[segment].title, recommended: $viewModel.segments[segment].recommended)
                         }
-                        .listRowSeparator(.hidden)
-                        ModalLink(destination: AddBudgetView( segment: viewModel, ramdom: $showAddBudget), label: {
-                            Label {
-                                Text("Add Category")
-                                    .foregroundColor(.black)
-                            } icon: {
-                                Image(systemName: "plus.circle.fill")
-                                    .foregroundColor(.interactiveColor)
-                            }
-                        })
-                    }
-                }
-                NavigationLink(destination: SetupBudget(income: self.$income)) {
-                    HStack{
-                        Text("Continue")
-                            .fontWeight(.semibold)
-
-                    }
-                    .font(.headline)
-                    .frame(width: 340, height: 50)
-                    .foregroundColor(.blackColor)
-                    .background(Color.interactiveColor)
-                    .cornerRadius(15)
-                    .padding()
-                }
-                .onChange(of: showAddBudget) { newValue in
-                    totalListBudget = 0
-                    for i in viewModel.segments{
-                        print(i.value) //ngitung totalBudget aja
                         
-                        totalListBudget = totalListBudget + i.value
+                        .foregroundColor(.black)
                     }
-                    print("onChange hereeeeee")
+                    .listRowSeparator(.hidden)
+                    ModalLink(destination: AddBudgetView( segment: viewModel, ramdom: $showAddBudget), label: {
+                        Label {
+                            Text("Add Category")
+                                .foregroundColor(.black)
+                        } icon: {
+                            Image(systemName: "plus.circle.fill")
+                                .foregroundColor(.interactiveColor)
+                        }
+                    })
                 }
-                
-                
             }
-
-//            .navigationBarBackButtonHidden(true)
-            .navigationBarItems(trailing:
-            Button("Skip") {
-                print("skip tapped")
+            Button(action: {
+                isShowOnBoarding = false
+            }){
+                HStack{
+                    Text("Continue")
+                        .fontWeight(.semibold)
+                    
+                }
+                .font(.headline)
+                .frame(width: 340, height: 50)
+                .foregroundColor(.blackColor)
+                .background(Color.interactiveColor)
+                .cornerRadius(15)
+                .padding()
             }
-                .foregroundColor(Color.interactiveColor))
+            .onChange(of: showAddBudget) { newValue in
+                totalListBudget = 0
+                for i in viewModel.segments{
+                    print(i.value) //ngitung totalBudget aja
+                    
+                    totalListBudget = totalListBudget + i.value
+                }
+                print("onChange hereeeeee")
+            }
+        }
         
-//            .navigationBarItems(leading:
-//                                    NavBarBackButton(dismiss:self.dismiss))
+        .navigationBarItems(trailing:
+                                Button("Skip") {
+            isShowOnBoarding = false
+        }
+            .foregroundColor(Color.interactiveColor))
         
-            .background(Color.whiteColor.ignoresSafeArea())
+        .background(Color.whiteColor.ignoresSafeArea())
         
-
+        
     }
     
     struct SegmentRow: View {
@@ -138,13 +135,9 @@ struct SetupBudget: View{
         
     }
     
-    //struct SetupBudget_Previews: PreviewProvider {
-    //    static var previews: some View {
-    //        SetupBudget().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
-    //    }
     struct SetupBudget_Previews: PreviewProvider {
         static var previews: some View {
-            SetupBudget(income: .constant(1000))
+            SetupBudget(income: .constant(1000), isShowOnBoarding: .constant(true))
         }
     }
 }

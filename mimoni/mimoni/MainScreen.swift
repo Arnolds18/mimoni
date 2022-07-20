@@ -9,8 +9,10 @@ import Foundation
 import SwiftUI
 
 struct MainScreen: View {
-        @State var totalSpend = Segment(title: "Test", value: 30, recommended: false)
-        @State var totalCategory = Segment(title: "Test", value: 100, recommended: false)
+    @State var totalSpend = Segment(title: "Test", value: 30, recommended: false)
+    @State var totalCategory = Segment(title: "Test", value: 100, recommended: false)
+    @AppStorage("isFirstLaunch") var isFirstLaunch: Bool = true
+    @State var isShowOnBoarding: Bool = false
     
     
     var body: some View {
@@ -55,7 +57,7 @@ struct MainScreen: View {
                     
                     
                 }
-                    .frame(width: 150, height: 360)
+                .frame(width: 150, height: 360)
                 
                 
                 //                Spacer()
@@ -64,6 +66,15 @@ struct MainScreen: View {
             .navigationTitle("Summary")
             
             
+        }
+        .onAppear{
+            if isFirstLaunch {
+                isShowOnBoarding.toggle()
+                isFirstLaunch = false
+            }
+        }
+        .fullScreenCover(isPresented: $isShowOnBoarding) {
+            OnboardingView(isShowOnBoarding: $isShowOnBoarding)
         }
     }
 }

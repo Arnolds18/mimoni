@@ -9,47 +9,61 @@ import Foundation
 import SwiftUI
 
 struct OnboardingView: View {
-    @AppStorage("isOnboarding") var isOnboarding: Bool?
-    @EnvironmentObject var viewlaunch: ViewLaunch
+    @Binding var isShowOnBoarding: Bool
+    
     var body: some View {
-        VStack {
-            
-            Spacer()
+        NavigationView {
+            VStack {
+                
+                Spacer()
                 Text("Welcome To ")
                     .font(.system(size: 40))
                     .frame(width: 300, alignment: .center)
-            
-            Text("Moneh")
-                .fontWeight(.heavy)
-                .font(.system(size: 50))
-                .frame(width: 300, alignment: .center)
-            
-            Spacer()
+                
+                Text("Moneh")
+                    .fontWeight(.heavy)
+                    .font(.system(size: 50))
+                    .frame(width: 300, alignment: .center)
+                
+                Spacer()
                 
                 VStack(alignment: .leading) {
                     NewDetail(image: "onboarding-1", imageColor: .pink, title: "YOUR BUDGETS SEEN BETTER", description: "Input budgets in different categories to see your expenses tracking.")
                     NewDetail(image: "onboarding-2", imageColor: .red, title: "DAILY BUDGET LIMIT", description: "Know the ideal maximum budget for you to spend daily, with notification.")
                     NewDetail(image: "onboarding-3", imageColor: .blue, title: "TRACK EXPENSES EASILY", description: "Add widget to your home screen to input expenses data easier.")
-            }
+                }
+                
+                Spacer()
+                
+                NavigationLink(destination: InputIncome( isShowOnBoarding: $isShowOnBoarding)){
+                    HStack{
+                        Text("Continue")
+                            .fontWeight(.semibold)
 
-            Spacer()
-            
-            Button(action: {
-                isOnboarding = false
-                UserDefaults.standard.set(true, forKey: "LaunchBefore")
-//                withAnimation(){
-//                    self.viewlaunch.currentPage = "ContentView"
-//                }
-            }){
-            Text("Next")
-                .foregroundColor(.white)
-                .font(.headline)
-                .frame(width: 350, height: 60)
-                .background(Color.blue)
-                .cornerRadius(15)
-                .padding(.top, 50)
+                    }
+                    .font(.headline)
+                    .frame(width: 340, height: 50)
+                    .foregroundColor(.blackColor)
+                    .background(Color.interactiveColor)
+                    .cornerRadius(15)
+                    .padding()
+                }
+                
+                //            Button(action: {
+                //                UserDefaults.standard.set(true, forKey: "LaunchBefore")
+                //            }){
+                //            Text("Next")
+                //                .foregroundColor(.white)
+                //                .font(.headline)
+                //                .frame(width: 350, height: 60)
+                //                .background(Color.blue)
+                //                .cornerRadius(15)
+                //                .padding(.top, 50)
+                //            }
             }
         }
+        .navigationBarHidden(true)
+        .accentColor(Color.interactiveColor)
     }
     
 }
@@ -59,7 +73,7 @@ struct NewDetail: View {
     var imageColor: Color
     var title: String
     var description: String
-
+    
     var body: some View {
         HStack(alignment: .center) {
             HStack {
@@ -69,10 +83,10 @@ struct NewDetail: View {
                     .frame(width: 50)
                     .foregroundColor(imageColor)
                     .padding()
-
+                
                 VStack(alignment: .leading) {
                     Text(title).bold()
-                
+                    
                     Text(description)
                         .fixedSize(horizontal: false, vertical: true)
                 }
@@ -83,15 +97,15 @@ struct NewDetail: View {
 
 struct OnboardingView_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardingView()
+        OnboardingView(isShowOnBoarding: .constant(true))
     }
 }
 
 struct NewDetail_Previews: PreviewProvider {
     static var previews: some View {
         NewDetail(image: "heart.fill", imageColor: .pink, title: "More Personalized", description: "Top Stories picked for you and recommendations from siri.")
-        .previewLayout(.sizeThatFits)
-        .padding(10)
+            .previewLayout(.sizeThatFits)
+            .padding(10)
     }
 }
 

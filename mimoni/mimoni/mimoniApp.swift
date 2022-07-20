@@ -9,9 +9,7 @@ import SwiftUI
 
 @main
 struct mimoniApp: App {
-    @AppStorage("isOnboarding") var isOnboarding = true
 
-    
     init() {
         UITableView.appearance().backgroundColor = .clear
         UINavigationBar.appearance().backgroundColor = .clear
@@ -19,16 +17,8 @@ struct mimoniApp: App {
     
     var body: some Scene {
         WindowGroup {
-
-            if isOnboarding{
-                OnboardingView()
-            }else{
-                InputIncome()
-            }
             
-//            ContentView()
-//                .environment(\.managedObjectContext, persistenceController.container.viewContext)
-            
+            MainScreen()
         }
     }
 }
