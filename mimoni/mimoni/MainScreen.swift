@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 
 struct MainScreen: View {
+//    @State var linkOne: Bool = false
     @State var totalSpend = Segment(title: "Test", value: 30, recommended: false)
     @State var totalCategory = Segment(title: "Test", value: 100, recommended: false)
     @AppStorage("isFirstLaunch") var isFirstLaunch: Bool = true
