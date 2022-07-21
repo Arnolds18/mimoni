@@ -16,62 +16,62 @@ struct AddBudgetView: View {
     @State var budgetCategory : String = ""
     @State var recomendationEnabled: Bool = false
     @Binding var ramdom:Bool
-
-
+    
+    
     var numberFormatter : NumberFormatter{
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .decimal
         numberFormatter.zeroSymbol = ""
         return numberFormatter
     }
-
-        var body: some View {
-            NavigationView {
-                  Form{
-                      HStack{
-                          Text("Kategori Budget")
-                          TextField("Lain-lain", text: $budgetCategory)
-                              .multilineTextAlignment(.trailing)
-                      }
-                      HStack{
-                          Text("Total")
-                          Spacer()
-                          TextField("Rp.0", value: $totalBudget, formatter: numberFormatter)
-                              .multilineTextAlignment(.trailing)                .focused($isInputActive)
-                              .keyboardType(.numberPad)
-                              .toolbar {
-                                  ToolbarItemGroup(placement: .keyboard) {
-                                      Spacer()
-                                      Button("Done") {
-                                          isInputActive = false
-                                          ramdom.toggle()
-                                      }
-                                  }
-                              }
-                            }
-                      HStack{
-                          Toggle(isOn: $recomendationEnabled) {
-                              Text("Rekomendasi")
-                          }
-                      }
+    
+    var body: some View {
+        NavigationView {
+                Form{
+                    HStack{
+                        Text("Kategori Budget")
+                        TextField("Lain-lain", text: $budgetCategory)
+                            .multilineTextAlignment(.trailing)
                     }
-                  .navigationBarTitle(Text("Budget"), displayMode: .inline)
-                  .navigationBarItems(leading:
-                  Button("Cancel") {
-                      dismiss()
-//                      showAddBudget = false
-                  }.foregroundColor(Color.interactiveColor))
-                
-                  .navigationBarItems(trailing:
-                  Button("Add") {
-                      print("add")
-                      segment.segments.append(Segment(id: UUID(), title: budgetCategory, value: totalBudget, recommended: recomendationEnabled))
-                      segment.objectWillChange.send()
-                      ramdom.toggle()
-                  }.foregroundColor(Color.interactiveColor))
-                  .background(Color.whiteColor)
-            }
+                    HStack{
+                        Text("Total")
+                        Spacer()
+                        TextField("Rp.0", value: $totalBudget, formatter: numberFormatter)
+                            .multilineTextAlignment(.trailing)                .focused($isInputActive)
+                            .keyboardType(.numberPad)
+                            .toolbar {
+                                ToolbarItemGroup(placement: .keyboard) {
+                                    Spacer()
+                                    Button("Done") {
+                                        isInputActive = false
+                                        ramdom.toggle()
+                                    }
+                                }
+                            }
+                    }
+                    HStack{
+                        Toggle(isOn: $recomendationEnabled) {
+                            Text("Rekomendasi")
+                        }
+                    }
+                }
+            .navigationBarTitle(Text("Budget"), displayMode: .inline)
+            .navigationBarItems(leading:
+                                    Button("Cancel") {
+                dismiss()
+                //                      showAddBudget = false
+            }.foregroundColor(Color.interactiveColor))
+            
+            .navigationBarItems(trailing:
+                                    Button("Add") {
+                print("add")
+                segment.segments.append(Segment(id: UUID(), title: budgetCategory, value: totalBudget, recommended: recomendationEnabled))
+                segment.objectWillChange.send()
+                ramdom.toggle()
+            }.foregroundColor(Color.interactiveColor))
+            .background(Color.whiteColor)
         }
+    }
 }
 
 struct AddBudgetView_Previews: PreviewProvider {
@@ -79,3 +79,4 @@ struct AddBudgetView_Previews: PreviewProvider {
         AddBudgetView(segment: SegmentsViewModel(), ramdom: .constant(true))
     }
 }
+
