@@ -41,12 +41,17 @@ class SegmentsViewModel: ObservableObject{
 struct SetupBudget: View{
     
     @Binding var income: Int
+    @State var income2:Int
     
     //Sudah Nick
     //Ini Gara2 ObservedObject ->StateObject
     @StateObject var viewModel = SegmentsViewModel()
     @State private var showAddBudget: Bool = false
-    @State private var totalListBudget = 0
+    @State private var totalListBudget = 0{
+        didSet{
+            income2 = income - totalListBudget
+        }
+    }
     @Binding var isShowOnBoarding: Bool
     
     var body: some View {
@@ -88,11 +93,11 @@ struct SetupBudget: View{
                 }
                 .font(.headline)
                 .frame(width: 340, height: 50)
-                .foregroundColor(.blackColor)
-                .background(Color.interactiveColor)
+                .foregroundColor(self.income2 == 0 ? .blackColor : .white)
+                .background(self.income2 == 0 ? Color.interactiveColor : .gray)
                 .cornerRadius(15)
                 .padding()
-            }
+            }.disabled(self.income2 == 0 ? false : true)
             .onChange(of: showAddBudget) { newValue in
                 totalListBudget = 0
                 for i in viewModel.segments{
@@ -137,7 +142,7 @@ struct SetupBudget: View{
     
     struct SetupBudget_Previews: PreviewProvider {
         static var previews: some View {
-            SetupBudget(income: .constant(1000), isShowOnBoarding: .constant(true))
+            SetupBudget(income: .constant(1000), income2: 1000,  isShowOnBoarding: .constant(true))
         }
     }
 }
