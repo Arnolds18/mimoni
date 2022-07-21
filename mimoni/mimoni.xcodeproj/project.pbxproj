@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		25A4226B2887E9C00027C043 /* SisaUangCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A4226A2887E9C00027C043 /* SisaUangCardView.swift */; };
 		25A4226F2887EA000027C043 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A4226E2887EA000027C043 /* MainScreen.swift */; };
+		25A422732887F4BD0027C043 /* CardViewExpenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A422722887F4BD0027C043 /* CardViewExpenses.swift */; };
 		41019AF42861A9F800CBF3D8 /* mimoniApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41019AF32861A9F800CBF3D8 /* mimoniApp.swift */; };
 		41019AF62861A9F800CBF3D8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41019AF52861A9F800CBF3D8 /* ContentView.swift */; };
 		41019AF82861A9FA00CBF3D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41019AF72861A9FA00CBF3D8 /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 		41019B072861AD1100CBF3D8 /* InputIncome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41019B062861AD1100CBF3D8 /* InputIncome.swift */; };
 		4144A0CD2865985D00917D31 /* SetupBudget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4144A0CC2865985D00917D31 /* SetupBudget.swift */; };
 		416315B62864641600C3B36B /* Wine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416315B52864641600C3B36B /* Wine.swift */; };
+		4175D9B32887E358007D8458 /* AddExpenseMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4175D9B22887E358007D8458 /* AddExpenseMainView.swift */; };
 		41A760B028815E78009B4CF8 /* AddExpenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A760AF28815E78009B4CF8 /* AddExpenseView.swift */; };
 		41BE7EC72869909B00F32CB9 /* AddBudgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BE7EC62869909B00F32CB9 /* AddBudgetView.swift */; };
 		7896969A288034A400C690FC /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 789696972880343700C690FC /* Charts.framework */; platformFilter = ios; };
@@ -85,7 +87,7 @@
 		};
 		A010168F287D671A00F9D128 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
@@ -99,6 +101,7 @@
 /* Begin PBXFileReference section */
 		25A4226A2887E9C00027C043 /* SisaUangCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SisaUangCardView.swift; sourceTree = "<group>"; };
 		25A4226E2887EA000027C043 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
+		25A422722887F4BD0027C043 /* CardViewExpenses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewExpenses.swift; sourceTree = "<group>"; };
 		41019AF02861A9F800CBF3D8 /* mimoni.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mimoni.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41019AF32861A9F800CBF3D8 /* mimoniApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mimoniApp.swift; sourceTree = "<group>"; };
 		41019AF52861A9F800CBF3D8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -110,6 +113,7 @@
 		4144A0CC2865985D00917D31 /* SetupBudget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupBudget.swift; sourceTree = "<group>"; };
 		416315B52864641600C3B36B /* Wine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wine.swift; sourceTree = "<group>"; };
 		416315B72864649200C3B36B /* Charts-master */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "Charts-master"; path = "../../../../../Downloads/Charts-master"; sourceTree = "<group>"; };
+		4175D9B22887E358007D8458 /* AddExpenseMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseMainView.swift; sourceTree = "<group>"; };
 		41A760AF28815E78009B4CF8 /* AddExpenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseView.swift; sourceTree = "<group>"; };
 		41BE7EC62869909B00F32CB9 /* AddBudgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBudgetView.swift; sourceTree = "<group>"; };
 		789696912880343700C690FC /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "Charts-master/Charts.xcodeproj"; sourceTree = SOURCE_ROOT; };
@@ -267,6 +271,7 @@
 				EC575568287C2AEF00CA63B4 /* WalletCardView.swift */,
 				EC57556A287C2AFB00CA63B4 /* RecommendationCardView.swift */,
 				25A4226A2887E9C00027C043 /* SisaUangCardView.swift */,
+				25A422722887F4BD0027C043 /* CardViewExpenses.swift */,
 			);
 			path = component;
 			sourceTree = "<group>";
@@ -284,6 +289,7 @@
 			children = (
 				41BE7EC62869909B00F32CB9 /* AddBudgetView.swift */,
 				41A760AF28815E78009B4CF8 /* AddExpenseView.swift */,
+				4175D9B22887E358007D8458 /* AddExpenseMainView.swift */,
 				EC575557286AF36800CA63B4 /* EditBudgetView.swift */,
 			);
 			path = modal;
@@ -451,12 +457,14 @@
 				EC575569287C2AEF00CA63B4 /* WalletCardView.swift in Sources */,
 				EC5953E428630A7200B0C200 /* PieChart.swift in Sources */,
 				41019AF62861A9F800CBF3D8 /* ContentView.swift in Sources */,
+				4175D9B32887E358007D8458 /* AddExpenseMainView.swift in Sources */,
 				789696A22880356600C690FC /* colors.swift in Sources */,
 				EC575565287C070E00CA63B4 /* CardView.swift in Sources */,
 				25A4226B2887E9C00027C043 /* SisaUangCardView.swift in Sources */,
 				789696AC2880366000C690FC /* color.swift in Sources */,
 				EC0797E12861B2880062E89B /* OnboardingView.swift in Sources */,
 				789696AB2880366000C690FC /* textfield.swift in Sources */,
+				25A422732887F4BD0027C043 /* CardViewExpenses.swift in Sources */,
 				41019AF42861A9F800CBF3D8 /* mimoniApp.swift in Sources */,
 				41BE7EC72869909B00F32CB9 /* AddBudgetView.swift in Sources */,
 				41A760B028815E78009B4CF8 /* AddExpenseView.swift in Sources */,

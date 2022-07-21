@@ -20,14 +20,14 @@ struct CardView: View{
                 ZStack(alignment: .leading){
                     Circle() //circle yang belakang
                         .trim(from: 0, to: 1)
-                        .stroke(Color.green.opacity(0.25), lineWidth: 10)
+                        .stroke(Color.yellow.opacity(0.25), lineWidth: 10)
                         .frame(width: (UIScreen.main.bounds.width - 150) / 4, height: (UIScreen.main.bounds.width - 220) / 3)
                     
                     
                     
                     Circle() //circle depan buat tau datanya berapa
                         .trim(from: 0, to: 0.3) //nanti to nya dari batas dari budget yang di set - data total pengeluaran
-                        .stroke(Color.green, lineWidth: 10)
+                        .stroke(Color.yellow, lineWidth: 10)
                         .frame(width: (UIScreen.main.bounds.width - 150) / 4, height: (UIScreen.main.bounds.width - 220) / 3)
                 }
                 .padding(.top)
@@ -54,9 +54,9 @@ struct CardView: View{
             //            Spacer()
         }
         .padding(15)
-        .background(Color.gray.opacity(0.5))
+        .background(Color.white)
         .cornerRadius(20)
-        .frame(width: 165, height: 190)
+        .frame(width: 165, height: 170)
         
     }
     

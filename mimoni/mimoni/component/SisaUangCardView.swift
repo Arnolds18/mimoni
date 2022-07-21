@@ -31,21 +31,21 @@ struct SisaUangCardView: View{
                         .font(.system(size: 22))
                         .frame(maxWidth: .infinity, alignment: .leading)
                     
-                    Text("Anda telah menyimpan uang Rp.100.600.00 pada bulan Juni!")
-                        .font(.system(size: 7))
-                        .frame(maxWidth: .infinity, alignment: .leading)
+//                    Text("Anda telah menyimpan uang Rp.100.600.00 pada bulan Juni!")
+//                        .font(.system(size: 7))
+//                        .frame(maxWidth: .infinity, alignment: .leading)
                     Spacer()
                     
                     
                 }
-                .frame(width: 256, height: 100)
+                .frame(width: 240, height: 100)
                 
                 
                 
             }
             
         }
-        .frame(width: 380, height: 100)
+        .frame(width: 360, height: 100)
         
     }
 }
