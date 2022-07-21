@@ -74,8 +74,8 @@ struct AddBudgetView: View {
         }
 }
 
-//struct AddBudgetView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        AddBudgetView()
-//    }
-//}
+struct AddBudgetView_Previews: PreviewProvider {
+    static var previews: some View {
+        AddBudgetView(segment: SegmentsViewModel(), ramdom: .constant(true))
+    }
+}

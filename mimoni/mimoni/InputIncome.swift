@@ -26,13 +26,13 @@ struct InputIncome: View {
                 Text("Income")
                     .fontWeight(.bold)
                     .font(.system(size: 31))
-                Text("write down your income")
+                Text("Masukin penghasilan kamu di sini!")
                     .fontWeight(.regular)
                     .font(.system(size: 18))
                     .frame(height: 100, alignment:.topLeading)
             }
             
-            TextField("Income", value: $income, formatter: numberFormatter)
+            TextField("cth: 2,000,000", value: $income, formatter: numberFormatter)
                 .focused($isInputActive)
                 .padding()
                 .textFieldStyle(OvalTextFieldStyle())
