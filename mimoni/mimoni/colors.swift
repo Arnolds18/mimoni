@@ -8,7 +8,7 @@
 import SwiftUI
 
 extension Color {
-    static let interactiveColor = Color("FFB700")
+    static let interactiveColor = Color("F2942A")
     
     // Ring Chart
     static let greenColor =  Color("3A8D87")
