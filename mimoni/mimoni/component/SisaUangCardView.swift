@@ -31,9 +31,9 @@ struct SisaUangCardView: View{
                         .font(.system(size: 22))
                         .frame(maxWidth: .infinity, alignment: .leading)
                     
-                    Text("Anda telah menyimpan uang Rp.100.600.00 pada bulan Juni!")
-                        .font(.system(size: 7))
-                        .frame(maxWidth: .infinity, alignment: .leading)
+//                    Text("Anda telah menyimpan uang Rp.100.600.00 pada bulan Juni!")
+//                        .font(.system(size: 7))
+//                        .frame(maxWidth: .infinity, alignment: .leading)
                     Spacer()
                     
                     

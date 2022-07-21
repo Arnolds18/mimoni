@@ -54,7 +54,7 @@ struct CardView: View{
             //            Spacer()
         }
         .padding(15)
-        .background(Color.white.opacity(0.5))
+        .background(Color.white)
         .cornerRadius(20)
         .frame(width: 165, height: 170)
         
