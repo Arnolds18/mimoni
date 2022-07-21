@@ -68,14 +68,17 @@ struct AddBudgetView: View {
                       segment.segments.append(Segment(id: UUID(), title: budgetCategory, value: totalBudget, recommended: recomendationEnabled))
                       segment.objectWillChange.send()
                       ramdom.toggle()
-                  }.foregroundColor(Color.interactiveColor))
+                  }
+                    .disabled(self.budgetCategory == "" || self.totalBudget <= 0  ? true : false)
+                    .foregroundColor(self.budgetCategory == "" || self.totalBudget <= 0  ? Color.gray : Color.interactiveColor))
                   .background(Color.whiteColor)
+                  
             }
         }
 }
 
-//struct AddBudgetView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        AddBudgetView()
-//    }
-//}
+struct AddBudgetView_Previews: PreviewProvider {
+    static var previews: some View {
+        AddBudgetView(segment: SegmentsViewModel(), ramdom: .constant(true))
+    }
+}

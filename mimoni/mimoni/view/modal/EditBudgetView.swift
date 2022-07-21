@@ -67,7 +67,9 @@ struct EditBudgetView: View {
                 isInputActive = false
                 ramdom.toggle()
                 
-            }.foregroundColor(Color.interactiveColor))
+            }
+                .disabled(self.budgetCategory == "" || self.totalBudget <= 0  ? true : false)
+                .foregroundColor(self.budgetCategory == "" || self.totalBudget <= 0  ? Color.gray : Color.interactiveColor))
         }.onAppear{
             totalBudget = segmentItem.value
             budgetCategory = segmentItem.title

@@ -79,17 +79,18 @@ struct SetupBudget: View{
                 }
                 NavigationLink(destination: SetupBudget(income: self.$income)) {
                     HStack{
-                        Text("Continue")
+                        Text("Continue\(income)")
                             .fontWeight(.semibold)
-
+                        
                     }
                     .font(.headline)
                     .frame(width: 340, height: 50)
-                    .foregroundColor(.blackColor)
-                    .background(Color.interactiveColor)
+                    .foregroundColor(self.income == 0 ? .blackColor : .whiteColor)
+                    .background(self.income == 0 ? Color.interactiveColor : Color.gray)
                     .cornerRadius(15)
                     .padding()
-                }
+                }.disabled(self.income == 0 ? false : true)
+                
                 .onChange(of: showAddBudget) { newValue in
                     totalListBudget = 0
                     for i in viewModel.segments{

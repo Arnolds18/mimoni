@@ -53,10 +53,10 @@ struct InputIncome: View {
                     }
                     .font(.headline)
                     .frame(width: 340, height: 50)
-                    .foregroundColor(.blackColor)
-                    .background(Color.interactiveColor)
+                    .foregroundColor(self.income > 0 ? .blackColor : .whiteColor)
+                    .background(self.income > 0 ? Color.interactiveColor : Color.gray)
                     .cornerRadius(15)
-                }
+                }.disabled(self.income > 0 ? false : true)
             }
             .frame(maxWidth:.infinity)
             .navigationBarBackButtonHidden(true)

@@ -15,8 +15,6 @@
 		41019B002861A9FA00CBF3D8 /* mimoni.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 41019AFE2861A9FA00CBF3D8 /* mimoni.xcdatamodeld */; };
 		41019B072861AD1100CBF3D8 /* InputIncome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41019B062861AD1100CBF3D8 /* InputIncome.swift */; };
 		4144A0CD2865985D00917D31 /* SetupBudget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4144A0CC2865985D00917D31 /* SetupBudget.swift */; };
-		416315B62864641600C3B36B /* Wine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416315B52864641600C3B36B /* Wine.swift */; };
-		41BE7EC72869909B00F32CB9 /* AddBudgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BE7EC62869909B00F32CB9 /* AddBudgetView.swift */; };
 		7896969A288034A400C690FC /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 789696972880343700C690FC /* Charts.framework */; platformFilter = ios; };
 		7896969B288034A400C690FC /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 789696972880343700C690FC /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		789696A22880356600C690FC /* colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7896969D2880356600C690FC /* colors.swift */; };
@@ -34,14 +32,16 @@
 		A0C34EF1287EB8EE0029522B /* TimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C34EF0287EB8EE0029522B /* TimelineProvider.swift */; };
 		A0C34EF3287EBF900029522B /* TimelineEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C34EF2287EBF900029522B /* TimelineEntry.swift */; };
 		A0C34EF7287EC0100029522B /* MonehWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C34EF6287EC0100029522B /* MonehWidgetView.swift */; };
-		EC0797E12861B2880062E89B /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0797E02861B2880062E89B /* OnboardingView.swift */; };
-		EC0797E32861B5C70062E89B /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0797E22861B5C70062E89B /* LaunchView.swift */; };
-		EC575558286AF36800CA63B4 /* EditBudgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC575557286AF36800CA63B4 /* EditBudgetView.swift */; };
 		EC57555D286AF69200CA63B4 /* ModalView in Frameworks */ = {isa = PBXBuildFile; productRef = EC57555C286AF69200CA63B4 /* ModalView */; };
-		EC575565287C070E00CA63B4 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC575564287C070E00CA63B4 /* CardView.swift */; };
-		EC575569287C2AEF00CA63B4 /* WalletCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC575568287C2AEF00CA63B4 /* WalletCardView.swift */; };
-		EC57556B287C2AFB00CA63B4 /* RecommendationCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC57556A287C2AFB00CA63B4 /* RecommendationCardView.swift */; };
-		EC5953E428630A7200B0C200 /* PieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5953E328630A7200B0C200 /* PieChart.swift */; };
+		EC57557128814E3800CA63B4 /* Wine.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC57556E28814E3800CA63B4 /* Wine.swift */; };
+		EC57557628814E4900CA63B4 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC57557228814E4900CA63B4 /* CardView.swift */; };
+		EC57557728814E4900CA63B4 /* PieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC57557328814E4900CA63B4 /* PieChart.swift */; };
+		EC57557828814E4900CA63B4 /* WalletCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC57557428814E4900CA63B4 /* WalletCardView.swift */; };
+		EC57557928814E4900CA63B4 /* RecommendationCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC57557528814E4900CA63B4 /* RecommendationCardView.swift */; };
+		EC57557C28814E5900CA63B4 /* EditBudgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC57557A28814E5900CA63B4 /* EditBudgetView.swift */; };
+		EC57557D28814E5900CA63B4 /* AddBudgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC57557B28814E5900CA63B4 /* AddBudgetView.swift */; };
+		EC57558028814E6500CA63B4 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC57557E28814E6500CA63B4 /* LaunchView.swift */; };
+		EC57558128814E6500CA63B4 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC57557F28814E6500CA63B4 /* OnboardingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,9 +103,7 @@
 		41019AFF2861A9FA00CBF3D8 /* mimoni.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = mimoni.xcdatamodel; sourceTree = "<group>"; };
 		41019B062861AD1100CBF3D8 /* InputIncome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputIncome.swift; sourceTree = "<group>"; };
 		4144A0CC2865985D00917D31 /* SetupBudget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupBudget.swift; sourceTree = "<group>"; };
-		416315B52864641600C3B36B /* Wine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wine.swift; sourceTree = "<group>"; };
 		416315B72864649200C3B36B /* Charts-master */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "Charts-master"; path = "../../../../../Downloads/Charts-master"; sourceTree = "<group>"; };
-		41BE7EC62869909B00F32CB9 /* AddBudgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBudgetView.swift; sourceTree = "<group>"; };
 		789696912880343700C690FC /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "Charts-master/Charts.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		7896969D2880356600C690FC /* colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = colors.swift; sourceTree = "<group>"; };
 		789696A12880356600C690FC /* mimoni.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = mimoni.xcdatamodel; sourceTree = "<group>"; };
@@ -122,13 +120,15 @@
 		A0C34EF0287EB8EE0029522B /* TimelineProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineProvider.swift; sourceTree = "<group>"; };
 		A0C34EF2287EBF900029522B /* TimelineEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineEntry.swift; sourceTree = "<group>"; };
 		A0C34EF6287EC0100029522B /* MonehWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonehWidgetView.swift; sourceTree = "<group>"; };
-		EC0797E02861B2880062E89B /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
-		EC0797E22861B5C70062E89B /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
-		EC575557286AF36800CA63B4 /* EditBudgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBudgetView.swift; sourceTree = "<group>"; };
-		EC575564287C070E00CA63B4 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
-		EC575568287C2AEF00CA63B4 /* WalletCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletCardView.swift; sourceTree = "<group>"; };
-		EC57556A287C2AFB00CA63B4 /* RecommendationCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationCardView.swift; sourceTree = "<group>"; };
-		EC5953E328630A7200B0C200 /* PieChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChart.swift; sourceTree = "<group>"; };
+		EC57556E28814E3800CA63B4 /* Wine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wine.swift; sourceTree = "<group>"; };
+		EC57557228814E4900CA63B4 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		EC57557328814E4900CA63B4 /* PieChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieChart.swift; sourceTree = "<group>"; };
+		EC57557428814E4900CA63B4 /* WalletCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletCardView.swift; sourceTree = "<group>"; };
+		EC57557528814E4900CA63B4 /* RecommendationCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendationCardView.swift; sourceTree = "<group>"; };
+		EC57557A28814E5900CA63B4 /* EditBudgetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditBudgetView.swift; sourceTree = "<group>"; };
+		EC57557B28814E5900CA63B4 /* AddBudgetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBudgetView.swift; sourceTree = "<group>"; };
+		EC57557E28814E6500CA63B4 /* LaunchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
+		EC57557F28814E6500CA63B4 /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,8 +246,8 @@
 		EC0797DF2861B2640062E89B /* onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				EC0797E02861B2880062E89B /* OnboardingView.swift */,
-				EC0797E22861B5C70062E89B /* LaunchView.swift */,
+				EC57557E28814E6500CA63B4 /* LaunchView.swift */,
+				EC57557F28814E6500CA63B4 /* OnboardingView.swift */,
 			);
 			path = onboarding;
 			sourceTree = "<group>";
@@ -255,10 +255,10 @@
 		EC575561286ED74000CA63B4 /* component */ = {
 			isa = PBXGroup;
 			children = (
-				EC5953E328630A7200B0C200 /* PieChart.swift */,
-				EC575564287C070E00CA63B4 /* CardView.swift */,
-				EC575568287C2AEF00CA63B4 /* WalletCardView.swift */,
-				EC57556A287C2AFB00CA63B4 /* RecommendationCardView.swift */,
+				EC57557228814E4900CA63B4 /* CardView.swift */,
+				EC57557328814E4900CA63B4 /* PieChart.swift */,
+				EC57557528814E4900CA63B4 /* RecommendationCardView.swift */,
+				EC57557428814E4900CA63B4 /* WalletCardView.swift */,
 			);
 			path = component;
 			sourceTree = "<group>";
@@ -266,7 +266,7 @@
 		EC575562286ED79300CA63B4 /* object */ = {
 			isa = PBXGroup;
 			children = (
-				416315B52864641600C3B36B /* Wine.swift */,
+				EC57556E28814E3800CA63B4 /* Wine.swift */,
 			);
 			path = object;
 			sourceTree = "<group>";
@@ -274,8 +274,8 @@
 		EC575563286ED85200CA63B4 /* modal */ = {
 			isa = PBXGroup;
 			children = (
-				41BE7EC62869909B00F32CB9 /* AddBudgetView.swift */,
-				EC575557286AF36800CA63B4 /* EditBudgetView.swift */,
+				EC57557B28814E5900CA63B4 /* AddBudgetView.swift */,
+				EC57557A28814E5900CA63B4 /* EditBudgetView.swift */,
 			);
 			path = modal;
 			sourceTree = "<group>";
@@ -431,25 +431,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				41019B002861A9FA00CBF3D8 /* mimoni.xcdatamodeld in Sources */,
+				EC57558028814E6500CA63B4 /* LaunchView.swift in Sources */,
 				A0101688287D671A00F9D128 /* MonehWidget.intentdefinition in Sources */,
-				EC575558286AF36800CA63B4 /* EditBudgetView.swift in Sources */,
 				789696AA2880366000C690FC /* NavBarBackButton.swift in Sources */,
-				EC0797E32861B5C70062E89B /* LaunchView.swift in Sources */,
+				EC57557828814E4900CA63B4 /* WalletCardView.swift in Sources */,
 				789696A32880356600C690FC /* mimoni.xcdatamodeld in Sources */,
-				416315B62864641600C3B36B /* Wine.swift in Sources */,
 				41019AFD2861A9FA00CBF3D8 /* Persistence.swift in Sources */,
-				EC575569287C2AEF00CA63B4 /* WalletCardView.swift in Sources */,
-				EC5953E428630A7200B0C200 /* PieChart.swift in Sources */,
+				EC57557728814E4900CA63B4 /* PieChart.swift in Sources */,
 				41019AF62861A9F800CBF3D8 /* ContentView.swift in Sources */,
+				EC57557928814E4900CA63B4 /* RecommendationCardView.swift in Sources */,
 				789696A22880356600C690FC /* colors.swift in Sources */,
-				EC575565287C070E00CA63B4 /* CardView.swift in Sources */,
 				789696AC2880366000C690FC /* color.swift in Sources */,
-				EC0797E12861B2880062E89B /* OnboardingView.swift in Sources */,
+				EC57557D28814E5900CA63B4 /* AddBudgetView.swift in Sources */,
 				789696AB2880366000C690FC /* textfield.swift in Sources */,
+				EC57557128814E3800CA63B4 /* Wine.swift in Sources */,
 				41019AF42861A9F800CBF3D8 /* mimoniApp.swift in Sources */,
-				41BE7EC72869909B00F32CB9 /* AddBudgetView.swift in Sources */,
-				EC57556B287C2AFB00CA63B4 /* RecommendationCardView.swift in Sources */,
 				4144A0CD2865985D00917D31 /* SetupBudget.swift in Sources */,
+				EC57557C28814E5900CA63B4 /* EditBudgetView.swift in Sources */,
+				EC57557628814E4900CA63B4 /* CardView.swift in Sources */,
+				EC57558128814E6500CA63B4 /* OnboardingView.swift in Sources */,
 				41019B072861AD1100CBF3D8 /* InputIncome.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
