@@ -26,13 +26,29 @@ struct AddExpenseMainView: View {
     
     var body: some View {
         NavigationView {
-            VStack{
+            VStack(){
                 Text("Kebutuhan")
                     .font(.system(size: 22))
                     .fontWeight(.bold)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(25)
-                Form{   
+                ZStack(){
+                    RoundedRectangle(cornerRadius:20)
+                        .fill(.white)
+                        .frame(width: 350, height: 150, alignment: .leading)
+                    CardViewExpenses()
+                }
+//                Spacer()
+//                VStack(spacing: 2){
+//                    Text("Input expenses")
+//                        .frame(width: 320, height: 10, alignment: .leading)
+//
+//                }
+//                .padding(.top)
+                
+//                Spacer()
+                Form{
+                    
                     HStack{
                         Text("Total")
                         Spacer()

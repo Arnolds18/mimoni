@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		25A4226B2887E9C00027C043 /* SisaUangCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A4226A2887E9C00027C043 /* SisaUangCardView.swift */; };
 		25A4226F2887EA000027C043 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A4226E2887EA000027C043 /* MainScreen.swift */; };
+		25A422732887F4BD0027C043 /* CardViewExpenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A422722887F4BD0027C043 /* CardViewExpenses.swift */; };
 		41019AF42861A9F800CBF3D8 /* mimoniApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41019AF32861A9F800CBF3D8 /* mimoniApp.swift */; };
 		41019AF62861A9F800CBF3D8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41019AF52861A9F800CBF3D8 /* ContentView.swift */; };
 		41019AF82861A9FA00CBF3D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41019AF72861A9FA00CBF3D8 /* Assets.xcassets */; };
@@ -100,6 +101,7 @@
 /* Begin PBXFileReference section */
 		25A4226A2887E9C00027C043 /* SisaUangCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SisaUangCardView.swift; sourceTree = "<group>"; };
 		25A4226E2887EA000027C043 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
+		25A422722887F4BD0027C043 /* CardViewExpenses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewExpenses.swift; sourceTree = "<group>"; };
 		41019AF02861A9F800CBF3D8 /* mimoni.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mimoni.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41019AF32861A9F800CBF3D8 /* mimoniApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mimoniApp.swift; sourceTree = "<group>"; };
 		41019AF52861A9F800CBF3D8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -269,6 +271,7 @@
 				EC575568287C2AEF00CA63B4 /* WalletCardView.swift */,
 				EC57556A287C2AFB00CA63B4 /* RecommendationCardView.swift */,
 				25A4226A2887E9C00027C043 /* SisaUangCardView.swift */,
+				25A422722887F4BD0027C043 /* CardViewExpenses.swift */,
 			);
 			path = component;
 			sourceTree = "<group>";
@@ -461,6 +464,7 @@
 				789696AC2880366000C690FC /* color.swift in Sources */,
 				EC0797E12861B2880062E89B /* OnboardingView.swift in Sources */,
 				789696AB2880366000C690FC /* textfield.swift in Sources */,
+				25A422732887F4BD0027C043 /* CardViewExpenses.swift in Sources */,
 				41019AF42861A9F800CBF3D8 /* mimoniApp.swift in Sources */,
 				41BE7EC72869909B00F32CB9 /* AddBudgetView.swift in Sources */,
 				41A760B028815E78009B4CF8 /* AddExpenseView.swift in Sources */,

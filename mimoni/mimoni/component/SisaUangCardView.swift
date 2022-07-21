@@ -38,14 +38,14 @@ struct SisaUangCardView: View{
                     
                     
                 }
-                .frame(width: 256, height: 100)
+                .frame(width: 240, height: 100)
                 
                 
                 
             }
             
         }
-        .frame(width: 380, height: 100)
+        .frame(width: 360, height: 100)
         
     }
 }
