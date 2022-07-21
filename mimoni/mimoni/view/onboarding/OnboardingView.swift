@@ -13,48 +13,51 @@ struct OnboardingView: View {
     
     var body: some View {
         NavigationView {
-            VStack {
-                Image("onboardingAppIcon")
-                    .resizable()
-                    .scaledToFit()
-                
-                Spacer()
-                Text("Selamat datang di")
-                    .font(.system(size: 32))
-                    .frame(width: 300, alignment: .center)
-                
-                Text("Moneh")
-                    .fontWeight(.heavy)
-                    .font(.system(size: 31))
-                    .frame(width: 300, alignment: .center)
-                    .padding(.bottom,10)
-                
-                Spacer()
-                
-                VStack(alignment: .leading) {
-                    NewDetail(image: "onboarding-1", imageColor: .pink, title: "ANGGARAN, LEBIH BAIK.", description: "Masukin anggaran kamu ke kategori yang beda, buat tracking pengeluaran!")
-                    NewDetail(image: "onboarding-2", imageColor: .red, title: "BATAS PENGELUARAN", description: "Dapet notifikasi untuk budget maximum harian kamu.")
-                    NewDetail(image: "onboarding-3", imageColor: .blue, title: "LACAK DENGAN MUDAH", description: "Tambah widget ke home screen kamu, mempermudah masukin expenses.")
-                }
-                
-                Spacer()
-                
-                NavigationLink(destination: InputIncome( isShowOnBoarding: $isShowOnBoarding)){
-                    HStack{
-                        Text("Continue")
-                            .fontWeight(.semibold)
-
+            ZStack {
+                Color.whiteColor.ignoresSafeArea()
+                VStack {
+                    Image("onboardingAppIcon")
+                        .resizable()
+                        .scaledToFit()
+                    
+                    Spacer()
+                    Text("Selamat datang di")
+                        .font(.system(size: 32))
+                        .frame(width: 300, alignment: .center)
+                    
+                    Text("Moneh")
+                        .fontWeight(.heavy)
+                        .font(.system(size: 31))
+                        .frame(width: 300, alignment: .center)
+                        .padding(.bottom,10)
+                    
+                    Spacer()
+                    
+                    VStack(alignment: .leading) {
+                        NewDetail(image: "onboarding-1", imageColor: .pink, title: "ANGGARAN, LEBIH BAIK.", description: "Masukin anggaran kamu ke kategori yang beda, buat tracking pengeluaran!")
+                        NewDetail(image: "onboarding-2", imageColor: .red, title: "BATAS PENGELUARAN", description: "Dapet notifikasi untuk budget maximum harian kamu.")
+                        NewDetail(image: "onboarding-3", imageColor: .blue, title: "LACAK DENGAN MUDAH", description: "Tambah widget ke home screen kamu, mempermudah masukin expenses.")
                     }
-                    .font(.headline)
-                    .frame(width: 340, height: 50)
-                    .foregroundColor(.blackColor)
-                    .background(Color.interactiveColor)
-                    .cornerRadius(15)
-                    .padding()
+                    
+                    Spacer()
+                    
+                    NavigationLink(destination: InputIncome( isShowOnBoarding: $isShowOnBoarding)){
+                        HStack{
+                            Text("Continue")
+                                .fontWeight(.semibold)
+
+                        }
+                        .font(.headline)
+                        .frame(width: 340, height: 50)
+                        .foregroundColor(.blackColor)
+                        .background(Color.interactiveColor)
+                        .cornerRadius(15)
+                        .padding()
+                    }
                 }
             }
+//            .background(Color.blue.edgesIgnoringSafeArea(.all))
         }
-        .background(Color.red.ignoresSafeArea())
         .navigationBarHidden(true)
         .accentColor(Color.interactiveColor)
     }
