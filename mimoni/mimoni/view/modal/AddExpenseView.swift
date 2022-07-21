@@ -9,7 +9,6 @@ import SwiftUI
 
 struct AddExpenseView: View {
     @Environment(\.dismiss) private var dismiss
-    
     var budgetCategory = ["Kebutuhan", "Keinginan", "Tabungan", "Dana Darurat"]
     @State private var selectedBudgetCategory = "Kebutuhan"
     @FocusState private var isInputActive: Bool
@@ -27,12 +26,12 @@ struct AddExpenseView: View {
     var body: some View {
         NavigationView {
             VStack{
-//                VStack(alignment: .trailing, spacing: 10){
-//                    Text("Input Budget Expenses")
-//                        .fontWeight(.semibold)
-//                        .font(.system(size: 25))
-//                        .multilineTextAlignment(.leading)
-//                }
+                //                VStack(alignment: .trailing, spacing: 10){
+                //                    Text("Input Budget Expenses")
+                //                        .fontWeight(.semibold)
+                //                        .font(.system(size: 25))
+                //                        .multilineTextAlignment(.leading)
+                //                }
                 Picker("", selection: $selectedBudgetCategory) {
                     ForEach(budgetCategory, id: \.self) {
                         Text($0)
@@ -71,6 +70,7 @@ struct AddExpenseView: View {
             .background(Color.whiteColor.ignoresSafeArea())
             
         }
+        
     }
 }
 
