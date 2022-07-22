@@ -50,13 +50,13 @@ struct MainScreen: View {
                     .frame(width: 345, height: 10, alignment: .leading)
                     
                     LazyVGrid(columns: adaptiveColumns, spacing: 10) {
-                        ForEach(data, id: \.self){ number in
+                        ForEach($segments, id: \.self){ segment in
                             Button(action: {
                                 isModalOpen.toggle()
                             }
                             ){
                                 ZStack{
-                                    CardView(totalSpend: $totalSpend, totalCategory: $totalCategory)
+                                    CardView(segmentList: segment)
                                 }
                                 
                             }
@@ -103,7 +103,7 @@ struct CustomButtonStyle : ButtonStyle {
     
     struct MainScreen_Previews: PreviewProvider {
         static var previews: some View {
-            MainScreen()
+            MainScreen( segments: .constant([Segment]()))
             
         }
     }
