@@ -22,7 +22,7 @@ struct EditBudgetView: View {
     
     var body: some View {
         NavigationView {
-            ZStack {
+//            ZStack {
                 Form{
                     HStack{
                         Text("Kategori Budget")
@@ -51,16 +51,16 @@ struct EditBudgetView: View {
                         }
                     }
                 }
-                VStack{
-                    Text("Untuk membatasi pengeluaran yang melebihi batas, kamu bisa dapat rekomendasi pengeluaran maksimum harian untuk kebutuhan yang akan ditampilkan di summary screen.")
-                        .font(.system(size: 11))
-                        .foregroundColor(.gray)
-                        .frame(maxWidth: .infinity ,alignment: .topLeading)
-                        .padding(.bottom, 320)
-                        .padding(23)
-                    
-                }
-            }
+//                VStack{
+//                    Text("Untuk membatasi pengeluaran yang melebihi batas, kamu bisa dapat rekomendasi pengeluaran maksimum harian untuk kebutuhan yang akan ditampilkan di summary screen.")
+//                        .font(.system(size: 11))
+//                        .foregroundColor(.gray)
+//                        .frame(maxWidth: .infinity ,alignment: .topLeading)
+//                        .padding(.bottom, 320)
+//                        .padding(23)
+//
+//                }
+//            }
             .background(Color.whiteColor)
             .navigationBarTitle(Text("Budget"), displayMode: .inline)
             .navigationBarItems(leading:
