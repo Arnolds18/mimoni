@@ -14,11 +14,13 @@ struct MainScreen: View {
         
         GridItem(.adaptive(minimum: 170))
     ]
-//    @State var linkOne: Bool = false
+    //    @State var linkOne: Bool = false
     @State var totalSpend = Segment(title: "Test", value: 30, recommended: false)
     @State var totalCategory = Segment(title: "Test", value: 100, recommended: false)
     @AppStorage("isFirstLaunch") var isFirstLaunch: Bool = true
     @State var isShowOnBoarding: Bool = false
+    
+    @State private var isModalOpen = false
     
     
     var body: some View {
@@ -47,35 +49,24 @@ struct MainScreen: View {
                     
                     LazyVGrid(columns: adaptiveColumns, spacing: 10) {
                         ForEach(data, id: \.self){ number in
-                            ZStack{
-                                CardView(totalSpend: $totalSpend, totalCategory: $totalCategory)
+                            Button(action: {
+                                isModalOpen.toggle()
                             }
-                            
+                            ){
+                                ZStack{
+                                    CardView(totalSpend: $totalSpend, totalCategory: $totalCategory)
+                                }
+                                
+                            }
+                            .sheet(isPresented: $isModalOpen){
+                                AddExpenseMainView(random: .constant(true))
+                                
+                            }
+                            .buttonStyle(CustomButtonStyle(isSelected: true))
                         }
-
+                        
                     }
                     .padding()
-                    
-//                    HStack{
-//                        VStack(spacing: 3){
-//                            CardView(totalSpend: $totalSpend, totalCategory: $totalCategory)
-//                            CardView(totalSpend: $totalSpend, totalCategory: $totalCategory)
-//                        }
-//                        .frame(width: 180, height: 350)
-//
-//
-//                        VStack(spacing: 3){
-//                            CardView(totalSpend: $totalSpend, totalCategory: $totalCategory)
-//                            CardView(totalSpend: $totalSpend, totalCategory: $totalCategory)
-//
-//                        }
-//                        .frame(width: 180, height: 150)
-//
-//
-//                    }
-//                    .frame(width: 150, height: 360)
-                    
-                    //                    .frame(width: 100, height: -100)
                 }
             }
             .navigationTitle("Summary")
@@ -93,11 +84,23 @@ struct MainScreen: View {
             OnboardingView(isShowOnBoarding: $isShowOnBoarding)
         }
     }
+    
 }
 
-struct MainScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        MainScreen()
 
+struct CustomButtonStyle : ButtonStyle {
+    var isSelected: Bool
+    
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+        
+        
     }
 }
+    
+    struct MainScreen_Previews: PreviewProvider {
+        static var previews: some View {
+            MainScreen()
+            
+        }
+    }
