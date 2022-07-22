@@ -14,12 +14,14 @@ struct MainScreen: View {
         
         GridItem(.adaptive(minimum: 170))
     ]
-//    @State var linkOne: Bool = false
+    //    @State var linkOne: Bool = false
     @State var totalSpend = Segment(title: "Test", value: 30, recommended: false)
     @State var totalCategory = Segment(title: "Test", value: 100, recommended: false)
     @AppStorage("isFirstLaunch") var isFirstLaunch: Bool = true
     @State var isShowOnBoarding: Bool = false
     @Binding var segments : [Segment]
+    
+    @State private var isModalOpen = false
     
     
     var body: some View {
@@ -48,13 +50,23 @@ struct MainScreen: View {
                     .frame(width: 345, height: 10, alignment: .leading)
                     
                     LazyVGrid(columns: adaptiveColumns, spacing: 10) {
-                        ForEach($segments, id: \.self){ segment in
-                            ZStack{
-                                CardView(segmentList: segment)
+                        ForEach(data, id: \.self){ number in
+                            Button(action: {
+                                isModalOpen.toggle()
                             }
-                            
+                            ){
+                                ZStack{
+                                    CardView(totalSpend: $totalSpend, totalCategory: $totalCategory)
+                                }
+                                
+                            }
+                            .sheet(isPresented: $isModalOpen){
+                                AddExpenseMainView(random: .constant(true))
+                                
+                            }
+                            .buttonStyle(CustomButtonStyle(isSelected: true))
                         }
-
+                        
                     }
                     .padding()
                     
@@ -75,11 +87,23 @@ struct MainScreen: View {
             OnboardingView(isShowOnBoarding: $isShowOnBoarding, segments: $segments)
         }
     }
+    
 }
 
-struct MainScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        MainScreen( segments: .constant([Segment]()))
 
+struct CustomButtonStyle : ButtonStyle {
+    var isSelected: Bool
+    
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+        
+        
     }
 }
+    
+    struct MainScreen_Previews: PreviewProvider {
+        static var previews: some View {
+            MainScreen()
+            
+        }
+    }
