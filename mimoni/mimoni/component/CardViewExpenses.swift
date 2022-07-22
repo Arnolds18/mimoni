@@ -23,11 +23,11 @@ struct CardViewExpenses: View{
                 
                 
                 Circle() //circle depan buat tau datanya berapa
-                    .trim(from: 0, to: 0.25) //nanti to nya dari batas dari budget yang di set - data total pengeluaran
+                    .trim(from: 0.25, to: 0.75) //nanti to nya dari batas dari budget yang di set - data total pengeluaran
                     .stroke(Color.orange, lineWidth: 15)
                     .frame(width: (UIScreen.main.bounds.width - 100) / 3, height: (UIScreen.main.bounds.width - 90) / 3)
-                    .rotationEffect(.degrees(-90))
-                Text("25%")
+//                    .rotationEffect(.degrees(-90))
+                Text("50%")
                     .frame(maxWidth: 100, alignment: .center)
                     .font(.system(size: 15))
                 
