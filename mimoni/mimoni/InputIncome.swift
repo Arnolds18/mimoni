@@ -6,12 +6,19 @@
 //
 
 import SwiftUI
+import SimpleToast
 
 struct InputIncome: View {
     @State var income : Int = 0
     @State var isShowingDetailView =  false
+    @State var showToast = false
     @FocusState private var isInputActive: Bool
     @Binding var isShowOnBoarding: Bool
+    @Binding var segments: [Segment]
+    
+    let toastOptions = SimpleToastOptions(
+        alignment: .bottom, hideAfter: 2, backdrop: Color.black.opacity(0.2), animation: .default, modifierType: .slide
+    )
     
     var numberFormatter : NumberFormatter{
         let numberFormatter = NumberFormatter()
@@ -46,7 +53,7 @@ struct InputIncome: View {
                     }
                 }
             Spacer()
-            NavigationLink(destination: SetupBudget(income: self.$income, income2: self.income, isShowOnBoarding: $isShowOnBoarding)) {
+            NavigationLink(destination: SetupBudget(income: self.$income, income2: self.income, isShowOnBoarding: $isShowOnBoarding, segments: $segments)) {
                 HStack{
                     Text("Continue")
                         .fontWeight(.semibold)
@@ -56,7 +63,17 @@ struct InputIncome: View {
                 .foregroundColor(self.income > 0 ? .blackColor : .white)
                 .background(self.income > 0 ? Color.interactiveColor : .gray)
                 .cornerRadius(15)
-            }.disabled(self.income > 0 ? false : true)
+            }
+            .disabled(self.income > 0 ? false : true)
+//            .simpleToast(isPresented: $showToast, options: toastOptions) {
+//                HStack{
+//                    Text("Masukkan angka lebih dari 0").bold()
+//                }
+//                .padding(20)
+//                .background(Color.yellow.opacity(0.8))
+//                .foregroundColor(Color.white)
+//                .cornerRadius(14)
+//            }
         }
         .frame(maxWidth:.infinity)
         .navigationBarItems(trailing:
@@ -72,6 +89,6 @@ struct InputIncome: View {
 
 struct InputIncome_Previews: PreviewProvider {
     static var previews: some View {
-        InputIncome(isShowOnBoarding: .constant(true))
+        InputIncome(isShowOnBoarding: .constant(true), segments: .constant([Segment]()))
     }
 }

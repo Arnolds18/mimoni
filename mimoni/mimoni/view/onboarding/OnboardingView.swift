@@ -10,6 +10,7 @@ import SwiftUI
 
 struct OnboardingView: View {
     @Binding var isShowOnBoarding: Bool
+    @Binding var segments: [Segment]
     
     var body: some View {
         NavigationView {
@@ -41,7 +42,7 @@ struct OnboardingView: View {
                     
                     Spacer()
                     
-                    NavigationLink(destination: InputIncome( isShowOnBoarding: $isShowOnBoarding)){
+                    NavigationLink(destination: InputIncome( isShowOnBoarding: $isShowOnBoarding, segments: $segments)){
                         HStack{
                             Text("Continue")
                                 .fontWeight(.semibold)
@@ -93,7 +94,7 @@ struct NewDetail: View {
 
 struct OnboardingView_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardingView(isShowOnBoarding: .constant(true))
+        OnboardingView(isShowOnBoarding: .constant(true), segments: .constant([Segment]()))
     }
 }
 

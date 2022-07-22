@@ -9,8 +9,8 @@ import Foundation
 import SwiftUI
 
 struct MainScreen: View {
-    private var data : [Int] = Array(1...20)
-    private let adaptiveColumns = [
+    var data : [Int] = Array(1...20)
+    let adaptiveColumns = [
         
         GridItem(.adaptive(minimum: 170))
     ]
@@ -19,6 +19,7 @@ struct MainScreen: View {
     @State var totalCategory = Segment(title: "Test", value: 100, recommended: false)
     @AppStorage("isFirstLaunch") var isFirstLaunch: Bool = true
     @State var isShowOnBoarding: Bool = false
+    @Binding var segments : [Segment]
     
     
     var body: some View {
@@ -30,7 +31,7 @@ struct MainScreen: View {
                         RoundedRectangle(cornerRadius:20)
                             .fill(.white)
                             .frame(width: 360, height: 125, alignment: .leading)
-                        SisaUangCardView()
+                        SisaUangCardView(income: 10000)
                     }
                     ZStack{
                         RoundedRectangle(cornerRadius:20)
@@ -41,14 +42,15 @@ struct MainScreen: View {
                     VStack(){
                         Text("Budget")
                             .font(.system(size: 24)).bold()
+                            .foregroundColor(.black)
                         
                     }
                     .frame(width: 345, height: 10, alignment: .leading)
                     
                     LazyVGrid(columns: adaptiveColumns, spacing: 10) {
-                        ForEach(data, id: \.self){ number in
+                        ForEach($segments, id: \.self){ segment in
                             ZStack{
-                                CardView(totalSpend: $totalSpend, totalCategory: $totalCategory)
+                                CardView(segmentList: segment)
                             }
                             
                         }
@@ -56,26 +58,6 @@ struct MainScreen: View {
                     }
                     .padding()
                     
-//                    HStack{
-//                        VStack(spacing: 3){
-//                            CardView(totalSpend: $totalSpend, totalCategory: $totalCategory)
-//                            CardView(totalSpend: $totalSpend, totalCategory: $totalCategory)
-//                        }
-//                        .frame(width: 180, height: 350)
-//
-//
-//                        VStack(spacing: 3){
-//                            CardView(totalSpend: $totalSpend, totalCategory: $totalCategory)
-//                            CardView(totalSpend: $totalSpend, totalCategory: $totalCategory)
-//
-//                        }
-//                        .frame(width: 180, height: 150)
-//
-//
-//                    }
-//                    .frame(width: 150, height: 360)
-                    
-                    //                    .frame(width: 100, height: -100)
                 }
             }
             .navigationTitle("Summary")
@@ -90,14 +72,14 @@ struct MainScreen: View {
             }
         }
         .fullScreenCover(isPresented: $isShowOnBoarding) {
-            OnboardingView(isShowOnBoarding: $isShowOnBoarding)
+            OnboardingView(isShowOnBoarding: $isShowOnBoarding, segments: $segments)
         }
     }
 }
 
 struct MainScreen_Previews: PreviewProvider {
     static var previews: some View {
-        MainScreen()
+        MainScreen( segments: .constant([Segment]()))
 
     }
 }

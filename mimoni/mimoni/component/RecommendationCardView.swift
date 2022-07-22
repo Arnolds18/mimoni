@@ -23,10 +23,12 @@ struct RecommendationCardView: View{
                     .font(.system(size: 12))
                     .font(.headline)
                     .frame(maxWidth: .infinity, alignment: .leading)
+                    .foregroundColor(.black)
                     
 //                Spacer()
                 Text("RP 33.000,-")
                     .font(.system(size: 23))
+                    .foregroundColor(.black)
                 Spacer()
                     
                

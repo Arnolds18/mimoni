@@ -44,7 +44,7 @@ struct WalletCardView: View{
 struct WalletCardView_Previews: PreviewProvider {
     static var previews: some View {
         Group{
-            CardView(totalSpend: .constant(Segment(title: "Test", value: 30, recommended: false)), totalCategory: .constant(Segment(title: "Test", value: 100, recommended: false)))
+            CardView(segmentList: .constant(Segment(title: "Test", value: 30, recommended: false)))
                 .previewLayout(.sizeThatFits)
         }
     }

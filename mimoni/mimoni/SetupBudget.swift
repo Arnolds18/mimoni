@@ -10,7 +10,7 @@
 import SwiftUI
 import ModalView
 
-struct Segment: Identifiable{
+struct Segment: Identifiable, Hashable{
     var id = UUID()
     
     var title: String
@@ -53,6 +53,7 @@ struct SetupBudget: View{
         }
     }
     @Binding var isShowOnBoarding: Bool
+    @Binding var segments: [Segment]
     
     var body: some View {
         VStack{
@@ -84,6 +85,7 @@ struct SetupBudget: View{
                 }
             }
             Button(action: {
+                segments = viewModel.segments
                 isShowOnBoarding = false
             }){
                 HStack{
@@ -142,7 +144,7 @@ struct SetupBudget: View{
     
     struct SetupBudget_Previews: PreviewProvider {
         static var previews: some View {
-            SetupBudget(income: .constant(1000), income2: 1000,  isShowOnBoarding: .constant(true))
+            SetupBudget(income: .constant(1000), income2: 1000,  isShowOnBoarding: .constant(true), segments: .constant([Segment]()))
         }
     }
 }

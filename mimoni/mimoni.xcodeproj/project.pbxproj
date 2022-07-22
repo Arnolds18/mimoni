@@ -14,7 +14,6 @@
 		41019AF62861A9F800CBF3D8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41019AF52861A9F800CBF3D8 /* ContentView.swift */; };
 		41019AF82861A9FA00CBF3D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41019AF72861A9FA00CBF3D8 /* Assets.xcassets */; };
 		41019AFB2861A9FA00CBF3D8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41019AFA2861A9FA00CBF3D8 /* Preview Assets.xcassets */; };
-		41019AFD2861A9FA00CBF3D8 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41019AFC2861A9FA00CBF3D8 /* Persistence.swift */; };
 		41019B002861A9FA00CBF3D8 /* mimoni.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 41019AFE2861A9FA00CBF3D8 /* mimoni.xcdatamodeld */; };
 		41019B072861AD1100CBF3D8 /* InputIncome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41019B062861AD1100CBF3D8 /* InputIncome.swift */; };
 		4144A0CD2865985D00917D31 /* SetupBudget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4144A0CC2865985D00917D31 /* SetupBudget.swift */; };
@@ -47,6 +46,8 @@
 		EC575569287C2AEF00CA63B4 /* WalletCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC575568287C2AEF00CA63B4 /* WalletCardView.swift */; };
 		EC57556B287C2AFB00CA63B4 /* RecommendationCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC57556A287C2AFB00CA63B4 /* RecommendationCardView.swift */; };
 		EC5953E428630A7200B0C200 /* PieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5953E328630A7200B0C200 /* PieChart.swift */; };
+		EC949A79288952B1000F7EEF /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC949A78288952B1000F7EEF /* PersistenceController.swift */; };
+		EC949A832889B42C000F7EEF /* SimpleToast in Frameworks */ = {isa = PBXBuildFile; productRef = EC949A822889B42C000F7EEF /* SimpleToast */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,7 +108,6 @@
 		41019AF52861A9F800CBF3D8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		41019AF72861A9FA00CBF3D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		41019AFA2861A9FA00CBF3D8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		41019AFC2861A9FA00CBF3D8 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		41019AFF2861A9FA00CBF3D8 /* mimoni.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = mimoni.xcdatamodel; sourceTree = "<group>"; };
 		41019B062861AD1100CBF3D8 /* InputIncome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputIncome.swift; sourceTree = "<group>"; };
 		4144A0CC2865985D00917D31 /* SetupBudget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupBudget.swift; sourceTree = "<group>"; };
@@ -139,6 +139,7 @@
 		EC575568287C2AEF00CA63B4 /* WalletCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletCardView.swift; sourceTree = "<group>"; };
 		EC57556A287C2AFB00CA63B4 /* RecommendationCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationCardView.swift; sourceTree = "<group>"; };
 		EC5953E328630A7200B0C200 /* PieChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChart.swift; sourceTree = "<group>"; };
+		EC949A78288952B1000F7EEF /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC57555D286AF69200CA63B4 /* ModalView in Frameworks */,
+				EC949A832889B42C000F7EEF /* SimpleToast in Frameworks */,
 				7896969A288034A400C690FC /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -197,10 +199,10 @@
 				41019B062861AD1100CBF3D8 /* InputIncome.swift */,
 				4144A0CC2865985D00917D31 /* SetupBudget.swift */,
 				41019AF72861A9FA00CBF3D8 /* Assets.xcassets */,
-				41019AFC2861A9FA00CBF3D8 /* Persistence.swift */,
 				41019AFE2861A9FA00CBF3D8 /* mimoni.xcdatamodeld */,
 				789696912880343700C690FC /* Charts.xcodeproj */,
 				41019AF92861A9FA00CBF3D8 /* Preview Content */,
+				EC949A78288952B1000F7EEF /* PersistenceController.swift */,
 			);
 			path = mimoni;
 			sourceTree = "<group>";
@@ -335,6 +337,7 @@
 			name = mimoni;
 			packageProductDependencies = (
 				EC57555C286AF69200CA63B4 /* ModalView */,
+				EC949A822889B42C000F7EEF /* SimpleToast */,
 			);
 			productName = mimoni;
 			productReference = 41019AF02861A9F800CBF3D8 /* mimoni.app */;
@@ -386,6 +389,7 @@
 			mainGroup = 41019AE72861A9F800CBF3D8;
 			packageReferences = (
 				EC57555B286AF69200CA63B4 /* XCRemoteSwiftPackageReference "modal-view" */,
+				EC949A812889B42C000F7EEF /* XCRemoteSwiftPackageReference "SimpleToast" */,
 			);
 			productRefGroup = 41019AF12861A9F800CBF3D8 /* Products */;
 			projectDirPath = "";
@@ -452,7 +456,6 @@
 				EC0797E32861B5C70062E89B /* LaunchView.swift in Sources */,
 				789696A32880356600C690FC /* mimoni.xcdatamodeld in Sources */,
 				416315B62864641600C3B36B /* Wine.swift in Sources */,
-				41019AFD2861A9FA00CBF3D8 /* Persistence.swift in Sources */,
 				25A4226F2887EA000027C043 /* MainScreen.swift in Sources */,
 				EC575569287C2AEF00CA63B4 /* WalletCardView.swift in Sources */,
 				EC5953E428630A7200B0C200 /* PieChart.swift in Sources */,
@@ -471,6 +474,7 @@
 				EC57556B287C2AFB00CA63B4 /* RecommendationCardView.swift in Sources */,
 				4144A0CD2865985D00917D31 /* SetupBudget.swift in Sources */,
 				41019B072861AD1100CBF3D8 /* InputIncome.swift in Sources */,
+				EC949A79288952B1000F7EEF /* PersistenceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -547,6 +551,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -601,6 +606,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -619,9 +625,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"mimoni/Preview Content\"";
-				DEVELOPMENT_TEAM = V87M9TA2X6;
+				DEVELOPMENT_TEAM = G9K9MD55MT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -650,9 +656,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"mimoni/Preview Content\"";
-				DEVELOPMENT_TEAM = V87M9TA2X6;
+				DEVELOPMENT_TEAM = G9K9MD55MT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -770,6 +776,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		EC949A812889B42C000F7EEF /* XCRemoteSwiftPackageReference "SimpleToast" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sanzaru/SimpleToast";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.6.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -777,6 +791,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = EC57555B286AF69200CA63B4 /* XCRemoteSwiftPackageReference "modal-view" */;
 			productName = ModalView;
+		};
+		EC949A822889B42C000F7EEF /* SimpleToast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EC949A812889B42C000F7EEF /* XCRemoteSwiftPackageReference "SimpleToast" */;
+			productName = SimpleToast;
 		};
 /* End XCSwiftPackageProductDependency section */
 

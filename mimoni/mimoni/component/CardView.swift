@@ -10,8 +10,7 @@ import SwiftUI
 import Charts
 
 struct CardView: View{
-    @Binding var totalSpend: Segment
-    @Binding var totalCategory: Segment
+    @Binding var segmentList: Segment
     
     var body: some View{
         VStack(alignment: .leading, spacing: 5){
@@ -37,7 +36,7 @@ struct CardView: View{
             
             
 //                        Spacer()
-            Text("Kebutuhan") //nanti ini title segment
+            Text(segmentList.title) //nanti ini title segment
                 .font(.system(size: 16)).bold()
                 .padding(.top)
 //                .frame(width: 100, height: 50)
@@ -45,9 +44,11 @@ struct CardView: View{
             HStack{
                 Text("Sisa:")
                     .font(.system(size: 12))
+                    .foregroundColor(.black)
 //                    .padding(.top)
-                Text("Rp 25.000")
+                Text("Rp \(segmentList.value)")
                     .font(.system(size: 13)).bold()
+                    .foregroundColor(.black)
 //                    .padding(.top)
             }
 //                        .padding(.vertical)
@@ -71,7 +72,7 @@ func getPercent(){
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
         Group{
-            CardView(totalSpend: .constant(Segment(title: "Test", value: 30, recommended: false)), totalCategory: .constant(Segment(title: "Test", value: 100, recommended: false)))
+            CardView(segmentList: .constant(Segment(title: "Test", value: 30, recommended: false)))
                 .previewLayout(.sizeThatFits)
         }
     }
