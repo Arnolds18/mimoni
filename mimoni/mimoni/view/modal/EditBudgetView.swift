@@ -39,8 +39,12 @@ struct EditBudgetView: View {
                             .toolbar {
                                 ToolbarItemGroup(placement: .keyboard) {
                                     Spacer()
-                                    Button("Done") {
+                                    Button{
                                         isInputActive = false
+                                        ramdom.toggle()
+                                    }label: {
+                                        Text("Done")
+                                            .foregroundColor(Color.interactiveColor)
                                     }
                                 }
                             }

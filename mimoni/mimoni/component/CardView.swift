@@ -12,6 +12,8 @@ import Charts
 struct CardView: View{
     @Binding var segmentList: Segment
     
+    private let colors = [Color.greenColor, Color.purpleColor, Color.redColor, Color.yellowColor]
+    
     var body: some View{
         VStack(alignment: .leading, spacing: 5){
             HStack{
@@ -30,6 +32,7 @@ struct CardView: View{
                         .frame(width: (UIScreen.main.bounds.width - 150) / 4, height: (UIScreen.main.bounds.width - 220) / 3)
                 }
                 .padding(.top)
+//                .foregroundColor(colors[Circle])
 //                .frame(width: 70, height: 90)
                 Spacer()
             }

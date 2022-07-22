@@ -11,12 +11,15 @@ extension Color {
     static let interactiveColor = Color("F2942A")
     
     // Ring Chart
-    static let greenColor =  Color("3A8D87")
-    static let purpleColor =  Color("5262B5")
-    static let redColor = Color("FF5547")
-    static let yellowColor =  Color("FFCC1F")
+    static let greenColor =  Color("3D7873")
+    static let purpleColor =  Color("414E9C")
+    static let redColor = Color("F8503E")
+    static let yellowColor =  Color("FFBB39")
     
-    static let blackColor = Color("2B1A13")
+    static let blackColor = Color("291B13")
     static let whiteColor = Color("F7F7F7")
+    
+    
+//merah: F8503E, kuning: FFBB39, ungu: 414E9C, hijau: 3D7873, hitam: 291B13
     
 }
