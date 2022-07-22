@@ -11,7 +11,6 @@
 		25A4226F2887EA000027C043 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A4226E2887EA000027C043 /* MainScreen.swift */; };
 		25A422732887F4BD0027C043 /* CardViewExpenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A422722887F4BD0027C043 /* CardViewExpenses.swift */; };
 		41019AF42861A9F800CBF3D8 /* mimoniApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41019AF32861A9F800CBF3D8 /* mimoniApp.swift */; };
-		41019AF62861A9F800CBF3D8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41019AF52861A9F800CBF3D8 /* ContentView.swift */; };
 		41019AF82861A9FA00CBF3D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41019AF72861A9FA00CBF3D8 /* Assets.xcassets */; };
 		41019AFB2861A9FA00CBF3D8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41019AFA2861A9FA00CBF3D8 /* Preview Assets.xcassets */; };
 		41019B072861AD1100CBF3D8 /* InputIncome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41019B062861AD1100CBF3D8 /* InputIncome.swift */; };
@@ -103,7 +102,6 @@
 		25A422722887F4BD0027C043 /* CardViewExpenses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewExpenses.swift; sourceTree = "<group>"; };
 		41019AF02861A9F800CBF3D8 /* mimoni.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mimoni.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41019AF32861A9F800CBF3D8 /* mimoniApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mimoniApp.swift; sourceTree = "<group>"; };
-		41019AF52861A9F800CBF3D8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		41019AF72861A9FA00CBF3D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		41019AFA2861A9FA00CBF3D8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		41019B062861AD1100CBF3D8 /* InputIncome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputIncome.swift; sourceTree = "<group>"; };
@@ -191,7 +189,6 @@
 				EC5953E728631FB400B0C200 /* view */,
 				41019AF32861A9F800CBF3D8 /* mimoniApp.swift */,
 				25A4226E2887EA000027C043 /* MainScreen.swift */,
-				41019AF52861A9F800CBF3D8 /* ContentView.swift */,
 				41019B062861AD1100CBF3D8 /* InputIncome.swift */,
 				4144A0CC2865985D00917D31 /* SetupBudget.swift */,
 				41019AF72861A9FA00CBF3D8 /* Assets.xcassets */,
@@ -458,7 +455,6 @@
 				25A4226F2887EA000027C043 /* MainScreen.swift in Sources */,
 				EC575569287C2AEF00CA63B4 /* WalletCardView.swift in Sources */,
 				EC5953E428630A7200B0C200 /* PieChart.swift in Sources */,
-				41019AF62861A9F800CBF3D8 /* ContentView.swift in Sources */,
 				4175D9B32887E358007D8458 /* AddExpenseMainView.swift in Sources */,
 				789696A22880356600C690FC /* colors.swift in Sources */,
 				EC575565287C070E00CA63B4 /* CardView.swift in Sources */,
