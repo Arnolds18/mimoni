@@ -14,8 +14,6 @@
 		41019AF62861A9F800CBF3D8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41019AF52861A9F800CBF3D8 /* ContentView.swift */; };
 		41019AF82861A9FA00CBF3D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41019AF72861A9FA00CBF3D8 /* Assets.xcassets */; };
 		41019AFB2861A9FA00CBF3D8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41019AFA2861A9FA00CBF3D8 /* Preview Assets.xcassets */; };
-		41019AFD2861A9FA00CBF3D8 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41019AFC2861A9FA00CBF3D8 /* Persistence.swift */; };
-		41019B002861A9FA00CBF3D8 /* mimoni.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 41019AFE2861A9FA00CBF3D8 /* mimoni.xcdatamodeld */; };
 		41019B072861AD1100CBF3D8 /* InputIncome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41019B062861AD1100CBF3D8 /* InputIncome.swift */; };
 		4144A0CD2865985D00917D31 /* SetupBudget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4144A0CC2865985D00917D31 /* SetupBudget.swift */; };
 		416315B62864641600C3B36B /* Wine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416315B52864641600C3B36B /* Wine.swift */; };
@@ -25,7 +23,6 @@
 		7896969A288034A400C690FC /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 789696972880343700C690FC /* Charts.framework */; platformFilter = ios; };
 		7896969B288034A400C690FC /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 789696972880343700C690FC /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		789696A22880356600C690FC /* colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7896969D2880356600C690FC /* colors.swift */; };
-		789696A32880356600C690FC /* mimoni.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 789696A02880356600C690FC /* mimoni.xcdatamodeld */; };
 		789696AA2880366000C690FC /* NavBarBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789696A62880366000C690FC /* NavBarBackButton.swift */; };
 		789696AB2880366000C690FC /* textfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789696A82880366000C690FC /* textfield.swift */; };
 		789696AC2880366000C690FC /* color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789696A92880366000C690FC /* color.swift */; };
@@ -39,6 +36,8 @@
 		A0C34EF1287EB8EE0029522B /* TimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C34EF0287EB8EE0029522B /* TimelineProvider.swift */; };
 		A0C34EF3287EBF900029522B /* TimelineEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C34EF2287EBF900029522B /* TimelineEntry.swift */; };
 		A0C34EF7287EC0100029522B /* MonehWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C34EF6287EC0100029522B /* MonehWidgetView.swift */; };
+		A0DC8E0E288A8C0000915454 /* Moneh.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A0DC8E0C288A8C0000915454 /* Moneh.xcdatamodeld */; };
+		A0DC8E10288A8DB900915454 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DC8E0F288A8DB900915454 /* DataController.swift */; };
 		EC0797E12861B2880062E89B /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0797E02861B2880062E89B /* OnboardingView.swift */; };
 		EC0797E32861B5C70062E89B /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0797E22861B5C70062E89B /* LaunchView.swift */; };
 		EC575558286AF36800CA63B4 /* EditBudgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC575557286AF36800CA63B4 /* EditBudgetView.swift */; };
@@ -107,8 +106,6 @@
 		41019AF52861A9F800CBF3D8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		41019AF72861A9FA00CBF3D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		41019AFA2861A9FA00CBF3D8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		41019AFC2861A9FA00CBF3D8 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		41019AFF2861A9FA00CBF3D8 /* mimoni.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = mimoni.xcdatamodel; sourceTree = "<group>"; };
 		41019B062861AD1100CBF3D8 /* InputIncome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputIncome.swift; sourceTree = "<group>"; };
 		4144A0CC2865985D00917D31 /* SetupBudget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupBudget.swift; sourceTree = "<group>"; };
 		416315B52864641600C3B36B /* Wine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wine.swift; sourceTree = "<group>"; };
@@ -118,7 +115,6 @@
 		41BE7EC62869909B00F32CB9 /* AddBudgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBudgetView.swift; sourceTree = "<group>"; };
 		789696912880343700C690FC /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "Charts-master/Charts.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		7896969D2880356600C690FC /* colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = colors.swift; sourceTree = "<group>"; };
-		789696A12880356600C690FC /* mimoni.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = mimoni.xcdatamodel; sourceTree = "<group>"; };
 		789696A62880366000C690FC /* NavBarBackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavBarBackButton.swift; sourceTree = "<group>"; };
 		789696A82880366000C690FC /* textfield.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = textfield.swift; sourceTree = "<group>"; };
 		789696A92880366000C690FC /* color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = color.swift; sourceTree = "<group>"; };
@@ -132,6 +128,8 @@
 		A0C34EF0287EB8EE0029522B /* TimelineProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineProvider.swift; sourceTree = "<group>"; };
 		A0C34EF2287EBF900029522B /* TimelineEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineEntry.swift; sourceTree = "<group>"; };
 		A0C34EF6287EC0100029522B /* MonehWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonehWidgetView.swift; sourceTree = "<group>"; };
+		A0DC8E0D288A8C0000915454 /* Moneh.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Moneh.xcdatamodel; sourceTree = "<group>"; };
+		A0DC8E0F288A8DB900915454 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		EC0797E02861B2880062E89B /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		EC0797E22861B5C70062E89B /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		EC575557286AF36800CA63B4 /* EditBudgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBudgetView.swift; sourceTree = "<group>"; };
@@ -185,9 +183,9 @@
 		41019AF22861A9F800CBF3D8 /* mimoni */ = {
 			isa = PBXGroup;
 			children = (
+				A0DC8E06288A8B0300915454 /* model */,
 				789696A52880366000C690FC /* utils */,
 				7896969D2880356600C690FC /* colors.swift */,
-				789696A02880356600C690FC /* mimoni.xcdatamodeld */,
 				EC575562286ED79300CA63B4 /* object */,
 				EC575561286ED74000CA63B4 /* component */,
 				EC5953E728631FB400B0C200 /* view */,
@@ -197,8 +195,6 @@
 				41019B062861AD1100CBF3D8 /* InputIncome.swift */,
 				4144A0CC2865985D00917D31 /* SetupBudget.swift */,
 				41019AF72861A9FA00CBF3D8 /* Assets.xcassets */,
-				41019AFC2861A9FA00CBF3D8 /* Persistence.swift */,
-				41019AFE2861A9FA00CBF3D8 /* mimoni.xcdatamodeld */,
 				789696912880343700C690FC /* Charts.xcodeproj */,
 				41019AF92861A9FA00CBF3D8 /* Preview Content */,
 			);
@@ -252,6 +248,15 @@
 				A0101686287D671A00F9D128 /* Info.plist */,
 			);
 			path = MonehWidget;
+			sourceTree = "<group>";
+		};
+		A0DC8E06288A8B0300915454 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				A0DC8E0C288A8C0000915454 /* Moneh.xcdatamodeld */,
+				A0DC8E0F288A8DB900915454 /* DataController.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 		EC0797DF2861B2640062E89B /* onboarding */ = {
@@ -445,14 +450,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41019B002861A9FA00CBF3D8 /* mimoni.xcdatamodeld in Sources */,
 				A0101688287D671A00F9D128 /* MonehWidget.intentdefinition in Sources */,
 				EC575558286AF36800CA63B4 /* EditBudgetView.swift in Sources */,
 				789696AA2880366000C690FC /* NavBarBackButton.swift in Sources */,
 				EC0797E32861B5C70062E89B /* LaunchView.swift in Sources */,
-				789696A32880356600C690FC /* mimoni.xcdatamodeld in Sources */,
 				416315B62864641600C3B36B /* Wine.swift in Sources */,
-				41019AFD2861A9FA00CBF3D8 /* Persistence.swift in Sources */,
 				25A4226F2887EA000027C043 /* MainScreen.swift in Sources */,
 				EC575569287C2AEF00CA63B4 /* WalletCardView.swift in Sources */,
 				EC5953E428630A7200B0C200 /* PieChart.swift in Sources */,
@@ -460,6 +462,7 @@
 				4175D9B32887E358007D8458 /* AddExpenseMainView.swift in Sources */,
 				789696A22880356600C690FC /* colors.swift in Sources */,
 				EC575565287C070E00CA63B4 /* CardView.swift in Sources */,
+				A0DC8E10288A8DB900915454 /* DataController.swift in Sources */,
 				25A4226B2887E9C00027C043 /* SisaUangCardView.swift in Sources */,
 				789696AC2880366000C690FC /* color.swift in Sources */,
 				EC0797E12861B2880062E89B /* OnboardingView.swift in Sources */,
@@ -468,6 +471,7 @@
 				41019AF42861A9F800CBF3D8 /* mimoniApp.swift in Sources */,
 				41BE7EC72869909B00F32CB9 /* AddBudgetView.swift in Sources */,
 				41A760B028815E78009B4CF8 /* AddExpenseView.swift in Sources */,
+				A0DC8E0E288A8C0000915454 /* Moneh.xcdatamodeld in Sources */,
 				EC57556B287C2AFB00CA63B4 /* RecommendationCardView.swift in Sources */,
 				4144A0CD2865985D00917D31 /* SetupBudget.swift in Sources */,
 				41019B072861AD1100CBF3D8 /* InputIncome.swift in Sources */,
@@ -781,23 +785,13 @@
 /* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
-		41019AFE2861A9FA00CBF3D8 /* mimoni.xcdatamodeld */ = {
+		A0DC8E0C288A8C0000915454 /* Moneh.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				41019AFF2861A9FA00CBF3D8 /* mimoni.xcdatamodel */,
+				A0DC8E0D288A8C0000915454 /* Moneh.xcdatamodel */,
 			);
-			currentVersion = 41019AFF2861A9FA00CBF3D8 /* mimoni.xcdatamodel */;
-			path = mimoni.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-		789696A02880356600C690FC /* mimoni.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				789696A12880356600C690FC /* mimoni.xcdatamodel */,
-			);
-			currentVersion = 789696A12880356600C690FC /* mimoni.xcdatamodel */;
-			path = mimoni.xcdatamodeld;
+			currentVersion = A0DC8E0D288A8C0000915454 /* Moneh.xcdatamodel */;
+			path = Moneh.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
