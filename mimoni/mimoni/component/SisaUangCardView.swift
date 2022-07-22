@@ -9,6 +9,8 @@ import Foundation
 import SwiftUI
 
 struct SisaUangCardView: View{
+    var totalBalance:Double
+    
     var body: some View{
         
         ZStack(alignment: .leading){
@@ -27,7 +29,7 @@ struct SisaUangCardView: View{
                         .font(.system(size: 15))
                         .frame(maxWidth: .infinity, alignment: .leading)
                     
-                    Text("RP 2.000.000,-")
+                    Text("RP \(totalBalance)")
                         .font(.system(size: 22))
                         .frame(maxWidth: .infinity, alignment: .leading)
                     
@@ -52,7 +54,7 @@ struct SisaUangCardView: View{
 
 struct SisaUangCardView_Previews: PreviewProvider {
     static var previews: some View {
-        SisaUangCardView()
+        SisaUangCardView(totalBalance: 2000)
 //            .previewLayout(.fixed(width: 360, height: 125))
 //            .previewInterfaceOrientation(.landscapeRight)
     }

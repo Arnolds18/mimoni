@@ -9,9 +9,14 @@ import Foundation
 import SwiftUI
 
 struct MainScreen: View {
+    @Environment(\.managedObjectContext) var managedObjectContext
+
+    @FetchRequest (entity: UserInfo.entity(),
+                   sortDescriptors: [])
+    var userInfo: FetchedResults<UserInfo>
+    
     private var data : [Int] = Array(1...20)
     private let adaptiveColumns = [
-        
         GridItem(.adaptive(minimum: 170))
     ]
 //    @State var linkOne: Bool = false
@@ -30,7 +35,7 @@ struct MainScreen: View {
                         RoundedRectangle(cornerRadius:20)
                             .fill(.white)
                             .frame(width: 360, height: 125, alignment: .leading)
-                        SisaUangCardView()
+                        SisaUangCardView(totalBalance: userInfo.first?.totalBalance ?? 0)
                     }
                     ZStack{
                         RoundedRectangle(cornerRadius:20)

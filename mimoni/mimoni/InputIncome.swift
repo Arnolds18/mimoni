@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct InputIncome: View {
+    @Environment(\.managedObjectContext) var managedObjectContext
+
+    
     @State var income : Int = 0
     @State var isShowingDetailView =  false
     @FocusState private var isInputActive: Bool
@@ -47,15 +50,23 @@ struct InputIncome: View {
                 }
             Spacer()
             NavigationLink(destination: SetupBudget(income: self.$income, income2: self.income, isShowOnBoarding: $isShowOnBoarding)) {
-                HStack{
-                    Text("Continue")
-                        .fontWeight(.semibold)
+                Button {
+                    let info = UserInfo(context: managedObjectContext)
+                    info.income = Double(income)
+                    info.totalBalance = Double(income)
+                    info.totalExpenses = 0
+                    DataController.shared.save()
+                } label: {
+                    HStack{
+                        Text("Continue")
+                            .fontWeight(.semibold)
+                    }
+                    .font(.headline)
+                    .frame(width: 340, height: 50)
+                    .foregroundColor(self.income > 0 ? .blackColor : .white)
+                    .background(self.income > 0 ? Color.interactiveColor : .gray)
+                    .cornerRadius(15)
                 }
-                .font(.headline)
-                .frame(width: 340, height: 50)
-                .foregroundColor(self.income > 0 ? .blackColor : .white)
-                .background(self.income > 0 ? Color.interactiveColor : .gray)
-                .cornerRadius(15)
             }.disabled(self.income > 0 ? false : true)
         }
         .frame(maxWidth:.infinity)
